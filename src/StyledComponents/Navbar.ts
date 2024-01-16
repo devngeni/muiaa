@@ -33,13 +33,15 @@ export const NavBarButtonsContainer = styled(Box)({
 })
 
 export const NavButton = styled(Button)({
-    border:"1px solid white",
-    color:"white",
-    borderRadius:"5px",
-    width:"150px",
-    height:"40px",
-})
+  border: "1px solid white",
+  color: "white",
+  borderRadius: "5px",
+  width: "auto",
+  height: "40px",
+  fontSize: "10px",
+});
 export const NavButton2 = styled(NavButton)({
     color: "#DFBC6D",
     border: "2px solid #DFBC6D",
+    width:"auto"
 });
