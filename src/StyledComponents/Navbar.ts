@@ -1,33 +1,34 @@
-import { Box, Button, styled } from "@mui/material";
+import { Box, Button, Grid, styled } from "@mui/material";
 
 export const NavbarContainer = styled(Box)({
     width:"100vw",
     height:"100px",
     backgroundColor:"#14263E",
 })
-export const NavbarMiniContainer = styled(Box)({
+export const NavbarMiniContainer = styled(Grid)({
     width:"90%",
     margin:"auto",
-    display:"flex",
-    flexDirection:"row",
     justifyContent:"space-between",
     alignItems:"center",
     height:"100%",
 })
-export const NavbarLinksContainer = styled(Box)({
+export const NavbarLogoItem  = styled(Grid)({
+
+})
+export const NavbarLinksContainer = styled(Grid)({
     display:"flex",
     flexDirection:"row",
-    justifyContent:"space-between",
+    justifyContent:"space-around",
     alignItems:"center",
     height:"100%",
     width:"30%",
 })
 
-export const NavBarButtonsContainer = styled(Box)({
+export const NavBarButtonsContainer = styled(Grid)({
     width:"20%",
     display:"flex",
     flexDirection:"row",
-    justifyContent:"space-between",
+    justifyContent:"space-around",
     alignItems:"center",
     height:"100%",
 })
@@ -36,12 +37,13 @@ export const NavButton = styled(Button)({
   border: "1px solid white",
   color: "white",
   borderRadius: "5px",
-  width: "auto",
+  width: "40%",
   height: "40px",
   fontSize: "10px",
 });
 export const NavButton2 = styled(NavButton)({
     color: "#DFBC6D",
     border: "2px solid #DFBC6D",
-    width:"auto"
+    width:"40%",
+    textAlign:"center",
 });

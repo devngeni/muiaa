@@ -1,11 +1,39 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Navbar from '@/Components/Navbar'
-import AboutHero from '@/Components/AboutHero'
-import Footer from '@/Components/Footer'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import Navbar from "@/Components/Navbar";
+import AboutHero from "@/Components/AboutHero";
+import Footer from "@/Components/Footer";
+import {
+  BgMask,
+  BlueButton,
+  ContentContainer,
+  HeroMainContainer,
+  HeroMainText,
+  HeroMiniText,
+  NavySection,
+  NavyStatContainer,
+  OrangeButton,
+  HomeMainContainer,
+  NavyTextContainer,
+  WhiteText,
+  NavyStatGridContainer,
+  NavyStatItem,
+  NavyNumber,
+  NavyText,
+  SeamlessMainContainer,
+  SeamlessGridItem,
+  SeamlessMainText,
+  UnparalleledMainContainer,
+  UnparalleledGridItem,
+  UnparalleledContentContainer,
+  OrangeText,
+  UnparalleledMainText,
+  UnparalleledSubText,
+} from "@/StyledComponents/HomeHero";
+import { Grid, Box } from "@mui/material";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -16,9 +44,316 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
-      <AboutHero/>
-      <Footer/>
+      <Navbar />
+      <HomeMainContainer>
+        <HeroMainContainer>
+          <BgMask>
+            <ContentContainer>
+              <HeroMainText>
+                Advance cross-border cattle feed distribution enterprise.
+              </HeroMainText>
+              <br />
+              <br />
+              <HeroMiniText>
+                Revolutionizing the cattle feed industry between Kenya and
+                Zanzibar. Leveraging the power of the XDC blockchain, our
+                platform ensures a transparent, efficient, and cost-effective
+                supply chain process.
+              </HeroMiniText>
+              <br />
+              <br />
+              <Grid container sx={{ width: "100%", maxWidth: "500px" }}>
+                <Grid item xs={6}>
+                  <BlueButton>Explore App</BlueButton>
+                </Grid>
+                <Grid item xs={6}>
+                  <OrangeButton>Get in touch</OrangeButton>
+                </Grid>
+              </Grid>
+            </ContentContainer>
+          </BgMask>
+        </HeroMainContainer>
+        <NavyStatContainer>
+          <NavyStatGridContainer container>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>50+</NavyNumber>
+              <NavyText>Dairy Farmers</NavyText>
+            </NavyStatItem>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>50+</NavyNumber>
+              <NavyText>Dairy Farmers</NavyText>
+            </NavyStatItem>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>50+</NavyNumber>
+              <NavyText>Dairy Farmers</NavyText>
+            </NavyStatItem>
+          </NavyStatGridContainer>
+        </NavyStatContainer>
+        <NavySection>
+          <br />
+          <br />
+          <NavyTextContainer>
+            <WhiteText>
+              Uniting Kenya and Zanzibar through innovative technology
+            </WhiteText>
+          </NavyTextContainer>
+        </NavySection>
+      </HomeMainContainer>
+      <SeamlessMainContainer container>
+        <SeamlessGridItem item md={4} xs={0}></SeamlessGridItem>
+        <SeamlessGridItem item md={8} xs={12}>
+          <SeamlessMainText>
+            By seamlessly integrating blockchain technology, we offer farmers
+            and distributors a decentralized platform for feed ordering,
+            real-time traceability, and smart contract automation.
+          </SeamlessMainText>
+          <br />
+          <UnparalleledMainContainer container>
+            <UnparalleledGridItem item md={8}>
+              <UnparalleledContentContainer>
+                <OrangeText>Dairy</OrangeText>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <UnparalleledMainText>
+                      Unparalleled access to high- quality feed products
+                    </UnparalleledMainText>
+                    <br />
+                    <br />
+                    <UnparalleledSubText>
+                      Leveraging the security and transparency of blockchain for
+                      every step from supplier sourcing to end-user delivery.
+                    </UnparalleledSubText>
+                    <br />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <img src="assets/dairy.svg" />
+                  </Grid>
+                </Grid>
+              </UnparalleledContentContainer>
+            </UnparalleledGridItem>
+            <UnparalleledGridItem item md={4}>
+              <UnparalleledContentContainer>
+                <OrangeText>Dairy</OrangeText>
+                <Grid container>
+                  <Grid item xs={12}>
+                    <img src="assets/process.svg" />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <UnparalleledMainText>
+                      Reliable supply chain
+                    </UnparalleledMainText>
+                    <UnparalleledSubText>
+                      providing feeds to agricultural farmers in Kenya and
+                      Zanzibar.
+                    </UnparalleledSubText>
+                  </Grid>
+                </Grid>
+              </UnparalleledContentContainer>
+            </UnparalleledGridItem>
+            <UnparalleledGridItem item md={4}>
+              <UnparalleledContentContainer>
+                <OrangeText>Dairy</OrangeText>
+                <Grid container>
+                  <Grid item xs={12}>
+                    <img src="assets/process.svg" />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <UnparalleledMainText>
+                      Reliable supply chain
+                    </UnparalleledMainText>
+                    <UnparalleledSubText>
+                      providing feeds to agricultural farmers in Kenya and
+                      Zanzibar.
+                    </UnparalleledSubText>
+                  </Grid>
+                </Grid>
+              </UnparalleledContentContainer>
+            </UnparalleledGridItem>
+            <UnparalleledGridItem item md={8}>
+              <UnparalleledContentContainer>
+                <OrangeText>Dairy</OrangeText>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <UnparalleledMainText>
+                      Unparalleled access to high- quality feed products
+                    </UnparalleledMainText>
+                    <br />
+                    <br />
+                    <UnparalleledSubText>
+                      Leveraging the security and transparency of blockchain for
+                      every step from supplier sourcing to end-user delivery.
+                    </UnparalleledSubText>
+                    <br />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <img src="assets/dairy.svg" />
+                  </Grid>
+                </Grid>
+              </UnparalleledContentContainer>
+            </UnparalleledGridItem>
+          </UnparalleledMainContainer>
+        </SeamlessGridItem>
+      </SeamlessMainContainer>
+      <br />
+      <br />
+      <br />
+      <Box sx={{ width: "85%", margin: "auto", mb: "50px" }}>
+        <SeamlessMainText
+          sx={{ color: "#191919", fontWeight: "700", width: "50%" }}
+        >
+          Remarkable transformation fueled by digital solutions.
+        </SeamlessMainText>
+      </Box>
+      <Grid container sx={{ width: "85%", margin: "auto" }}>
+        <Grid md={6} xs={12}>
+          <UnparalleledSubText
+            sx={{ fontSize: "28px", lineHeight: "44px", width: "65%" }}
+          >
+            Hence, a blockchain-based platform that connects dairy farmers, feed
+            suppliers, distributors, and regulatory authorities can address
+            these challenges. The platform ensures transparency, traceability,
+            and quality assurance throughout the feed supply chain.
+          </UnparalleledSubText>
+        </Grid>
+        <Grid md={6} xs={12}>
+          <Grid container>
+            <Grid md={6} xs={12}>
+              <img src="./assets/notes.svg" />
+              <br />
+              <SeamlessMainText
+                sx={{
+                  color: "#191919",
+                  fontSize: "32px",
+                  fontWeight: "700",
+                  width: "100%",
+                }}
+              >
+                Smart Contracts
+              </SeamlessMainText>
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "65%",
+                  color: "#444444",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </Grid>
+            <Grid md={6} xs={12}>
+              <img src="./assets/search.svg" />
+              <br />
+              <SeamlessMainText
+                sx={{
+                  color: "#191919",
+                  fontSize: "32px",
+                  fontWeight: "700",
+                  width: "100%",
+                }}
+              >
+                Smart Contracts
+              </SeamlessMainText>
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "65%",
+                  color: "#444444",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </Grid>
+            <Grid md={6} xs={12}>
+              <img src="./assets/quality.svg" />
+              <br />
+              <SeamlessMainText
+                sx={{
+                  color: "#191919",
+                  fontSize: "32px",
+                  fontWeight: "700",
+                  width: "100%",
+                }}
+              >
+                Smart Contracts
+              </SeamlessMainText>
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "65%",
+                  color: "#444444",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </Grid>
+            <Grid md={6} xs={12}>
+              <img src="./assets/tokenization.svg" />
+              <br />
+              <SeamlessMainText
+                sx={{
+                  color: "#191919",
+                  fontSize: "32px",
+                  fontWeight: "700",
+                  width: "100%",
+                }}
+              >
+                Smart Contracts
+              </SeamlessMainText>
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "65%",
+                  color: "#444444",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item md={4} xs={0}></Grid>
+        <Grid item md={4} xs={12}></Grid>
+        <Grid item md={4} xs={0}></Grid>
+      </Grid>
+      <Footer />
     </>
-  )
+  );
 }

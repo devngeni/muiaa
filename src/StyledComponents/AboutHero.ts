@@ -1,6 +1,5 @@
 import { Box, Button, Grid, Typography, styled } from "@mui/material"
 
-
 export const AboutMainHero = styled(Box)({
   width: "100vw",
   height: "auto",

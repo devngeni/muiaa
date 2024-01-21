@@ -4,6 +4,7 @@ import {
   NavButton2,
   NavbarContainer,
   NavbarLinksContainer,
+  NavbarLogoItem,
   NavbarMiniContainer,
 } from "@/StyledComponents/Navbar";
 import React from "react";
@@ -11,15 +12,17 @@ import React from "react";
 function Navbar() {
   return (
     <NavbarContainer>
-      <NavbarMiniContainer>
-        <img src="assets/logo.svg" />
-        <NavbarLinksContainer sx={{ display: { md: "flex", xs: "none" } }}>
+      <NavbarMiniContainer container>
+        <NavbarLogoItem item md={2} xs={6}>
+          <img src="assets/logo.svg" />
+        </NavbarLogoItem>
+        <NavbarLinksContainer sx={{ display: { md: "flex", xs: "none" } }} item md={4} xs={0}>
           <a href="#">Home</a>
           <a href="#">How it works</a>
           <a href="#">Solutions</a>
           <a href="#">About</a>
         </NavbarLinksContainer>
-        <NavBarButtonsContainer>
+        <NavBarButtonsContainer item md={4} xs={6}>
           <NavButton href="#">Explore App</NavButton>
           <NavButton2 href="#" sx={{ display: { md: "block", xs: "none" } }}>
             Get in Touch
