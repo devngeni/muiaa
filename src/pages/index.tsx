@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/Components/Navbar";
 import AboutHero from "@/Components/AboutHero";
 import Footer from "@/Components/Footer";
+import { Fade } from "react-awesome-reveal"; 
 import {
   BgMask,
   BlueButton,
@@ -31,7 +32,8 @@ import {
   UnparalleledMainText,
   UnparalleledSubText,
 } from "@/StyledComponents/HomeHero";
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, Button } from "@mui/material";
+import CountUp from "react-countup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,43 +51,53 @@ export default function Home() {
         <HeroMainContainer>
           <BgMask>
             <ContentContainer>
-              <HeroMainText>
-                Advance cross-border cattle feed distribution enterprise.
-              </HeroMainText>
+              <Fade direction="down">
+                <HeroMainText>
+                  Advance cross-border cattle feed distribution enterprise.
+                </HeroMainText>
+              </Fade>
               <br />
               <br />
-              <HeroMiniText>
-                Revolutionizing the cattle feed industry between Kenya and
-                Zanzibar. Leveraging the power of the XDC blockchain, our
-                platform ensures a transparent, efficient, and cost-effective
-                supply chain process.
-              </HeroMiniText>
-              <br />
-              <br />
-              <Grid container sx={{ width: "100%", maxWidth: "500px" }}>
-                <Grid item xs={6}>
-                  <BlueButton>Explore App</BlueButton>
+              <Fade direction="up">
+                <HeroMiniText>
+                  Revolutionizing the cattle feed industry between Kenya and
+                  Zanzibar. Leveraging the power of the XDC blockchain, our
+                  platform ensures a transparent, efficient, and cost-effective
+                  supply chain process.
+                </HeroMiniText>
+                <br />
+                <br />
+                <Grid container sx={{ width: "100%", maxWidth: "500px" }}>
+                  <Grid item xs={6}>
+                    <BlueButton>Explore App</BlueButton>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <OrangeButton>Get in touch</OrangeButton>
+                  </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                  <OrangeButton>Get in touch</OrangeButton>
-                </Grid>
-              </Grid>
+              </Fade>
             </ContentContainer>
           </BgMask>
         </HeroMainContainer>
         <NavyStatContainer>
           <NavyStatGridContainer container>
             <NavyStatItem md={4} xs={12}>
-              <NavyNumber>50+</NavyNumber>
+              <NavyNumber>
+                <CountUp end={50} duration={10} /> +
+              </NavyNumber>
               <NavyText>Dairy Farmers</NavyText>
             </NavyStatItem>
             <NavyStatItem md={4} xs={12}>
-              <NavyNumber>50+</NavyNumber>
-              <NavyText>Dairy Farmers</NavyText>
+              <NavyNumber>
+                <CountUp end={266} duration={10} />
+              </NavyNumber>
+              <NavyText>Smart Contracts</NavyText>
             </NavyStatItem>
             <NavyStatItem md={4} xs={12}>
-              <NavyNumber>50+</NavyNumber>
-              <NavyText>Dairy Farmers</NavyText>
+              <NavyNumber>
+                <CountUp end={45} duration={10} />
+              </NavyNumber>
+              <NavyText>Export/Import Transactions</NavyText>
             </NavyStatItem>
           </NavyStatGridContainer>
         </NavyStatContainer>
@@ -110,86 +122,96 @@ export default function Home() {
           <br />
           <UnparalleledMainContainer container>
             <UnparalleledGridItem item md={8}>
-              <UnparalleledContentContainer>
-                <OrangeText>Dairy</OrangeText>
-                <Grid container>
-                  <Grid item xs={6}>
-                    <UnparalleledMainText>
-                      Unparalleled access to high- quality feed products
-                    </UnparalleledMainText>
-                    <br />
-                    <br />
-                    <UnparalleledSubText>
-                      Leveraging the security and transparency of blockchain for
-                      every step from supplier sourcing to end-user delivery.
-                    </UnparalleledSubText>
-                    <br />
+              <Fade direction="left">
+                <UnparalleledContentContainer>
+                  <OrangeText>Dairy</OrangeText>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <UnparalleledMainText>
+                        Unparalleled access to high- quality feed products
+                      </UnparalleledMainText>
+                      <br />
+                      <br />
+                      <UnparalleledSubText>
+                        Leveraging the security and transparency of blockchain
+                        for every step from supplier sourcing to end-user
+                        delivery.
+                      </UnparalleledSubText>
+                      <br />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <img src="assets/dairy.svg" />
+                    </Grid>
                   </Grid>
-                  <Grid item xs={6}>
-                    <img src="assets/dairy.svg" />
-                  </Grid>
-                </Grid>
-              </UnparalleledContentContainer>
+                </UnparalleledContentContainer>
+              </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={4}>
-              <UnparalleledContentContainer>
-                <OrangeText>Dairy</OrangeText>
-                <Grid container>
-                  <Grid item xs={12}>
-                    <img src="assets/process.svg" />
+              <Fade direction="right">
+                <UnparalleledContentContainer>
+                  <OrangeText>Dairy</OrangeText>
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <img src="assets/process.svg" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <UnparalleledMainText>
+                        Reliable supply chain
+                      </UnparalleledMainText>
+                      <UnparalleledSubText>
+                        providing feeds to agricultural farmers in Kenya and
+                        Zanzibar.
+                      </UnparalleledSubText>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12}>
-                    <UnparalleledMainText>
-                      Reliable supply chain
-                    </UnparalleledMainText>
-                    <UnparalleledSubText>
-                      providing feeds to agricultural farmers in Kenya and
-                      Zanzibar.
-                    </UnparalleledSubText>
-                  </Grid>
-                </Grid>
-              </UnparalleledContentContainer>
+                </UnparalleledContentContainer>
+              </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={4}>
-              <UnparalleledContentContainer>
-                <OrangeText>Dairy</OrangeText>
-                <Grid container>
-                  <Grid item xs={12}>
-                    <img src="assets/process.svg" />
+              <Fade direction="left">
+                <UnparalleledContentContainer>
+                  <OrangeText>Dairy</OrangeText>
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <img src="assets/process.svg" />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <UnparalleledMainText>
+                        Reliable supply chain
+                      </UnparalleledMainText>
+                      <UnparalleledSubText>
+                        providing feeds to agricultural farmers in Kenya and
+                        Zanzibar.
+                      </UnparalleledSubText>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12}>
-                    <UnparalleledMainText>
-                      Reliable supply chain
-                    </UnparalleledMainText>
-                    <UnparalleledSubText>
-                      providing feeds to agricultural farmers in Kenya and
-                      Zanzibar.
-                    </UnparalleledSubText>
-                  </Grid>
-                </Grid>
-              </UnparalleledContentContainer>
+                </UnparalleledContentContainer>
+              </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={8}>
-              <UnparalleledContentContainer>
-                <OrangeText>Dairy</OrangeText>
-                <Grid container>
-                  <Grid item xs={6}>
-                    <UnparalleledMainText>
-                      Unparalleled access to high- quality feed products
-                    </UnparalleledMainText>
-                    <br />
-                    <br />
-                    <UnparalleledSubText>
-                      Leveraging the security and transparency of blockchain for
-                      every step from supplier sourcing to end-user delivery.
-                    </UnparalleledSubText>
-                    <br />
+              <Fade direction="right">
+                <UnparalleledContentContainer>
+                  <OrangeText>Dairy</OrangeText>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <UnparalleledMainText>
+                        Unparalleled access to high- quality feed products
+                      </UnparalleledMainText>
+                      <br />
+                      <br />
+                      <UnparalleledSubText>
+                        Leveraging the security and transparency of blockchain
+                        for every step from supplier sourcing to end-user
+                        delivery.
+                      </UnparalleledSubText>
+                      <br />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <img src="assets/dairy.svg" />
+                    </Grid>
                   </Grid>
-                  <Grid item xs={6}>
-                    <img src="assets/dairy.svg" />
-                  </Grid>
-                </Grid>
-              </UnparalleledContentContainer>
+                </UnparalleledContentContainer>
+              </Fade>
             </UnparalleledGridItem>
           </UnparalleledMainContainer>
         </SeamlessGridItem>
@@ -207,12 +229,21 @@ export default function Home() {
       <Grid container sx={{ width: "85%", margin: "auto" }}>
         <Grid md={6} xs={12}>
           <UnparalleledSubText
-            sx={{ fontSize: "28px", lineHeight: "44px", width: "65%" }}
+            sx={{
+              fontSize: "28px",
+              lineHeight: "44px",
+              width: "65%",
+              color: "#1A1A1A",
+            }}
           >
-            Hence, a blockchain-based platform that connects dairy farmers, feed
-            suppliers, distributors, and regulatory authorities can address
-            these challenges. The platform ensures transparency, traceability,
-            and quality assurance throughout the feed supply chain.
+            Hence, a blockchain-based platform that{" "}
+            <span style={{ color: "#DFBC6D", fontWeight: "bold" }}>
+              connects dairy farmers, feed suppliers, distributors, and
+              regulatory authorities
+            </span>{" "}
+            can address these challenges. The platform ensures transparency,
+            traceability, and quality assurance throughout the feed supply
+            chain.
           </UnparalleledSubText>
         </Grid>
         <Grid md={6} xs={12}>
@@ -348,11 +379,549 @@ export default function Home() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container>
-        <Grid item md={4} xs={0}></Grid>
-        <Grid item md={4} xs={12}></Grid>
-        <Grid item md={4} xs={0}></Grid>
+      <Grid
+        container
+        sx={{
+          width: "90%",
+          margin: "auto",
+          borderRadius: "20px",
+          overflow: "hidden",
+          mb: "50px",
+        }}
+      >
+        <Grid item md={4} xs={0}>
+          <Box sx={{ width: "100%", height: "650px" }}>
+            <img src="./assets/asset22.svg" style={{ width: "100%" }} />
+          </Box>
+        </Grid>
+        <Grid
+          item
+          md={4}
+          xs={12}
+          sx={{ background: "#F5F6F7", padding: "50px" }}
+        >
+          <SeamlessMainText
+            sx={{
+              color: "#191919",
+              fontWeight: "700",
+              fontSize: "40px",
+              letterSpacing: "0.02em",
+            }}
+          >
+            Spearheading a transformative era
+          </SeamlessMainText>
+          <br />
+          <br />
+          <UnparalleledSubText
+            sx={{
+              fontSize: "24px",
+              lineHeight: "40px",
+              color: "#1A1A1A",
+            }}
+          >
+            in cross-border cattle feed distribution, uniting Kenya and Zanzibar
+            through innovative technology and sustainable practices. Powered by
+            the XDC blockchain, we are committed to delivering transparency,
+            efficiency, and traceability in every facet of the supply chain
+          </UnparalleledSubText>
+        </Grid>
+        <Grid item md={4} xs={0}>
+          <Box sx={{ width: "100%", height: "650px" }}>
+            <img src="./assets/asset24.svg" style={{ width: "100%" }} />
+          </Box>
+        </Grid>
       </Grid>
+      <br />
+      <br />
+      <br />
+      <Box sx={{ width: "100%", textAlign: "center" }}>
+        <SeamlessMainText
+          sx={{
+            color: "#191919",
+            fontWeight: "900",
+            fontSize: "80px",
+            letterSpacing: "-3px",
+            textAlign: "center",
+            width: "100%",
+            maxWidth: "700px",
+            margin: "auto",
+          }}
+        >
+          Add Interoperability To Your Work
+        </SeamlessMainText>
+        <UnparalleledSubText
+          sx={{
+            fontSize: "28px",
+            lineHeight: "44px",
+            color: "#1A1A1A",
+            textAlign: "center",
+            width: "100%",
+            maxWidth: "700px",
+            margin: "auto",
+          }}
+        >
+          We utilize the XDC blockchain, to facilitate connections between dairy
+          farmers and feed suppliers/distributors
+        </UnparalleledSubText>
+      </Box>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Box sx={{ width: "100%", maxWidth: "1400px", margin: "auto" }}>
+        <Grid
+          container
+          sx={{ height: "622px", background: "#FFDE59", borderRadius: "20px" }}
+        >
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <Box sx={{ width: "80%", height: "50%", margin: "auto" }}>
+              <Button
+                sx={{
+                  background: "#fff",
+                  width: "100%",
+                  fontWeight: "bold",
+                  color: "#000",
+                  padding: "10px",
+                  paddingRight: "40%",
+                  borderRadius: "10px",
+                  textTransform: "capitalize",
+                }}
+              >
+                Order
+              </Button>
+              <br />
+              <br />
+              <Button
+                sx={{
+                  width: "100%",
+                  color: "#000",
+                  padding: "10px",
+                  paddingRight: "40%",
+                  borderRadius: "10px",
+                  textTransform: "capitalize",
+                }}
+              >
+                Trade
+              </Button>
+              <br />
+              <br />
+              <Button
+                sx={{
+                  width: "100%",
+                  color: "#000",
+                  padding: "10px",
+                  paddingRight: "13%",
+                  borderRadius: "10px",
+                  textTransform: "capitalize",
+                }}
+              >
+                Automate with XDC
+              </Button>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <img src="assets/phone.svg" style={{ marginTop: "-80px" }} />
+          </Grid>
+          <Grid
+            item
+            md={4}
+            xs={12}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <Box
+              sx={{
+                width: "80%",
+                height: "40%",
+                margin: "auto",
+                "*": { lineHeight: "38px" },
+              }}
+            >
+              <ul>
+                <li>
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    Browse available feed products
+                  </UnparalleledSubText>
+                </li>
+                <li>
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    View detailed quality assurance and traceability details of
+                    each feed.
+                  </UnparalleledSubText>
+                </li>
+                <li>
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    Place an order for the desired feed quantity.
+                  </UnparalleledSubText>
+                </li>
+              </ul>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Box sx={{ width: "100%", textAlign: "center" }}>
+        <br />
+        <br />
+        <br />
+        <br />
+        <SeamlessMainText
+          sx={{
+            color: "#191919",
+            fontWeight: "900",
+            fontSize: "80px",
+            letterSpacing: "-3px",
+            textAlign: "center",
+            width: "100%",
+            maxWidth: "700px",
+            margin: "auto",
+          }}
+        >
+          It Powers the chain
+        </SeamlessMainText>
+        <br />
+        <Grid
+          container
+          sx={{
+            width: "100%",
+            maxWidth: "1200px",
+            margin: "auto",
+            img: { width: "50px", height: "50px", marginBottom: "10px" },
+          }}
+        >
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/api.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                XDC APIs integrations.
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/token.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                Token Creation: MUIAA Feed Tokens (MFT)
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                The MFT ERC20 token will serve multiple utilities within the
+                platform, including payments, incentives, and platform
+                governance.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/orderlist.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                Order Records Management on the Blockchain(Transaction Hashes)
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                To maintain a decentralised, tamper-proof record of all orders
+                placed on the platform.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/map.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                Real-time Feed Tracking via Blockchain
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                Automate and enforce agreements between stakeholders, such as
+                contracts between farmers and suppliers, payment terms, and
+                quality standards.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/contract.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                Real-time Feed Tracking via Blockchain
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                To automate agreements between stakeholders like contracts
+                between farmers and suppliers, payment terms, and quality
+                standards.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "10px",
+                background: "#F0F0F0",
+                height: "280px",
+                mb: "20px",
+                padding: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <img src="./assets/distribution.svg" />
+              </Box>
+              <UnparalleledMainText
+                sx={{ fontSize: "24px", textAlign: "left" }}
+              >
+                Incentive Distribution through MFT Tokens(Royalties)
+              </UnparalleledMainText>
+              <br />
+              <UnparalleledSubText
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "22px",
+                  width: "100%",
+                  color: "#444444",
+                  textAlign: "left",
+                }}
+              >
+                To reward users and stakeholders for their participation,
+                loyalty, and contributions to the platform.
+              </UnparalleledSubText>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Box sx={{ width: "100%", textAlign: "center" }}>
+        <SeamlessMainText
+          sx={{
+            color: "#191919",
+            fontWeight: "900",
+            fontSize: "80px",
+            letterSpacing: "-3px",
+            textAlign: "center",
+            width: "100%",
+            maxWidth: "700px",
+            margin: "auto",
+          }}
+        >
+          Get Started
+        </SeamlessMainText>
+        <UnparalleledSubText
+          sx={{
+            fontSize: "28px",
+            lineHeight: "44px",
+            color: "#1A1A1A",
+            textAlign: "center",
+            width: "100%",
+            maxWidth: "1200px",
+            margin: "auto",
+          }}
+        >
+          Hundreds of people already going cross-border with us. What are you
+          waiting for?
+        </UnparalleledSubText>
+        <br />
+        <BlueButton sx={{ maxWidth: "250px" }}>Explore App</BlueButton>
+        <br />
+        <br />
+        <br />
+        <br />
+      </Box>
       <Footer />
     </>
   );
