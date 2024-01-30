@@ -1,4 +1,12 @@
-import { Box, Grid, styled } from "@mui/material";
+import {
+  Box,
+  Grid,
+  styled,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
 
 
 export const WorksMainHero = styled(Box)({
@@ -48,4 +56,44 @@ export const Part = styled(Box)({
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+});
+export const  BlueSection = styled(Box)({
+    width:"100%",
+    height:"auto",
+    minHeight:"35vh",
+    background:"#14263E",
+    display:"flex",
+    flexDirection:'column',
+    justifyContent:"center",
+    alignItems:"center",
+    padding:"50px",
+})
+
+export const WhiteBackgroundAccordion = styled(Accordion)({
+  backgroundColor: "white",
+  boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.1)", // Optional: Add shadow for a better visual effect
+  padding: "10px 20px",
+  marginBottom: "30px",
+  borderRadius: "10px",
+  width:"90vw",
+  maxWidth: "1000px",
+});
+
+export const WhiteBackgroundAccordionSummary = styled(AccordionSummary)({
+  // Add any specific styles for the AccordionSummary if needed
+});
+
+export const WhiteBackgroundAccordionDetails = styled(AccordionDetails)({
+  // Add any specific styles for the AccordionDetails if needed
+});
+
+export const AccordionText = styled(Typography)({
+  color: "#003565",
+  fontWeight: "bold",
+    fontSize: "22px",
+});
+export const AccordionText2 = styled(Typography)({
+  color: "#003565",
+  fontWeight: "400",
+  fontSize: "18px",
 });

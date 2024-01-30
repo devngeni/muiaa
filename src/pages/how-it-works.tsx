@@ -1,16 +1,33 @@
 import Footer from '@/Components/Footer';
 import Navbar from '@/Components/Navbar';
-import { OrangeButton, UnparalleledMainText, UnparalleledSubText } from '@/StyledComponents/HomeHero';
 import {
+  OrangeButton,
+  UnparalleledMainText,
+  UnparalleledSubText,
+  WhiteText,
+  SeamlessMainText,
+  BlueButton,
+} from "@/StyledComponents/HomeHero";
+import {
+  AccordionText,
   BgOverlay,
+  BlueSection,
   Part,
   PlatformContainer,
   PLatformItem,
+  WhiteBackgroundAccordion,
+  WhiteBackgroundAccordionDetails,
+  WhiteBackgroundAccordionSummary,
   WhiteBox,
   WorksMainHero,
+  AccordionText2,
 } from "@/StyledComponents/Works";
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react'
+import MaximizeIcon from "@mui/icons-material/Maximize";
+import { NavButton2 } from '@/StyledComponents/Navbar';
+import TestimonialCarousel from '@/Components/TestimonialCarousel';
+
 
 function HotItWorks() {
   return (
@@ -95,7 +112,7 @@ function HotItWorks() {
               />
               <br />
               <br />
-
+              Carousel
               <img src="./assets/line.svg" style={{ height: "100px" }} />
             </Grid>
             <Grid item md={9}>
@@ -159,20 +176,121 @@ function HotItWorks() {
       </PlatformContainer>
       <Part>
         <Box>
-        <Typography
-          sx={{
-            color: "#ffff",
-            fontWeight: "900",
-            fontSize: "60px",
-            margin: "auto",
-            lineHeight: "",
-            letterSpacing: "-3px",
-          }}
-        >
-          They were Part, they say...
-        </Typography>
+          <Typography
+            sx={{
+              color: "#ffff",
+              fontWeight: "900",
+              fontSize: "60px",
+              margin: "auto",
+              lineHeight: "",
+              letterSpacing: "-3px",
+            }}
+          >
+            They were Part, they say...
+          </Typography>
         </Box>
       </Part>
+      <TestimonialCarousel />
+      <BlueSection>
+        <WhiteText
+          sx={{
+            ml: "0",
+            mb: "50px",
+            mt: "70px",
+            maxWidth: "80vw",
+          }}
+        >
+          Technical FAQ's
+        </WhiteText>
+        <WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+            <AccordionText>How does it help Farmers</AccordionText>
+          </WhiteBackgroundAccordionSummary>
+          <WhiteBackgroundAccordionDetails>
+            <AccordionText2>
+              It helps farmers show that they produce top-quality dairy and
+              helps them reach more people who care about where their food comes
+              from.
+            </AccordionText2>
+          </WhiteBackgroundAccordionDetails>
+        </WhiteBackgroundAccordion>
+        <WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+            <AccordionText>Is it easy to use?</AccordionText>
+          </WhiteBackgroundAccordionSummary>
+          <WhiteBackgroundAccordionDetails>
+            <AccordionText2>
+              Yes, it's easy! You can scan a code or use an app to find out
+              everything you need to know about the dairy products you're
+              getting. It's like a digital tag that ensures you're getting the
+              best.
+            </AccordionText2>
+          </WhiteBackgroundAccordionDetails>
+        </WhiteBackgroundAccordion>
+        <WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+            <AccordionText>Is my information safe?</AccordionText>
+          </WhiteBackgroundAccordionSummary>
+          <WhiteBackgroundAccordionDetails>
+            <AccordionText2>
+              Absolutely! Your personal details are kept super safe and can't be
+              seen by anyone else. This means you can use the platform without
+              worrying about your privacy.
+            </AccordionText2>
+          </WhiteBackgroundAccordionDetails>
+        </WhiteBackgroundAccordion>
+        <WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+            <AccordionText>How does it help farmers?</AccordionText>
+          </WhiteBackgroundAccordionSummary>
+          <WhiteBackgroundAccordionDetails>
+            <AccordionText2>
+              It helps farmers show that they produce top-quality dairy and
+              helps them reach more people who care about where their food comes
+              from
+            </AccordionText2>
+          </WhiteBackgroundAccordionDetails>
+        </WhiteBackgroundAccordion>
+        <br />
+        <br />
+        <Box sx={{ width: "100%", textAlign: "center" }}>
+          <SeamlessMainText
+            sx={{
+              color: "#fff",
+              fontWeight: "900",
+              fontSize: "80px",
+              letterSpacing: "-3px",
+              textAlign: "center",
+              width: "100%",
+              maxWidth: "700px",
+              margin: "auto",
+            }}
+          >
+            Get Started
+          </SeamlessMainText>
+          <UnparalleledSubText
+            sx={{
+              fontSize: "28px",
+              lineHeight: "44px",
+              color: "#fff",
+              textAlign: "center",
+              width: "100%",
+              maxWidth: "1200px",
+              margin: "auto",
+              fontWeight: "300",
+            }}
+          >
+            Hundreds of people already going cross-border with us. What are you
+            waiting for?
+          </UnparalleledSubText>
+          <br />
+          <NavButton2 sx={{ maxWidth: "262px" }}>Get Satrted</NavButton2>
+          <br />
+          <br />
+          <br />
+          <br />
+        </Box>
+      </BlueSection>
       <Footer />
     </>
   );
