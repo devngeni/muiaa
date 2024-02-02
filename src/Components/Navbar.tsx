@@ -17,10 +17,10 @@ function Navbar() {
           <img src="assets/logo.svg" />
         </NavbarLogoItem>
         <NavbarLinksContainer sx={{ display: { md: "flex", xs: "none" } }} item md={4} xs={0}>
-          <a href="#">Home</a>
-          <a href="#">How it works</a>
+          <a href="/">Home</a>
+          <a href="/how-it-works">How it works</a>
           <a href="#">Solutions</a>
-          <a href="#">About</a>
+          <a href="/about">About</a>
         </NavbarLinksContainer>
         <NavBarButtonsContainer item md={4} xs={6}>
           <NavButton href="#">Explore App</NavButton>

@@ -2,16 +2,13 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
-  Paper,
-  Typography,
   Box,
   useMediaQuery,
   useTheme,
-  styled,
+  styled
 } from "@mui/material";
-import Testimony from "./Testimony";
 
-const TestimonialCarousel = () => {
+const ProductsCarousel = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -33,17 +30,33 @@ const TestimonialCarousel = () => {
 
   return (
     <CustomCarousel {...settings}>
-      <Box sx={{ border: "none" }}>
-        <Testimony />
+      <Box>
+        <Box
+          sx={{ padding: "50px", textAlign: "center" }}
+        >
+          <img
+            src="/assets/nourishing.svg"
+            style={{ width: "80%", margin: "auto" }}
+          />
+        </Box>
       </Box>
-      <Box sx={{ border: "none" }}>
-        <Testimony />
+      <Box>
+        <Box
+          sx={{ padding: "50px", textAlign: "center" }}
+        >
+          <img
+            src="/assets/carefully.svg"
+            style={{ width: "80%", margin: "auto", border:"1px solid yellow" }}
+          />
+        </Box>
       </Box>
-      <Box sx={{ border: "none" }}>
-        <Testimony />
+      <Box>
+        <Box sx={{ padding: "50px", textAlign:"center" }}>
+          <img src="/assets/smart.svg" style={{width:"80%", margin:"auto"}}/>
+        </Box>
       </Box>
     </CustomCarousel>
   );
 };
 
-export default TestimonialCarousel;
+export default ProductsCarousel;

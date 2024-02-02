@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/Components/Navbar";
-import AboutHero from "@/Components/AboutHero";
 import Footer from "@/Components/Footer";
-import { Fade } from "react-awesome-reveal"; 
+import { Fade } from "react-awesome-reveal";
 import {
   BgMask,
   BlueButton,
@@ -34,6 +32,7 @@ import {
 } from "@/StyledComponents/HomeHero";
 import { Grid, Box, Button } from "@mui/material";
 import CountUp from "react-countup";
+import { TypeAnimation } from "react-type-animation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -106,7 +105,19 @@ export default function Home() {
           <br />
           <NavyTextContainer>
             <WhiteText>
-              Uniting Kenya and Zanzibar through innovative technology
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Uniting Kenya and Zanzibar",
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  "through innovative technology",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={10}
+                style={{ fontSize: "1.8em", display: "inline-block" }}
+                repeat={Infinity}
+              />
             </WhiteText>
           </NavyTextContainer>
         </NavySection>
@@ -114,10 +125,24 @@ export default function Home() {
       <SeamlessMainContainer container>
         <SeamlessGridItem item md={4} xs={0}></SeamlessGridItem>
         <SeamlessGridItem item md={8} xs={12}>
-          <SeamlessMainText>
-            By seamlessly integrating blockchain technology, we offer farmers
-            and distributors a decentralized platform for feed ordering,
-            real-time traceability, and smart contract automation.
+          <SeamlessMainText sx={{ minHeight: "220px", mt: "100px" }}>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "By seamlessly integrating blockchain technology,",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "we offer farmers and distributors a decentralized",
+                1000,
+                "platform for feed ordering, real-time traceability,",
+                1000,
+                "and smart contract automation.",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "1em", display: "inline-block" }}
+              repeat={Infinity}
+            />
           </SeamlessMainText>
           <br />
           <UnparalleledMainContainer container>
@@ -221,9 +246,26 @@ export default function Home() {
       <br />
       <Box sx={{ width: "85%", margin: "auto", mb: "50px" }}>
         <SeamlessMainText
-          sx={{ color: "#191919", fontWeight: "700", width: "50%" }}
+          sx={{
+            color: "#191919",
+            fontWeight: "700",
+            width: "50%",
+            minHeight: "200px",
+          }}
         >
-          Remarkable transformation fueled by digital solutions.
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "Remarkable transformation",
+              1000,
+              " fueled by digital solutions",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "1em", display: "inline-block" }}
+            repeat={Infinity}
+          />
         </SeamlessMainText>
       </Box>
       <Grid container sx={{ width: "85%", margin: "auto" }}>
@@ -249,62 +291,32 @@ export default function Home() {
         <Grid md={6} xs={12}>
           <Grid container>
             <Grid md={6} xs={12}>
-              <img src="./assets/notes.svg" />
-              <br />
-              <SeamlessMainText
-                sx={{
-                  color: "#191919",
-                  fontSize: "32px",
-                  fontWeight: "700",
-                  width: "100%",
-                }}
-              >
-                Smart Contracts
-              </SeamlessMainText>
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "65%",
-                  color: "#444444",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-            </Grid>
-            <Grid md={6} xs={12}>
-              <img src="./assets/search.svg" />
-              <br />
-              <SeamlessMainText
-                sx={{
-                  color: "#191919",
-                  fontSize: "32px",
-                  fontWeight: "700",
-                  width: "100%",
-                }}
-              >
-                Smart Contracts
-              </SeamlessMainText>
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "65%",
-                  color: "#444444",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
+              <Fade direction="left">
+                <img src="./assets/notes.svg" />
+                <br />
+                <SeamlessMainText
+                  sx={{
+                    color: "#191919",
+                    fontSize: "32px",
+                    fontWeight: "700",
+                    width: "100%",
+                  }}
+                >
+                  Smart Contracts
+                </SeamlessMainText>
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "65%",
+                    color: "#444444",
+                  }}
+                >
+                  Automate and enforce agreements between stakeholders, such as
+                  contracts between farmers and suppliers, payment terms, and
+                  quality standards.
+                </UnparalleledSubText>
+              </Fade>
               <br />
               <br />
               <br />
@@ -313,30 +325,32 @@ export default function Home() {
               <br />
             </Grid>
             <Grid md={6} xs={12}>
-              <img src="./assets/quality.svg" />
-              <br />
-              <SeamlessMainText
-                sx={{
-                  color: "#191919",
-                  fontSize: "32px",
-                  fontWeight: "700",
-                  width: "100%",
-                }}
-              >
-                Smart Contracts
-              </SeamlessMainText>
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "65%",
-                  color: "#444444",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
+              <Fade direction="right">
+                <img src="./assets/search.svg" />
+                <br />
+                <SeamlessMainText
+                  sx={{
+                    color: "#191919",
+                    fontSize: "32px",
+                    fontWeight: "700",
+                    width: "100%",
+                  }}
+                >
+                  Smart Contracts
+                </SeamlessMainText>
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "65%",
+                    color: "#444444",
+                  }}
+                >
+                  Automate and enforce agreements between stakeholders, such as
+                  contracts between farmers and suppliers, payment terms, and
+                  quality standards.
+                </UnparalleledSubText>
+              </Fade>
               <br />
               <br />
               <br />
@@ -345,30 +359,66 @@ export default function Home() {
               <br />
             </Grid>
             <Grid md={6} xs={12}>
-              <img src="./assets/tokenization.svg" />
+              <Fade direction="left">
+                <img src="./assets/quality.svg" />
+                <br />
+                <SeamlessMainText
+                  sx={{
+                    color: "#191919",
+                    fontSize: "32px",
+                    fontWeight: "700",
+                    width: "100%",
+                  }}
+                >
+                  Smart Contracts
+                </SeamlessMainText>
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "65%",
+                    color: "#444444",
+                  }}
+                >
+                  Automate and enforce agreements between stakeholders, such as
+                  contracts between farmers and suppliers, payment terms, and
+                  quality standards.
+                </UnparalleledSubText>
+              </Fade>
               <br />
-              <SeamlessMainText
-                sx={{
-                  color: "#191919",
-                  fontSize: "32px",
-                  fontWeight: "700",
-                  width: "100%",
-                }}
-              >
-                Smart Contracts
-              </SeamlessMainText>
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "65%",
-                  color: "#444444",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </Grid>
+            <Grid md={6} xs={12}>
+              <Fade direction="right">
+                <img src="./assets/tokenization.svg" />
+                <br />
+                <SeamlessMainText
+                  sx={{
+                    color: "#191919",
+                    fontSize: "32px",
+                    fontWeight: "700",
+                    width: "100%",
+                  }}
+                >
+                  Smart Contracts
+                </SeamlessMainText>
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "65%",
+                    color: "#444444",
+                  }}
+                >
+                  Automate and enforce agreements between stakeholders, such as
+                  contracts between farmers and suppliers, payment terms, and
+                  quality standards.
+                </UnparalleledSubText>
+              </Fade>
               <br />
               <br />
               <br />
@@ -447,7 +497,19 @@ export default function Home() {
             margin: "auto",
           }}
         >
-          Add Interoperability To Your Work
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "Add Interoperability",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "To Your Work",
+              1000
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "1em", display: "inline-block" }}
+            repeat={Infinity}
+          />
         </SeamlessMainText>
         <UnparalleledSubText
           sx={{
@@ -532,7 +594,9 @@ export default function Home() {
             xs={12}
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <img src="assets/phone.svg" style={{ marginTop: "-80px" }} />
+            <Fade direction="up">
+              <img src="assets/phone.svg" style={{ marginTop: "-80px" }} />
+            </Fade>
           </Grid>
           <Grid
             item
@@ -630,254 +694,275 @@ export default function Home() {
           }}
         >
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
-                }}
-              >
-                <img src="./assets/api.svg" />
-              </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                XDC APIs integrations.
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
-            </Box>
+            <Fade direction="left">
+              <Fade direction="down">
+                <Box
+                  sx={{
+                    width: "95%",
+                    margin: "auto",
+                    borderRadius: "10px",
+                    background: "#F0F0F0",
+                    height: "280px",
+                    mb: "20px",
+                    padding: "20px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    <img src="./assets/api.svg" />
+                  </Box>
+                  <UnparalleledMainText
+                    sx={{ fontSize: "24px", textAlign: "left" }}
+                  >
+                    XDC APIs integrations.
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    Automate and enforce agreements between stakeholders, such
+                    as contracts between farmers and suppliers, payment terms,
+                    and quality standards.
+                  </UnparalleledSubText>
+                </Box>
+              </Fade>
+            </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
+            <Fade direction="down">
               <Box
                 sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
+                  width: "95%",
+                  margin: "auto",
+                  borderRadius: "10px",
+                  background: "#F0F0F0",
+                  height: "280px",
+                  mb: "20px",
+                  padding: "20px",
                 }}
               >
-                <img src="./assets/token.svg" />
+                <Box
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "row-reverse",
+                  }}
+                >
+                  <img src="./assets/token.svg" />
+                </Box>
+                <UnparalleledMainText
+                  sx={{ fontSize: "24px", textAlign: "left" }}
+                >
+                  Token Creation: MUIAA Feed Tokens (MFT)
+                </UnparalleledMainText>
+                <br />
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "100%",
+                    color: "#444444",
+                    textAlign: "left",
+                  }}
+                >
+                  The MFT ERC20 token will serve multiple utilities within the
+                  platform, including payments, incentives, and platform
+                  governance.
+                </UnparalleledSubText>
               </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                Token Creation: MUIAA Feed Tokens (MFT)
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                The MFT ERC20 token will serve multiple utilities within the
-                platform, including payments, incentives, and platform
-                governance.
-              </UnparalleledSubText>
-            </Box>
+            </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
-                }}
-              >
-                <img src="./assets/orderlist.svg" />
-              </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                Order Records Management on the Blockchain(Transaction Hashes)
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                To maintain a decentralised, tamper-proof record of all orders
-                placed on the platform.
-              </UnparalleledSubText>
-            </Box>
+            <Fade direction="right">
+              <Fade direction="down">
+                <Box
+                  sx={{
+                    width: "95%",
+                    margin: "auto",
+                    borderRadius: "10px",
+                    background: "#F0F0F0",
+                    height: "280px",
+                    mb: "20px",
+                    padding: "20px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    <img src="./assets/orderlist.svg" />
+                  </Box>
+                  <UnparalleledMainText
+                    sx={{ fontSize: "24px", textAlign: "left" }}
+                  >
+                    Order Records Management on the Blockchain(Transaction
+                    Hashes)
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    To maintain a decentralised, tamper-proof record of all
+                    orders placed on the platform.
+                  </UnparalleledSubText>
+                </Box>
+              </Fade>
+            </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
-                }}
-              >
-                <img src="./assets/map.svg" />
-              </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                Real-time Feed Tracking via Blockchain
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                Automate and enforce agreements between stakeholders, such as
-                contracts between farmers and suppliers, payment terms, and
-                quality standards.
-              </UnparalleledSubText>
-            </Box>
+            <Fade direction="left">
+              <Fade direction="up">
+                <Box
+                  sx={{
+                    width: "95%",
+                    margin: "auto",
+                    borderRadius: "10px",
+                    background: "#F0F0F0",
+                    height: "280px",
+                    mb: "20px",
+                    padding: "20px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    <img src="./assets/map.svg" />
+                  </Box>
+                  <UnparalleledMainText
+                    sx={{ fontSize: "24px", textAlign: "left" }}
+                  >
+                    Real-time Feed Tracking via Blockchain
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    Automate and enforce agreements between stakeholders, such
+                    as contracts between farmers and suppliers, payment terms,
+                    and quality standards.
+                  </UnparalleledSubText>
+                </Box>
+              </Fade>
+            </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
+            <Fade direction="up">
               <Box
                 sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
+                  width: "95%",
+                  margin: "auto",
+                  borderRadius: "10px",
+                  background: "#F0F0F0",
+                  height: "280px",
+                  mb: "20px",
+                  padding: "20px",
                 }}
               >
-                <img src="./assets/contract.svg" />
+                <Box
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "row-reverse",
+                  }}
+                >
+                  <img src="./assets/contract.svg" />
+                </Box>
+                <UnparalleledMainText
+                  sx={{ fontSize: "24px", textAlign: "left" }}
+                >
+                  Real-time Feed Tracking via Blockchain
+                </UnparalleledMainText>
+                <br />
+                <UnparalleledSubText
+                  sx={{
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    width: "100%",
+                    color: "#444444",
+                    textAlign: "left",
+                  }}
+                >
+                  To automate agreements between stakeholders like contracts
+                  between farmers and suppliers, payment terms, and quality
+                  standards.
+                </UnparalleledSubText>
               </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                Real-time Feed Tracking via Blockchain
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                To automate agreements between stakeholders like contracts
-                between farmers and suppliers, payment terms, and quality
-                standards.
-              </UnparalleledSubText>
-            </Box>
+            </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Box
-              sx={{
-                width: "95%",
-                margin: "auto",
-                borderRadius: "10px",
-                background: "#F0F0F0",
-                height: "280px",
-                mb: "20px",
-                padding: "20px",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
-                }}
-              >
-                <img src="./assets/distribution.svg" />
-              </Box>
-              <UnparalleledMainText
-                sx={{ fontSize: "24px", textAlign: "left" }}
-              >
-                Incentive Distribution through MFT Tokens(Royalties)
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText
-                sx={{
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  width: "100%",
-                  color: "#444444",
-                  textAlign: "left",
-                }}
-              >
-                To reward users and stakeholders for their participation,
-                loyalty, and contributions to the platform.
-              </UnparalleledSubText>
-            </Box>
+            <Fade direction="right">
+              <Fade direction="up">
+                <Box
+                  sx={{
+                    width: "95%",
+                    margin: "auto",
+                    borderRadius: "10px",
+                    background: "#F0F0F0",
+                    height: "280px",
+                    mb: "20px",
+                    padding: "20px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    <img src="./assets/distribution.svg" />
+                  </Box>
+                  <UnparalleledMainText
+                    sx={{ fontSize: "24px", textAlign: "left" }}
+                  >
+                    Incentive Distribution through MFT Tokens(Royalties)
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{
+                      fontSize: "16px",
+                      lineHeight: "22px",
+                      width: "100%",
+                      color: "#444444",
+                      textAlign: "left",
+                    }}
+                  >
+                    To reward users and stakeholders for their participation,
+                    loyalty, and contributions to the platform.
+                  </UnparalleledSubText>
+                </Box>
+              </Fade>
+            </Fade>
           </Grid>
         </Grid>
       </Box>

@@ -20,6 +20,7 @@ import {
   ColBodyText,
 } from "@/StyledComponents/AboutHero";
 import { Grid } from "@mui/material";
+import CountUp from "react-countup";
 import React from "react";
 
 function AboutHero() {
@@ -43,7 +44,11 @@ function AboutHero() {
         <br />
         <br />
         <AboutHeroContainer
-          sx={{ width: "100%", maxWidth: "1000px", paddingBottom: {md:"500px", xs:"250px"} }}
+          sx={{
+            width: "100%",
+            maxWidth: "1000px",
+            paddingBottom: { md: "500px", xs: "250px" },
+          }}
         >
           <AboutUsText>About us</AboutUsText>
           <AboutMiniHeader sx={{ fontSize: { md: "60px", xs: "40px" } }}>
@@ -56,7 +61,7 @@ function AboutHero() {
           <AboutDumbGrid container>
             <AboutDumbGridItem item xs={0} sm={6}></AboutDumbGridItem>
             <AboutDumbGridItem item xs={12} sm={6}>
-              <AboutMiniText sx={{maxWidth:"90%", margin:"auto"}}>
+              <AboutMiniText sx={{ maxWidth: "90%", margin: "auto" }}>
                 Lead qualification process entail a meticulous process of
                 evaluating & categorizing potential leads to determine their
                 quality and likelihood of conversion. We utilize advanced data
@@ -71,25 +76,46 @@ function AboutHero() {
       <CowImageContainer>
         <CowsImage src="assets/cows.svg" />
       </CowImageContainer>
-      <br/>
+      <br />
       <StatsContainer container>
         <StatItem item md={4} xs={12}>
           <NumbersContainer container>
-            <NumbersItem item md={12} xs={6} sx={{textAlign:{md:"left", xs:"center"}}}>
-              <StatNumber>50+</StatNumber>
+            <NumbersItem
+              item
+              md={12}
+              xs={6}
+              sx={{ textAlign: { md: "left", xs: "center" } }}
+            >
+              <StatNumber>
+                <CountUp end={50} duration={10} /> +
+              </StatNumber>
               <StatText>Happy Clients</StatText>
             </NumbersItem>
-            <NumbersItem item md={12} xs={6} sx={{textAlign:{md:"left", xs:"center"}}}>
-              <StatNumber>266</StatNumber>
+            <NumbersItem
+              item
+              md={12}
+              xs={6}
+              sx={{ textAlign: { md: "left", xs: "center" } }}
+            >
+              <StatNumber>
+                <CountUp end={266} duration={10} />
+              </StatNumber>
               <StatText>Smart Contracts</StatText>
             </NumbersItem>
-            <NumbersItem item md={12} xs={6} sx={{textAlign:{md:"left", xs:"center"}}}>
-              <StatNumber>45</StatNumber>
+            <NumbersItem
+              item
+              md={12}
+              xs={6}
+              sx={{ textAlign: { md: "left", xs: "center" } }}
+            >
+              <StatNumber>
+                <CountUp end={45} duration={10} />
+              </StatNumber>
               <StatText>Export/Import Transactions</StatText>
             </NumbersItem>
           </NumbersContainer>
         </StatItem>
-        <br/>
+        <br />
         <StatItem item md={6} xs={12}>
           <StatText>Impact</StatText>
           <br />
@@ -107,9 +133,7 @@ function AboutHero() {
           </AboutMiniHeader>
           <br />
           <br />
-          <StatText
-            sx={{ lineHeight: "30px", fontSize: "20px" }}
-          >
+          <StatText sx={{ lineHeight: "30px", fontSize: "20px" }}>
             Lead qualification process entail a meticulous process of evaluating
             & categorizing potential leads to determine their quality and
             likelihood of conversion. We utilize advanced data analytics,
@@ -119,7 +143,9 @@ function AboutHero() {
           </StatText>
           <br />
           <br />
-          <ServiceButton sx={{marginLeft:"30px"}}>Get our Service</ServiceButton>
+          <ServiceButton sx={{ marginLeft: "30px" }}>
+            Get our Service
+          </ServiceButton>
         </StatItem>
       </StatsContainer>
       <br />

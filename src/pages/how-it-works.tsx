@@ -1,5 +1,5 @@
-import Footer from '@/Components/Footer';
-import Navbar from '@/Components/Navbar';
+import Footer from "@/Components/Footer";
+import Navbar from "@/Components/Navbar";
 import {
   OrangeButton,
   UnparalleledMainText,
@@ -22,12 +22,14 @@ import {
   WorksMainHero,
   AccordionText2,
 } from "@/StyledComponents/Works";
-import { Box, Grid, Typography } from '@mui/material';
-import React from 'react'
+import { Box, Grid, Typography } from "@mui/material";
+import React from "react";
 import MaximizeIcon from "@mui/icons-material/Maximize";
-import { NavButton2 } from '@/StyledComponents/Navbar';
-import TestimonialCarousel from '@/Components/TestimonialCarousel';
-
+import { NavButton2 } from "@/StyledComponents/Navbar";
+import ProductsCarousel from "@/Components/ProductsCarousel";
+import TestimonialCarousel from "@/Components/TestimonialCarousel";
+import { Fade } from "react-awesome-reveal";
+import {TypeAnimation} from "react-type-animation";
 
 function HotItWorks() {
   return (
@@ -36,25 +38,41 @@ function HotItWorks() {
       <WorksMainHero>
         <BgOverlay>
           <Box sx={{ textAlign: "center", width: "100%" }}>
-            <Typography
-              sx={{
-                color: "#ffff",
-                fontWeight: "900",
-                fontSize: "60px",
-                maxWidth: "1200px",
-                margin: "auto",
-                mt: "100px",
-                lineHeight: "",
-                letterSpacing: "-3px",
-              }}
-            >
-              Reliable supply for all your dairy products, across the border
-            </Typography>
-            <OrangeButton
-              sx={{ marginTop: "20px", maxWidth: "300px", mb: "100px" }}
-            >
-              Place Order
-            </OrangeButton>
+            <Fade direction="down">
+              <Typography
+                sx={{
+                  color: "#ffff",
+                  fontWeight: "900",
+                  fontSize: "60px",
+                  maxWidth: "1200px",
+                  margin: "auto",
+                  mt: "100px",
+                  lineHeight: "",
+                  letterSpacing: "-3px",
+                }}
+              >
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "Reliable supply for all your dairy products,",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    " across the border",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ display: "inline-block" }}
+                  repeat={Infinity}
+                />
+              </Typography>
+            </Fade>
+            <Fade direction="up">
+              <OrangeButton
+                sx={{ marginTop: "20px", maxWidth: "300px", mb: "100px" }}
+              >
+                Place Order
+              </OrangeButton>
+            </Fade>
           </Box>
         </BgOverlay>
       </WorksMainHero>
@@ -81,27 +99,36 @@ function HotItWorks() {
         <PLatformItem item xs={12} md={6}>
           <Grid container sx={{ marginTop: "150px" }}>
             <Grid item md={3} sx={{ textAlign: "center" }}>
-              <img src="./assets/SearchOrange.svg" style={{ width: "100px" }} />
-              <br />
-              <br />
+              <Fade direction="down">
+                <img
+                  src="./assets/SearchOrange.svg"
+                  style={{ width: "100px" }}
+                />
+                <br />
+                <br />
 
-              <img src="./assets/line.svg" style={{ height: "100px" }} />
+                <img src="./assets/line.svg" style={{ height: "100px" }} />
+              </Fade>
             </Grid>
             <Grid item md={9}>
-              <UnparalleledMainText sx={{ color: "#fff" }}>
-                Place order
-              </UnparalleledMainText>
-              <br />
-              <UnparalleledSubText sx={{ maxWidth: "500px", color: "#E0D2A4" }}>
-                Place an order via Whatsapp or our Webstore.
+              <Fade direction="down">
+                <UnparalleledMainText sx={{ color: "#fff" }}>
+                  Place order
+                </UnparalleledMainText>
                 <br />
-                <br /> Supplier details, contracts, and quality assurance
-                information in a transparent and tamper-proof manner are
-                recorded in the blockchain. <br />
-                <br /> Contracts with suppliers would typically outline terms
-                such as feed quality, pricing, delivery schedules, and payment
-                terms.
-              </UnparalleledSubText>
+                <UnparalleledSubText
+                  sx={{ maxWidth: "500px", color: "#E0D2A4" }}
+                >
+                  Place an order via Whatsapp or our Webstore.
+                  <br />
+                  <br /> Supplier details, contracts, and quality assurance
+                  information in a transparent and tamper-proof manner are
+                  recorded in the blockchain. <br />
+                  <br /> Contracts with suppliers would typically outline terms
+                  such as feed quality, pricing, delivery schedules, and payment
+                  terms.
+                </UnparalleledSubText>
+              </Fade>
             </Grid>
           </Grid>
           <Grid container sx={{ marginTop: "60px" }}>
@@ -112,7 +139,6 @@ function HotItWorks() {
               />
               <br />
               <br />
-              Carousel
               <img src="./assets/line.svg" style={{ height: "100px" }} />
             </Grid>
             <Grid item md={9}>
@@ -143,7 +169,9 @@ function HotItWorks() {
             }}
           >
             <Box sx={{ mt: "-200px", width: "100%" }}>
-              <img src="./assets/Stock.png" style={{ width: "100%" }} />
+              <Fade direction="down">
+                <img src="./assets/Stock.png" style={{ width: "100%" }} />
+              </Fade>
             </Box>
           </WhiteBox>
         </PLatformItem>
@@ -174,6 +202,15 @@ function HotItWorks() {
           </Typography>
         </PLatformItem>
       </PlatformContainer>
+      <ProductsCarousel />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Part>
         <Box>
           <Typography
@@ -190,7 +227,23 @@ function HotItWorks() {
           </Typography>
         </Box>
       </Part>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <TestimonialCarousel />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <BlueSection>
         <WhiteText
           sx={{
