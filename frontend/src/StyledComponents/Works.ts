@@ -99,3 +99,6 @@ export const AccordionText2 = styled(Typography)({
   fontSize: "18px",
   fontFamily: "'Inter'",
 });
+
+export const AccordionText3 = styled(Typography)({
+});

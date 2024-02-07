@@ -22,11 +22,8 @@ export const AboutUsText = styled(Typography)({
 });
 
 export const AboutUsText2 = styled(AboutUsText)({
-    // fontSize: "80px",
-    // maxWidth:"1200px",
     fontWeight: "500",
     paddingTop: "10px",
-    // letterSpacing: "-3px",
     lineHeight:"96px",
     color:"#fff",
 })
