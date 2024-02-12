@@ -7,6 +7,7 @@ import {
   NavbarLogoItem,
   NavbarMiniContainer,
 } from "@/StyledComponents/Navbar";
+import Link from "next/link";
 import React from "react";
 
 function Navbar() {
@@ -17,10 +18,10 @@ function Navbar() {
           <img src="assets/logo.svg" />
         </NavbarLogoItem>
         <NavbarLinksContainer sx={{ display: { md: "flex", xs: "none" } }} item md={4} xs={0}>
-          <a href="/">Home</a>
-          <a href="/how-it-works">How it works</a>
-          <a href="#">Solutions</a>
-          <a href="/about">About</a>
+          <Link href="/">Home</Link>
+          <Link href="/how-it-works">How it works</Link>
+          <Link href="#">Solutions</Link>
+          <Link href="/about">About</Link>
         </NavbarLinksContainer>
         <NavBarButtonsContainer item md={4} xs={6}>
           <NavButton href="#">Explore App</NavButton>
