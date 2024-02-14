@@ -1,0 +1,63 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dependency directories
+**/vendor/
+**/.pnp/
+pnp.js
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.log
+*.yml
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Production build/output
+/dist/
+/build/
+/out/
+
+# Backup and swap files
+*~
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# User-specific files
+.history
+.DS_Store
+Desktop.ini
+ehthumbs.db
+Thumbs.db
