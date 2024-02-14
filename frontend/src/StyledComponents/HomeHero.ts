@@ -1,5 +1,10 @@
 import { styled, Grid, Box, Typography, Button } from "@mui/material";
 
+const baseFontSize = {
+  fontSize: "16px", // Set a base font size for default screens
+};
+
+
 export const HomeMainContainer = styled(Box)({
   backgroundImage: "linear-gradient(to right, #033D66, #14263E)",
 });
@@ -9,6 +14,9 @@ export const HeroMainContainer = styled(Grid)({
   backgroundImage: "url(./assets/bgIMage.svg)",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
+  "@media (max-width: 600px)": {
+    height: "100vh",
+  },
 });
 export const BgMask = styled(Box)({
   width: "100%",
@@ -29,12 +37,18 @@ export const ContentContainer = styled(Box)({
   justifyContent: "center",
 });
 export const HeroMainText = styled(Typography)({
+  ...baseFontSize,
   fontSize: "80px",
   fontWeight: "bold",
   color: "#1A1A1A",
   textAlign: "left",
   width: "80%",
   lineHeight: "96px",
+  "@media (max-width: 600px)": {
+    fontSize: "40px", // Adjust for smaller screens
+    lineHeight: "48px",
+    margin:"auto",
+  },
 });
 export const HeroMiniText = styled(Typography)({
   fontSize: "24px",
@@ -42,6 +56,9 @@ export const HeroMiniText = styled(Typography)({
   color: "#1A1A1A",
   textAlign: "left",
   width: "70%",
+  "@media (max-width: 600px)": {
+    margin: "auto",
+  },
 });
 export const BlueButton = styled(Button)({
   border: "none",
@@ -65,7 +82,7 @@ export const NavyStatContainer = styled(Box)({
   borderRadius: "10px",
   minHeight: "200px",
   marginTop: "-100px",
-  zIndex: 500,
+  zIndex: 503,
 });
 export const NavyStatGridContainer = styled(Grid)({
   width: "100%",
@@ -114,12 +131,11 @@ export const NavyTextContainer = styled(Box)({
 });
 export const WhiteText = styled(Typography)({
   color: "#fff",
-  fontSize: "60px",
   fontWeight: "bold",
   width: "160%",
   margin: "auto",
   textAlign: "center",
-  marginLeft: "-30%",
+  // marginLeft: "-30%",
   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
 });
 export const SeamlessMainContainer = styled(Grid)({

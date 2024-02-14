@@ -30,13 +30,19 @@ import {
   UnparalleledMainText,
   UnparalleledSubText,
 } from "@/StyledComponents/HomeHero";
-import { Grid, Box, Button } from "@mui/material";
+import { Grid, Box, Button, styled } from "@mui/material";
 import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const Type = styled(TypeAnimation)({
+
+  })
+  const ImageHere = styled("img")({
+
+  })
   return (
     <>
       <Head>
@@ -66,19 +72,26 @@ export default function Home() {
                 </HeroMiniText>
                 <br />
                 <br />
-                <Grid container sx={{ width: "100%", maxWidth: "500px" }}>
-                  <Grid item xs={6}>
-                    <BlueButton>Explore App</BlueButton>
+                <Grid
+                  container
+                  sx={{ width: "90%", maxWidth: "500px", margin: "auto" }}
+                >
+                  <Grid item md={6} xs={12}>
+                    <BlueButton sx={{ width: "100%", mb: "30px" }}>
+                      Explore App
+                    </BlueButton>
                   </Grid>
-                  <Grid item xs={6}>
-                    <OrangeButton>Get in touch</OrangeButton>
+                  <Grid item md={6} xs={12}>
+                    <OrangeButton sx={{ width: "100%", mb: "30px" }}>
+                      Get in touch
+                    </OrangeButton>
                   </Grid>
                 </Grid>
               </Fade>
             </ContentContainer>
           </BgMask>
         </HeroMainContainer>
-        <NavyStatContainer>
+        <NavyStatContainer sx={{ marginTop: { md: "-100px", xs: "-50px" } }}>
           <NavyStatGridContainer container>
             <NavyStatItem md={4} xs={12}>
               <NavyNumber>
@@ -100,12 +113,25 @@ export default function Home() {
             </NavyStatItem>
           </NavyStatGridContainer>
         </NavyStatContainer>
-        <NavySection>
+        <NavySection
+          sx={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            minHeight: { md: "400px", xs: "200px" },
+          }}
+        >
           <br />
           <br />
-          <NavyTextContainer>
+          <NavyTextContainer
+            sx={{
+              width: { xs: "100%", md: "70%" },
+              margin: "auto",
+              minHeight: { md: "400px", xs: "200px" },
+            }}
+          >
             <WhiteText>
-              <TypeAnimation
+              <Type
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
                   "Uniting Kenya and Zanzibar",
@@ -115,7 +141,11 @@ export default function Home() {
                 ]}
                 wrapper="span"
                 speed={10}
-                style={{ fontSize: "1.8em", display: "inline-block" }}
+                sx={{
+                  fontSize: { md: "60px", xs: "1em" },
+                  display: "inline-block",
+                  marginLeft: { md: "-30%", xs: "0" },
+                }}
                 repeat={Infinity}
               />
             </WhiteText>
@@ -126,7 +156,7 @@ export default function Home() {
         <SeamlessGridItem item md={4} xs={0}></SeamlessGridItem>
         <SeamlessGridItem item md={8} xs={12}>
           <SeamlessMainText sx={{ minHeight: "220px", mt: "100px" }}>
-            <TypeAnimation
+            <Type
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "By seamlessly integrating blockchain technology,",
@@ -140,7 +170,11 @@ export default function Home() {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "1em", display: "inline-block" }}
+              sx={{
+                fontSize: { md: "1em", xs: "0.5em" },
+                display: "inline-block",
+                minHeight: { xs: "170px", md: "200px" },
+              }}
               repeat={Infinity}
             />
           </SeamlessMainText>
@@ -151,7 +185,7 @@ export default function Home() {
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
                   <Grid container>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <UnparalleledMainText>
                         Unparalleled access to high- quality feed products
                       </UnparalleledMainText>
@@ -164,7 +198,7 @@ export default function Home() {
                       </UnparalleledSubText>
                       <br />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <img src="assets/dairy.svg" />
                     </Grid>
                   </Grid>
@@ -218,7 +252,7 @@ export default function Home() {
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
                   <Grid container>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <UnparalleledMainText>
                         Unparalleled access to high- quality feed products
                       </UnparalleledMainText>
@@ -231,7 +265,7 @@ export default function Home() {
                       </UnparalleledSubText>
                       <br />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <img src="assets/dairy.svg" />
                     </Grid>
                   </Grid>
@@ -253,7 +287,7 @@ export default function Home() {
             minHeight: "200px",
           }}
         >
-          <TypeAnimation
+          <Type
             sequence={[
               // Same substring at the start will only be typed out once, initially
               "Remarkable transformation",
@@ -263,7 +297,11 @@ export default function Home() {
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: "1em", display: "inline-block" }}
+            sx={{
+              fontSize: { md: "1em", xs: "0.6em" },
+              display: "inline-block",
+              minHeight: { md: "200px", xs: "170px" },
+            }}
             repeat={Infinity}
           />
         </SeamlessMainText>
@@ -272,9 +310,9 @@ export default function Home() {
         <Grid md={6} xs={12}>
           <UnparalleledSubText
             sx={{
-              fontSize: "28px",
-              lineHeight: "44px",
-              width: "65%",
+              fontSize: { md: "28px", xs: "24px" },
+              lineHeight: { md: "44px", xs: "35px" },
+              width: { md: "65%", xs: "100%" },
               color: "#1A1A1A",
             }}
           >
@@ -287,6 +325,9 @@ export default function Home() {
             traceability, and quality assurance throughout the feed supply
             chain.
           </UnparalleledSubText>
+          <br />
+          <br />
+          <br />
         </Grid>
         <Grid md={6} xs={12}>
           <Grid container>
@@ -308,13 +349,13 @@ export default function Home() {
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: "65%",
+                    width: { md: "65%", xs: "80%" },
                     color: "#444444",
                   }}
                 >
-                  Automate and enforce agreements between stakeholders, such as
-                  contracts between farmers and suppliers, payment terms, and
-                  quality standards.
+                  Our platform leverages smart contracts to automate and enforce
+                  agreements between stakeholders, such as contracts between
+                  farmers and suppliers, payment terms, and quality standards.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -336,19 +377,20 @@ export default function Home() {
                     width: "100%",
                   }}
                 >
-                  Smart Contracts
+                  Tokenization
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: "65%",
+                    width: { md: "65%", xs: "80%" },
                     color: "#444444",
                   }}
                 >
-                  Automate and enforce agreements between stakeholders, such as
-                  contracts between farmers and suppliers, payment terms, and
-                  quality standards.
+                  Introducing our utility token specific to the platform which
+                  serves a variety of purposes.From facilitating transactions to
+                  offering incentives and rewards, our token creates an
+                  ecosystem of participation.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -370,19 +412,20 @@ export default function Home() {
                     width: "100%",
                   }}
                 >
-                  Smart Contracts
+                  Traceability
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: "65%",
+                    width: { md: "65%", xs: "80%" },
                     color: "#444444",
                   }}
                 >
-                  Automate and enforce agreements between stakeholders, such as
-                  contracts between farmers and suppliers, payment terms, and
-                  quality standards.
+                  Each batch of feed is recorded on the blockchain, this
+                  provides you with real-time tracking capabilities, allowing
+                  you to trace its origin, transportation, and quality testing
+                  results.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -404,19 +447,20 @@ export default function Home() {
                     width: "100%",
                   }}
                 >
-                  Smart Contracts
+                  Quality Assurance
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: "65%",
+                    width: { md: "65%", xs: "80%" },
                     color: "#444444",
                   }}
                 >
-                  Automate and enforce agreements between stakeholders, such as
-                  contracts between farmers and suppliers, payment terms, and
-                  quality standards.
+                  We store feed quality data, including nutritional content and
+                  safety tests, immutably on the blockchain. This not only
+                  ensures the highest standards but also builds trust among all
+                  stakeholders involved in the process.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -436,11 +480,11 @@ export default function Home() {
           margin: "auto",
           borderRadius: "20px",
           overflow: "hidden",
-          mb: "50px",
+          mb: { md: "50px", xs: "0" },
         }}
       >
         <Grid item md={4} xs={0}>
-          <Box sx={{ width: "100%", height: "650px" }}>
+          <Box sx={{ width: "100%", height: { md: "650px" } }}>
             <img src="./assets/asset22.svg" style={{ width: "100%" }} />
           </Box>
         </Grid>
@@ -454,8 +498,9 @@ export default function Home() {
             sx={{
               color: "#191919",
               fontWeight: "700",
-              fontSize: "40px",
+              fontSize: { md: "40px", xs: "28px" },
               letterSpacing: "0.02em",
+              lineHeight: "35px",
             }}
           >
             Spearheading a transformative era
@@ -464,8 +509,8 @@ export default function Home() {
           <br />
           <UnparalleledSubText
             sx={{
-              fontSize: "24px",
-              lineHeight: "40px",
+              fontSize: { md: "24px", xs: "16px" },
+              lineHeight: { md: "40px", xs: "22px" },
               color: "#1A1A1A",
             }}
           >
@@ -476,7 +521,7 @@ export default function Home() {
           </UnparalleledSubText>
         </Grid>
         <Grid item md={4} xs={0}>
-          <Box sx={{ width: "100%", height: "650px" }}>
+          <Box sx={{ width: "100%", height: { md: "650px", xs: "auto" } }}>
             <img src="./assets/asset24.svg" style={{ width: "100%" }} />
           </Box>
         </Grid>
@@ -497,17 +542,20 @@ export default function Home() {
             margin: "auto",
           }}
         >
-          <TypeAnimation
+          <Type
             sequence={[
               // Same substring at the start will only be typed out once, initially
               "Add Interoperability",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               "To Your Work",
-              1000
+              1000,
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: "1em", display: "inline-block" }}
+            sx={{
+              fontSize: { md: "1em", xs: "0.5em" },
+              display: "inline-block",
+            }}
             repeat={Infinity}
           />
         </SeamlessMainText>
@@ -595,7 +643,10 @@ export default function Home() {
             sx={{ display: "flex", alignItems: "center" }}
           >
             <Fade direction="up">
-              <img src="assets/phone.svg" style={{ marginTop: "-80px" }} />
+              <ImageHere
+                src="assets/phone.svg"
+                sx={{ marginTop: { md: "-80px", xs: "0" } }}
+              />
             </Fade>
           </Grid>
           <Grid
@@ -664,7 +715,13 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <Box sx={{ width: "100%", textAlign: "center" }}>
+      <Box
+        sx={{
+          width: "100%",
+          textAlign: "center",
+          marginTop: { xs: "400px", md: "10px" },
+        }}
+      >
         <br />
         <br />
         <br />
@@ -976,7 +1033,7 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: "80px",
+            fontSize: { md: "80px", xs: "40px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
@@ -988,11 +1045,11 @@ export default function Home() {
         </SeamlessMainText>
         <UnparalleledSubText
           sx={{
-            fontSize: "28px",
+            fontSize: { md: "28px", xs: "16px" },
             lineHeight: "44px",
             color: "#1A1A1A",
             textAlign: "center",
-            width: "100%",
+            width: { md: "100%", xs: "80%" },
             maxWidth: "1200px",
             margin: "auto",
           }}
