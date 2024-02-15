@@ -3,6 +3,7 @@ import { styled, Grid, Box, Typography, Button } from "@mui/material";
 const baseFontSize = {
   fontSize: "16px", // Set a base font size for default screens
 };
+//
 
 
 export const HomeMainContainer = styled(Box)({
@@ -27,6 +28,7 @@ export const BgMask = styled(Box)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  // Add a mask to the background image
 });
 export const ContentContainer = styled(Box)({
   width: "100%",

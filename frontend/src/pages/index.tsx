@@ -494,6 +494,7 @@ export default function Home() {
           xs={12}
           sx={{ background: "#F5F6F7", padding: "50px" }}
         >
+          
           <SeamlessMainText
             sx={{
               color: "#191919",
