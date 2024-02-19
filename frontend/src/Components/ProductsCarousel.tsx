@@ -31,9 +31,7 @@ const ProductsCarousel = () => {
   return (
     <CustomCarousel {...settings}>
       <Box>
-        <Box
-          sx={{ padding: "50px", textAlign: "center" }}
-        >
+        <Box sx={{ padding: { md: "50px", xs: "20px" }, textAlign: "center" }}>
           <img
             src="/assets/nourishing.svg"
             style={{ width: "80%", margin: "auto" }}
@@ -41,18 +39,19 @@ const ProductsCarousel = () => {
         </Box>
       </Box>
       <Box>
-        <Box
-          sx={{ padding: "50px", textAlign: "center" }}
-        >
+        <Box sx={{ padding: { md: "50px", xs: "20px" }, textAlign: "center" }}>
           <img
             src="/assets/carefully.svg"
-            style={{ width: "80%", margin: "auto", border:"1px solid yellow" }}
+            style={{ width: "80%", margin: "auto", border: "1px solid yellow" }}
           />
         </Box>
       </Box>
       <Box>
-        <Box sx={{ padding: "50px", textAlign:"center" }}>
-          <img src="/assets/smart.svg" style={{width:"80%", margin:"auto"}}/>
+        <Box sx={{ padding: { md: "50px", xs: "20px" }, textAlign: "center" }}>
+          <img
+            src="/assets/smart.svg"
+            style={{ width: "80%", margin: "auto" }}
+          />
         </Box>
       </Box>
     </CustomCarousel>

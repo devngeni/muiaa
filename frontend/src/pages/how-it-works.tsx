@@ -86,8 +86,8 @@ function HotItWorks() {
               sx={{
                 color: "#ffff",
                 fontWeight: "900",
-                fontSize: "60px",
-                width: "65%",
+                fontSize: {md:"60px", xs:"40px"},
+                width: {md:"65%", xs:"90%"},
                 margin: "auto",
                 mt: "100px",
                 lineHeight: "72px",
@@ -106,7 +106,7 @@ function HotItWorks() {
             md={6}
             sx={{ width: "90%", maxWidth: "90vw", margin: "auto" }}
           >
-            <Grid container sx={{ marginTop: "150px" }}>
+            <Grid container sx={{ marginTop: {md:"150px", xs:"20px"} }}>
               <Grid item md={3} sx={{ textAlign: "center" }}>
                 <Fade direction="down">
                   <img
@@ -178,12 +178,12 @@ function HotItWorks() {
             <WhiteBox
               sx={{
                 borderTopRightRadius: "0",
-                height: { md: "600px", xs: "400px" },
+                height: { md: "600px", xs: "auto" },
                 boxShadow: "rgba(0, 0, 0, 0.3) 0px 26px 26px",
                 borderTop: "1px solid #fff",
               }}
             >
-              <Box sx={{ mt: "-200px", width: "100%" }}>
+              <Box sx={{ mt: {md:"-200px", xs:"10px"}, width: "100%" }}>
                 <Fade direction="down">
                   <img src="./assets/Stock.png" style={{ width: "100%" }} />
                 </Fade>
@@ -203,7 +203,7 @@ function HotItWorks() {
                 fontSize: { md: "60px", xs: "30px" },
                 width: "80%",
                 margin: "auto",
-                mt: "100px",
+                mt: {md:"100px", xs:"20px"},
                 lineHeight: "55px",
                 letterSpacing: "-2px",
               }}
@@ -338,7 +338,7 @@ function HotItWorks() {
               sx={{
                 color: "#fff",
                 fontWeight: "900",
-                fontSize: "80px",
+                fontSize: {md:"80px", sm:"40px"},
                 letterSpacing: "-3px",
                 textAlign: "center",
                 width: "100%",
@@ -351,7 +351,7 @@ function HotItWorks() {
             <UnparalleledSubText
               sx={{
                 fontSize: "28px",
-                lineHeight: "44px",
+                lineHeight: {md:"44px", sm:"30px"},
                 color: "#fff",
                 textAlign: "center",
                 width: "100%",

@@ -11,7 +11,7 @@ function Footer() {
     <MainFooterContainer>
       <Grid container sx={{ width: "95%", margin: "auto" }}>
         <Grid item xs={12} md={3}>
-          <img src="assets/logo.svg" />
+          <img src="assets/logo.png" />
           <br />
           <FooterText>
             Cutting-edge cross-border cattle feed distribution enterprise

@@ -37,7 +37,12 @@ function AboutHero() {
       <AboutMainHero>
         <AboutHeroContainer>
           <AboutUsText>About us</AboutUsText>
-          <AboutUsText2 sx={{ fontSize: { md: "80px", xs: "50px" } }}>
+          <AboutUsText2
+            sx={{
+              fontSize: { md: "80px", xs: "40px" },
+              lineHeight: { md: "96px", xs: "55px" },
+            }}
+          >
             Building the Value in dairy supplies
           </AboutUsText2>
           <br />
@@ -139,12 +144,14 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={50} duration={10} /> +
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Happy Clients</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "20px" } }}>
+                  Happy Clients
+                </StatText>
               </Fade>
             </NumbersItem>
             <NumbersItem
@@ -154,12 +161,14 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={266} duration={10} />
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Smart Contracts</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "20px" } }}>
+                  Smart Contracts
+                </StatText>
               </Fade>
             </NumbersItem>
             <NumbersItem
@@ -169,12 +178,16 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={45} duration={10} />
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Export/Import Transactions</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "16px" } }}>
+                  Export/Import Transactions
+                </StatText>
+                <br />
+                <br />
               </Fade>
             </NumbersItem>
           </NumbersContainer>
@@ -198,7 +211,7 @@ function AboutHero() {
             </AboutMiniHeader>
             <br />
             <br />
-            <StatText sx={{ lineHeight: "30px", fontSize: "20px" }}>
+            <StatText sx={{ lineHeight: {md:"30px", xs:"24px"}, fontSize: "20px" }}>
               Lead qualification process entail a meticulous process of
               evaluating & categorizing potential leads to determine their
               quality and likelihood of conversion. We utilize advanced data
@@ -305,11 +318,23 @@ function AboutHero() {
             maxWidth: "100vw",
           }}
         >
-          <AboutUsText2 sx={{ color: "#000", width: "100%" }}>
+          <AboutUsText2
+            sx={{
+              color: "#000",
+              width: "100%",
+              fontSize: { md: "80px", xs: "40px" },
+            }}
+          >
             Get Started
           </AboutUsText2>
           <br />
-          <AboutMiniText sx={{ color: "#000", width: "100%" }}>
+          <AboutMiniText
+            sx={{
+              color: "#000",
+              width: "100%",
+              fontSize: { md: "28px", xs: "16px" },
+            }}
+          >
             Enabling the world to move value the way information moves today.
           </AboutMiniText>
           <br /> <br />

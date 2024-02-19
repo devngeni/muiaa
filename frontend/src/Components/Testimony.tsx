@@ -45,7 +45,7 @@ function Testimony() {
         <br />
         <Typography
           variant="body1"
-          sx={{ paddingLeft: "10px", textAlign: "left", color: "#393939", fontWeight:"300", fontSize:"16px", lineHeight:"26px" }}
+          sx={{ paddingLeft: "10px", textAlign: "left", color: "#393939", fontWeight:"300", fontSize:{md:"16px", xs:"13px"}, lineHeight:"26px" }}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatum, voluptate, nemo, quidem quia voluptas quae voluptatibus
