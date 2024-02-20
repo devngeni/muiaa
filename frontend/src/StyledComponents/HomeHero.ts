@@ -22,7 +22,7 @@ export const HeroMainContainer = styled(Grid)({
     height: "130vh",
   },
   "@media (max-width: 400px)": {
-    height: "160vh",
+    height: "100vh",
   },
 });
 export const BgMask = styled(Box)({
