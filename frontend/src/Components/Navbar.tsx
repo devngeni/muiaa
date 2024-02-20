@@ -47,7 +47,7 @@ function Navbar() {
     <NavbarContainer>
       <NavbarMiniContainer container>
         <NavbarLogoItem item md={2} xs={6}>
-          <img src="assets/logo.svg" alt="Logo" />
+          <img src="assets/logo.png" alt="Logo" />
         </NavbarLogoItem>
         {/* NavbarLinksContainer for larger screens */}
         <NavbarLinksContainer
@@ -119,7 +119,7 @@ function Navbar() {
             <br />
             <br />
             <Box sx={{ width: "100%", mt: "50px" }}>
-              <img src="assets/logo.svg" alt="Logo" style={{ width: "100%" }} />
+              <img src="assets/logo.png" alt="Logo" style={{ width: "100%" }} />
             </Box>
           </Box>
           <a href="/" style={{ color: "#fff", fontWeight: "bolder" }}>
@@ -132,7 +132,7 @@ function Navbar() {
             href="/how-it-works"
             style={{ color: "#fff", fontWeight: "bolder" }}
           >
-            <ButtonCustom>Hiw it works</ButtonCustom>
+            <ButtonCustom>How it works</ButtonCustom>
           </a>
           <br />
           <br />

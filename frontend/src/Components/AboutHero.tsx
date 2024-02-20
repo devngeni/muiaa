@@ -22,7 +22,6 @@ import {
 import { Grid, Box, styled } from "@mui/material";
 import CountUp from "react-countup";
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
 import { Fade } from "react-awesome-reveal";
 
 function AboutHero() {
@@ -30,14 +29,17 @@ function AboutHero() {
     width: "100%",
     height: "auto",
   });
-  const Type = styled(TypeAnimation)({
-  })
   return (
     <>
       <AboutMainHero>
         <AboutHeroContainer>
           <AboutUsText>About us</AboutUsText>
-          <AboutUsText2 sx={{ fontSize: { md: "80px", xs: "50px" } }}>
+          <AboutUsText2
+            sx={{
+              fontSize: { md: "80px", xs: "40px" },
+              lineHeight: { md: "96px", xs: "55px" },
+            }}
+          >
             Building the Value in dairy supplies
           </AboutUsText2>
           <br />
@@ -62,23 +64,8 @@ function AboutHero() {
           <AboutMiniHeader
             sx={{ fontSize: { md: "60px", xs: "40px" }, minHeight: "200px" }}
           >
-            <Type
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Committed to delivering transparency, efficiency, and traceability",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "in the supply chain",
-                1000,
-              ]}
-              wrapper="span"
-              speed={10}
-              sx={{
-                display: "inline-block",
-                minHeight: "150px",
-                fontSize: { md: "1em", xs: "0.7em" },
-              }}
-              repeat={Infinity}
-            />
+            Committed to delivering transparency, efficiency, and traceability
+            in the supply chain
           </AboutMiniHeader>
           <br />
           <br />
@@ -139,12 +126,14 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={50} duration={10} /> +
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Happy Clients</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "20px" } }}>
+                  Happy Clients
+                </StatText>
               </Fade>
             </NumbersItem>
             <NumbersItem
@@ -154,12 +143,14 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={266} duration={10} />
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Smart Contracts</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "20px" } }}>
+                  Smart Contracts
+                </StatText>
               </Fade>
             </NumbersItem>
             <NumbersItem
@@ -169,12 +160,16 @@ function AboutHero() {
               sx={{ textAlign: { md: "left", xs: "center" } }}
             >
               <Fade direction="left">
-                <StatNumber>
+                <StatNumber sx={{ fontSize: { md: "50px", xs: "35px" } }}>
                   <CountUp end={45} duration={10} />
                 </StatNumber>
               </Fade>
               <Fade direction="left">
-                <StatText>Export/Import Transactions</StatText>
+                <StatText sx={{ fontSize: { md: "24px", xs: "16px" } }}>
+                  Export/Import Transactions
+                </StatText>
+                <br />
+                <br />
               </Fade>
             </NumbersItem>
           </NumbersContainer>
@@ -198,7 +193,9 @@ function AboutHero() {
             </AboutMiniHeader>
             <br />
             <br />
-            <StatText sx={{ lineHeight: "30px", fontSize: "20px" }}>
+            <StatText
+              sx={{ lineHeight: { md: "30px", xs: "24px" }, fontSize: "20px" }}
+            >
               Lead qualification process entail a meticulous process of
               evaluating & categorizing potential leads to determine their
               quality and likelihood of conversion. We utilize advanced data
@@ -240,19 +237,8 @@ function AboutHero() {
                 minHeight: "200px",
               }}
             >
-              <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Transformative blockachain-enhaced solutions",
-                  1000, // wait 1s before replacing "Mice" with "Hamsters"
-                  "built to connect and manage distribution",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "1em", display: "inline-block" }}
-                repeat={Infinity}
-              />
+              Transformative blockachain-enhaced solutions built to connect and
+              manage distribution
             </AboutMiniHeader>
             <br /> <br /> <br />
           </Grid>
@@ -305,11 +291,23 @@ function AboutHero() {
             maxWidth: "100vw",
           }}
         >
-          <AboutUsText2 sx={{ color: "#000", width: "100%" }}>
+          <AboutUsText2
+            sx={{
+              color: "#000",
+              width: "100%",
+              fontSize: { md: "80px", xs: "40px" },
+            }}
+          >
             Get Started
           </AboutUsText2>
           <br />
-          <AboutMiniText sx={{ color: "#000", width: "100%" }}>
+          <AboutMiniText
+            sx={{
+              color: "#000",
+              width: "100%",
+              fontSize: { md: "28px", xs: "16px" },
+            }}
+          >
             Enabling the world to move value the way information moves today.
           </AboutMiniText>
           <br /> <br />

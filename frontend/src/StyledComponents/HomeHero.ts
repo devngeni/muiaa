@@ -18,6 +18,12 @@ export const HeroMainContainer = styled(Grid)({
   "@media (max-width: 600px)": {
     height: "100vh",
   },
+  "@media (max-width: 500px)": {
+    height: "130vh",
+  },
+  "@media (max-width: 400px)": {
+    height: "100vh",
+  },
 });
 export const BgMask = styled(Box)({
   width: "100%",
@@ -41,7 +47,8 @@ export const ContentContainer = styled(Box)({
 export const HeroMainText = styled(Typography)({
   ...baseFontSize,
   fontSize: "80px",
-  fontWeight: "bold",
+  fontFamily:"'Inter' sans-serif",
+  fontWeight: "900",
   color: "#1A1A1A",
   textAlign: "left",
   width: "80%",
@@ -139,6 +146,10 @@ export const WhiteText = styled(Typography)({
   textAlign: "center",
   // marginLeft: "-30%",
   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
+  "@media (max-width: 800px)": {
+    width: "90%",
+    margin: "auto",
+  },
 });
 export const SeamlessMainContainer = styled(Grid)({
   width: "90%",
@@ -179,16 +190,22 @@ export const OrangeText = styled(Typography)({
 });
 
 export const UnparalleledMainText = styled(Typography)({
-    color:"#003565",
-    fontSize:"28px",
-    fontWeight:"700",
-    lineHeight:"32px",
-    width:"90%",
-})
+  color: "#003565",
+  fontSize: "28px",
+  fontWeight: "700",
+  lineHeight: "32px",
+  width: "90%",
+  "@media (max-width: 600px)": {
+    fontSize: "20px",
+  },
+});
 export const UnparalleledSubText = styled(Typography)({
-    color:"#003565",
-    fontSize:"16px",
-    fontWeight:"300",
-    lineHeight:"21px",
-    width:"90%",
-})
+  color: "#003565",
+  fontSize: "16px",
+  fontWeight: "300",
+  lineHeight: "21px",
+  width: "90%",
+  "@media (max-width: 800px)": {
+    fontSize: "12px",
+  },
+});
