@@ -75,11 +75,18 @@ export default function Home() {
                 </HeroMiniText>
                 <br />
                 <br />
-                <Grid container sx={{ width: "auto", maxWidth: "500px" }}>
+                <Grid
+                  container
+                  sx={{
+                    width: "auto",
+                    maxWidth: { xs: "300px", md: "500px" },
+                    margin: "auto",
+                  }}
+                >
                   <Grid item md={6} xs={12}>
                     <BlueButton
                       sx={{
-                        width: "90%",
+                        width: { md: "90%", xs: "100%" },
                         mb: "30px",
                       }}
                     >
@@ -87,7 +94,9 @@ export default function Home() {
                     </BlueButton>
                   </Grid>
                   <Grid item md={6} xs={12}>
-                    <OrangeButton sx={{ width: "90%", mb: "30px" }}>
+                    <OrangeButton
+                      sx={{ width: { md: "90%", xs: "100%" }, mb: "30px" }}
+                    >
                       Get in touch
                     </OrangeButton>
                   </Grid>
@@ -114,7 +123,7 @@ export default function Home() {
               <NavyNumber>
                 <CountUp end={45} duration={10} />
               </NavyNumber>
-              <NavyText>Export/Import Transactions</NavyText>
+              <NavyText sx={{pb:"30px"}}>Export/Import Transactions</NavyText>
             </NavyStatItem>
           </NavyStatGridContainer>
         </NavyStatContainer>
@@ -135,53 +144,32 @@ export default function Home() {
               minHeight: { md: "400px", xs: "200px" },
             }}
           >
-            <WhiteText>
-              <Type
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Uniting Kenya and Zanzibar",
-                  1000, // wait 1s before replacing "Mice" with "Hamsters"
-                  "through innovative technology",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={10}
-                sx={{
-                  fontSize: { md: "60px", xs: "1em" },
-                  display: "inline-block",
-                  marginLeft: { md: "-30%", xs: "0" },
-                }}
-                repeat={Infinity}
-              />
+            <WhiteText
+              sx={{
+                fontSize: { md: "60px", xs: "35px" },
+                display: "inline-block",
+                marginLeft: { md: "-30%", xs: "0" },
+                pt: { xs: "100px", md: "0" },
+                pb: { xs: "100px", md: "0" },
+              }}
+            >
+              Uniting Kenya and Zanzibar through innovative technology
             </WhiteText>
           </NavyTextContainer>
         </NavySection>
       </HomeMainContainer>
       <SeamlessMainContainer container>
-        <SeamlessGridItem item md={4} xs={0}></SeamlessGridItem>
-        <SeamlessGridItem item md={8} xs={12}>
-          <SeamlessMainText sx={{ minHeight: "220px", mt: "100px" }}>
-            <Type
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "By seamlessly integrating blockchain technology,",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "we offer farmers and distributors a decentralized",
-                1000,
-                "platform for feed ordering, real-time traceability,",
-                1000,
-                "and smart contract automation.",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              sx={{
-                fontSize: { md: "1em", xs: "0.5em" },
-                display: "inline-block",
-                minHeight: { xs: "170px", md: "200px" },
-              }}
-              repeat={Infinity}
-            />
+        <SeamlessGridItem item md={12} xs={12}>
+          <SeamlessMainText
+            sx={{
+              mt: "100px",
+              fontSize: {md:"60px", xs:"30px"},
+              letterSpacing: {md:"-3px", xs:"-1px"},
+            }}
+          >
+            By seamlessly integrating blockchain technology, we offer farmers
+            and distributors a decentralized platform for feed ordering,
+            real-time traceability, and smart contract automation.
           </SeamlessMainText>
           <br />
           <UnparalleledMainContainer container>
@@ -288,27 +276,12 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "700",
-            width: "50%",
-            minHeight: "200px",
+            width: {md:"50%", xs:"100%"},
+            fontSize:{lg:"60px",md:"40px", xs:"30px"},
+            letterSpacing: {md:"-3px", xs:"-1px"},
           }}
         >
-          <Type
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "Remarkable transformation",
-              1000,
-              " fueled by digital solutions",
-              1000,
-            ]}
-            wrapper="span"
-            speed={50}
-            sx={{
-              fontSize: { md: "1em", xs: "0.6em" },
-              display: "inline-block",
-              minHeight: { md: "200px", xs: "170px" },
-            }}
-            repeat={Infinity}
-          />
+          Remarkable transformation fueled by digital solutions
         </SeamlessMainText>
       </Box>
       <Grid container sx={{ width: "85%", margin: "auto" }}>
@@ -539,7 +512,7 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: "80px",
+            fontSize: { lg: "80px", md: "60px", xs: "40px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
@@ -547,22 +520,7 @@ export default function Home() {
             margin: "auto",
           }}
         >
-          <Type
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "Add Interoperability",
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
-              "To Your Work",
-              1000,
-            ]}
-            wrapper="span"
-            speed={50}
-            sx={{
-              fontSize: { md: "1em", xs: "0.5em" },
-              display: "inline-block",
-            }}
-            repeat={Infinity}
-          />
+          Add Interoperability To Your Work
         </SeamlessMainText>
         <UnparalleledSubText
           sx={{
@@ -735,12 +693,13 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: "80px",
+            fontSize: { lg: "80px", md: "60px", xs: "40px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
             margin: "auto",
+            marginTop: { md: "0", xs: "150px" },
           }}
         >
           It Powers the chain
