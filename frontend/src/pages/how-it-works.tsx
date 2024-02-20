@@ -22,7 +22,7 @@ import {
   WorksMainHero,
   AccordionText2,
 } from "@/StyledComponents/Works";
-import { Box, Grid, Typography, styled } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import MaximizeIcon from "@mui/icons-material/Maximize";
 import { NavButton2 } from "@/StyledComponents/Navbar";
@@ -166,6 +166,7 @@ function HotItWorks() {
                 height: { md: "600px", xs: "auto" },
                 boxShadow: "rgba(0, 0, 0, 0.3) 0px 26px 26px",
                 borderTop: "1px solid #fff",
+                marginTop:"-10px"
               }}
             >
               <Box sx={{ mt: { md: "-200px", xs: "10px" }, width: "100%" }}>

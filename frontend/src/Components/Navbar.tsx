@@ -60,7 +60,6 @@ function Navbar() {
             Home
           </a>
           <a href="/how-it-works">How it works</a>
-          <a href="#">Solutions</a>
           <a href="/about">About</a>
         </NavbarLinksContainer>
         {/* NavBarButtonsContainer for larger screens */}
