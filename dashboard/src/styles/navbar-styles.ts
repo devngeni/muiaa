@@ -6,8 +6,8 @@ export const NavbarContainer = styled(Box)(() => ({
   justifyContent: "center",
   background: "#14263E",
   color: "#FFFFFF",
-  padding: "10px 20px",
-  height: "99px",
+  padding: "0 100px",
+  height: "66px",
 
   ".navbar_items": {
     display: "flex",
@@ -17,6 +17,44 @@ export const NavbarContainer = styled(Box)(() => ({
   },
 
   ".logo": {
-    svg: {},
+    width: "138.86px",
+    height: "46.29px",
+    img: {
+      width: "100%",
+      height: "100%",
+    },
+  },
+}));
+
+export const SearchContainer = styled(Box)(() => ({
+  display: "flex",
+  alignItems: "center",
+  width: "898px",
+  height: "38px",
+  borderRadius: "10px",
+  background: "rgba(255, 255, 255, 0.2)",
+  padding: "0 20px",
+
+  ".icon": {
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
+    img: {
+      height: "25px",
+      width: "25px",
+    },
+  },
+
+  input: {
+    background: "transparent",
+    width: "100%",
+    height: "100%",
+    padding: "0 20px",
+    border: "none",
+    outline: "none",
+    color: "#AAA8A7",
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontWeight: 400,
   },
 }));

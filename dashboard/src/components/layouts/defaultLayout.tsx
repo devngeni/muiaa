@@ -6,12 +6,14 @@ import Footer from "../common-components/footer";
 import { PageWrapper } from "@/styles/common-styles";
 
 const DefaultLayout = ({ children, pageTitle }: LayoutProps) => {
+  const renderFooter = true;
+
   return (
-    <PageWrapper>
+    <PageWrapper isFooterRendered={renderFooter}>
       <HeadMetaData pageTitle={pageTitle} />
       <Navbar />
       <main>{children}</main>
-      <Footer />
+      {renderFooter && <Footer />}
     </PageWrapper>
   );
 };
