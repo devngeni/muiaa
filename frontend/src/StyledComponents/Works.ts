@@ -91,9 +91,11 @@ export const AccordionText = styled(Typography)({
   color: "#003565",
   fontWeight: "bold",
     fontSize: "22px",
+  fontFamily: "'Inter'",
 });
 export const AccordionText2 = styled(Typography)({
   color: "#003565",
   fontWeight: "400",
   fontSize: "18px",
+  fontFamily: "'Inter'",
 });

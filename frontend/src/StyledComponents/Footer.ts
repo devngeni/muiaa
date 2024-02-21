@@ -10,13 +10,14 @@ export const MainFooterContainer = styled(Box)({
 });
 
 export const FooterText = styled(Typography)({
-    color: "#fff",
-    fontSize: "16px",
-    fontWeight: "300",
-    textAlign: "left",
-    paddingLeft: "30px",
-    paddingBottom:"10px",
-    });
+  color: "#fff",
+  fontSize: "16px",
+  fontWeight: "300",
+  textAlign: "left",
+  paddingLeft: "30px",
+  paddingBottom: "10px",
+  fontFamily: "'Inter'",
+});
 export const FooterHeader = styled(FooterText)({
     fontWeight: "bold",
 })

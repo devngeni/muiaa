@@ -1,5 +1,5 @@
 import { FooterHeader, FooterText, MainFooterContainer } from '@/StyledComponents/Footer'
-import { Grid } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import React from 'react'
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -9,49 +9,66 @@ import { YouTube } from '@mui/icons-material';
 function Footer() {
   return (
     <MainFooterContainer>
-      <Grid container sx={{ width: "95%", margin: "auto" }}>
-        <Grid item xs={12} md={3}>
-          <img src="assets/logo.png" />
-          <br />
-          <FooterText>
-            Cutting-edge cross-border cattle feed distribution enterprise
-          </FooterText>
-          <br />
-          <FooterText>
-            Terms of Use &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Privacy Policy
-          </FooterText>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <FooterHeader>Our platform</FooterHeader>
-          <FooterText>App Store</FooterText>
-          <FooterText>Play Store</FooterText>
+      <Grid container sx={{ width: "95%", margin: "auto", maxWidth: "1200px" }}>
+        <Grid item xs={6} md={4}>
+          <FooterHeader sx={{ color: "#E9BC6D" }}>Our platform</FooterHeader>
+          <FooterText>Playstore</FooterText>
           <FooterText>Make an Order</FooterText>
-          <FooterText>Docs</FooterText>
         </Grid>
-        <Grid item xs={6} md={3}>
-          <FooterHeader>Quick Links</FooterHeader>
+        <Grid item xs={6} md={4}>
+          <FooterHeader sx={{ color: "#E9BC6D" }}>Quick Links</FooterHeader>
           <FooterText>Home</FooterText>
           <FooterText>How it Works</FooterText>
-          <FooterText>Ecosystem</FooterText>
           <FooterText>About</FooterText>
-          <FooterText> Back to Top</FooterText>
         </Grid>
-        <Grid item xs={12} md={3} sx={{display:{md:"block", xs:"flex"}}}>
-          <FooterText>
-            <FacebookIcon />
-          </FooterText>
-          <br />
-          <FooterHeader>
-            <InstagramIcon />
-          </FooterHeader>
-          <br />
-          <FooterText>
-            <TwitterIcon />
-          </FooterText>
-          <br />
-          <FooterText>
-            <YouTube />
-          </FooterText>
+        <Grid item xs={12} md={4}>
+          <FooterHeader sx={{ color: "#E9BC6D" }}>Our Socials</FooterHeader>
+          <Box sx={{ display: { xs: "flex" } }}>
+            <FooterText>
+              <FacebookIcon />
+            </FooterText>
+            <br />
+            <FooterHeader>
+              <InstagramIcon />
+            </FooterHeader>
+            <br />
+            <FooterText>
+              <TwitterIcon />
+            </FooterText>
+            <br />
+            <FooterText>
+              <YouTube />
+            </FooterText>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            marginTop: "50px",
+            paddingTop: "50px",
+            borderTop: "2px solid #6A6A6A",
+          }}
+        >
+          <Box
+            sx={{
+              maxWidth: "1200px",
+              display: "flex",
+              flexWrap:"wrap",
+              margin: "auto",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <Box sx={{ maxWidth: "240px" }}>
+              <img src="assets/logo.png" />
+            </Box>
+            <FooterText>
+              {" "}
+              All Rights Reserved &nbsp; &nbsp; | &nbsp;&nbsp; Terms of Use
+              &nbsp; &nbsp; | &nbsp;&nbsp; Privacy Policy
+            </FooterText>
+          </Box>
         </Grid>
       </Grid>
     </MainFooterContainer>
