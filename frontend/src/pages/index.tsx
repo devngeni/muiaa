@@ -59,7 +59,11 @@ export default function Home() {
             <ContentContainer>
               {/* <Fade direction="down"> */}
               <HeroMainText
-                sx={{ fontSize: { md: "80px", sm: "30px", xs: "27px" } }}
+                sx={{
+                  fontSize: { md: "60px", sm: "30px", xs: "27px" },
+                  letterSpacing: { md: "-3px", xs: "-1px" },
+                  textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)", // Adjust values as needed
+                }}
               >
                 Advance cross-border cattle feed distribution enterprise.
               </HeroMainText>
@@ -123,7 +127,9 @@ export default function Home() {
               <NavyNumber>
                 <CountUp end={45} duration={10} />
               </NavyNumber>
-              <NavyText sx={{pb:"30px"}}>Export/Import Transactions</NavyText>
+              <NavyText sx={{ pb: "30px" }}>
+                Export/Import Transactions
+              </NavyText>
             </NavyStatItem>
           </NavyStatGridContainer>
         </NavyStatContainer>
@@ -141,7 +147,7 @@ export default function Home() {
             sx={{
               width: { xs: "100%", md: "70%" },
               margin: "auto",
-              minHeight: { md: "400px", xs: "200px" },
+              minHeight: { md: "600px", xs: "200px" },
             }}
           >
             <WhiteText
@@ -163,8 +169,9 @@ export default function Home() {
           <SeamlessMainText
             sx={{
               mt: "100px",
-              fontSize: {md:"60px", xs:"30px"},
-              letterSpacing: {md:"-3px", xs:"-1px"},
+              width: { md: "80%", xs: "100%" },
+              fontSize: { md: "60px", xs: "30px" },
+              letterSpacing: { md: "-3px", xs: "-1px" },
             }}
           >
             By seamlessly integrating blockchain technology, we offer farmers
@@ -276,9 +283,9 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "700",
-            width: {md:"50%", xs:"100%"},
-            fontSize:{lg:"60px",md:"40px", xs:"30px"},
-            letterSpacing: {md:"-3px", xs:"-1px"},
+            width: { md: "50%", xs: "100%" },
+            fontSize: { lg: "60px", md: "40px", xs: "30px" },
+            letterSpacing: { md: "-3px", xs: "-1px" },
           }}
         >
           Remarkable transformation fueled by digital solutions
@@ -479,6 +486,7 @@ export default function Home() {
               fontSize: { md: "40px", xs: "28px" },
               letterSpacing: "0.02em",
               lineHeight: "35px",
+              width: { md: "80%", xs: "100%" },
             }}
           >
             Spearheading a transformative era

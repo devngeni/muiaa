@@ -12,9 +12,11 @@ export const HomeMainContainer = styled(Box)({
 export const HeroMainContainer = styled(Grid)({
   width: "100vw",
   height: "80vh",
-  backgroundImage: "url(./assets/bgIMage.svg)",
+  backgroundImage: "url(./assets/bgIMage.svg)", // Initial background image
   backgroundSize: "cover",
+  backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+  // animation: `${backgroundChange} 10s linear infinite`, // 10s duration, linear timing, infinite loop
   "@media (max-width: 600px)": {
     height: "100vh",
   },
@@ -29,7 +31,7 @@ export const BgMask = styled(Box)({
   width: "100%",
   height: "100%",
   backgroundImage:
-    "linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0))",
+    "linear-gradient(to right, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -46,22 +48,23 @@ export const ContentContainer = styled(Box)({
 });
 export const HeroMainText = styled(Typography)({
   ...baseFontSize,
-  fontSize: "80px",
-  fontFamily:"'Inter' sans-serif",
+  fontSize: "60px",
   fontWeight: "900",
   color: "#1A1A1A",
   textAlign: "left",
   width: "80%",
   lineHeight: "96px",
+  fontFamily: "'Inter'",
   "@media (max-width: 600px)": {
     fontSize: "40px", // Adjust for smaller screens
     lineHeight: "48px",
-    margin:"auto",
+    margin: "auto",
   },
 });
 export const HeroMiniText = styled(Typography)({
   fontSize: "24px",
   fontWeight: "300",
+  fontFamily: "'Inter'",
   color: "#1A1A1A",
   textAlign: "left",
   width: "70%",
@@ -79,9 +82,17 @@ export const BlueButton = styled(Button)({
   background: "#033D66",
   fontWeight: "bold",
   textTransform: "capitalize",
+  "&:hover": {
+    background: "#E9BC6D",
+    color:"#003565",
+  },
 });
 export const OrangeButton = styled(BlueButton)({
   background: "#DFBC6D",
+  "&:hover": {
+    background: "#003565",
+    color: "#E9BC6D",
+  },
 });
 export const NavyStatContainer = styled(Box)({
   backgroundColor: "#fff",
@@ -112,11 +123,13 @@ export const NavyNumber = styled(Typography)({
   color: "#003565",
   width: "90%",
   margin: "auto",
+  fontFamily: "'Inter'",
 });
 export const NavyText = styled(Typography)({
   fontSize: "24px",
   fontWeight: "300",
   color: "#003565",
+  fontFamily: "'Inter'",
   width: "90%",
 });
 export const NavySection = styled(Box)({
@@ -125,9 +138,10 @@ export const NavySection = styled(Box)({
   backgroundImage: "linear-gradient(to right, #033D66, #14263E)",
   minHeight: "400px",
   zIndex: 400,
+  paddingTop: "100px",
 });
 export const NavyTextContainer = styled(Box)({
-  width: "70%",
+  width: "60%",
   maxWidth: "600px",
   margin: "auto",
   minHeight: "600px",
@@ -137,6 +151,7 @@ export const NavyTextContainer = styled(Box)({
   backgroundPosition: "center",
   mixBlendMode: "screen",
   backgroundColor: "linear-gradient(to right, #033D66, #14263E)",
+  marginTop:"80px",
 });
 export const WhiteText = styled(Typography)({
   color: "#fff",
@@ -144,7 +159,7 @@ export const WhiteText = styled(Typography)({
   width: "160%",
   margin: "auto",
   textAlign: "center",
-  // marginLeft: "-30%",
+  fontFamily: "'Inter'",
   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
   "@media (max-width: 800px)": {
     width: "90%",
@@ -166,6 +181,7 @@ export const SeamlessMainText = styled(Typography)({
   textAlign: "left",
   width: "80%",
   letterSpacing: "-3px",
+  fontFamily: "'Inter'",
 });
 export const UnparalleledMainContainer = styled(Grid)({
 })
@@ -179,14 +195,16 @@ export const UnparalleledContentContainer = styled(Typography)({
   backgroundColor: "#F5F6F7",
   borderRadius: "10px",
   padding: "20px",
-  minHeight:"360px",
+  minHeight: "360px",
+  fontFamily: "'Inter'",
 });
 export const OrangeText = styled(Typography)({
   color: "#DFBC6D",
   fontWeight: "500",
   fontSize: "14px",
-  marginBottom:"30px",
-  width:"100%",
+  marginBottom: "30px",
+  width: "100%",
+  fontFamily: "'Inter'",
 });
 
 export const UnparalleledMainText = styled(Typography)({
@@ -194,6 +212,7 @@ export const UnparalleledMainText = styled(Typography)({
   fontSize: "28px",
   fontWeight: "700",
   lineHeight: "32px",
+  fontFamily: "'Inter'",
   width: "90%",
   "@media (max-width: 600px)": {
     fontSize: "20px",
@@ -203,6 +222,7 @@ export const UnparalleledSubText = styled(Typography)({
   color: "#003565",
   fontSize: "16px",
   fontWeight: "300",
+  fontFamily: "'Inter'",
   lineHeight: "21px",
   width: "90%",
   "@media (max-width: 800px)": {

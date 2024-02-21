@@ -40,6 +40,12 @@ export const NavButton = styled(Button)({
   width: "40%",
   height: "40px",
   fontSize: "10px",
+  fontWeight:"900",
+  "&:hover": {
+    background: "#E9BC6D",
+    color: "#003565",
+    border:"none",
+  },
 });
 export const NavButton2 = styled(NavButton)({
     color: "#DFBC6D",

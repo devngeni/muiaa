@@ -45,11 +45,12 @@ function HotItWorks() {
                     fontWeight: "900",
                     fontSize: { md: "60px", xs: "40px" },
                     minHeight: { md: "200px", xs: "200px" },
-                    maxWidth: "1200px",
+                    maxWidth: "1000px",
                     margin: "auto",
                     mt: "100px",
                     lineHeight: "",
                     letterSpacing: "-3px",
+                    fontFamily: "'Inter'",
                   }}
                 >
                   Reliable supply for all your dairy products, across the border
@@ -77,6 +78,7 @@ function HotItWorks() {
                 mt: "100px",
                 lineHeight: "72px",
                 letterSpacing: "-3px",
+                fontFamily: "'Inter'",
               }}
             >
               How our platform Works{" "}
@@ -166,12 +168,12 @@ function HotItWorks() {
                 height: { md: "600px", xs: "auto" },
                 boxShadow: "rgba(0, 0, 0, 0.3) 0px 26px 26px",
                 borderTop: "1px solid #fff",
-                marginTop:"-10px"
+                marginTop: "-10px",
               }}
             >
               <Box sx={{ mt: { md: "-200px", xs: "10px" }, width: "100%" }}>
                 <Fade direction="down">
-                  <img src="./assets/Stock.png" style={{ width: "100%" }} />
+                  <img src="./assets/StockK.png" style={{ width: "100%" }} />
                 </Fade>
               </Box>
             </WhiteBox>
@@ -192,6 +194,7 @@ function HotItWorks() {
                 mt: { md: "100px", xs: "20px" },
                 lineHeight: "55px",
                 letterSpacing: "-2px",
+                fontFamily: "'Inter'",
               }}
             >
               We believe that in a world that{" "}
@@ -222,6 +225,7 @@ function HotItWorks() {
                 margin: "auto",
                 lineHeight: "",
                 letterSpacing: "-2px",
+                fontFamily: "'Inter'",
               }}
             >
               They were Part, they say...

@@ -18,6 +18,7 @@ export const AboutHeroContainer = styled(Box)({
 export const AboutUsText = styled(Typography)({
   color: "#E0D2A4",
   paddingLeft: "30px",
+  fontFamily: "'Inter'",
 });
 
 export const AboutUsText2 = styled(AboutUsText)({
@@ -31,10 +32,11 @@ export const AboutUsText2 = styled(AboutUsText)({
 })
 
 export const AboutMiniText = styled(Typography)({
-    color:"#fff",
-    fontSize:"24px",
-    fontWeight:"300",
-})
+  color: "#fff",
+  fontSize: "24px",
+  fontWeight: "300",
+  fontFamily: "'Inter'",
+});
 export const AboutMiniHeader = styled(Typography)({
   paddingLeft: "30px",
   fontSize: "60px",
@@ -42,6 +44,7 @@ export const AboutMiniHeader = styled(Typography)({
   fontWeight: "bold",
   width: "90%",
   margin: "auto",
+  fontFamily: "'Inter'",
 });
 export const AboutDumbGrid = styled(Grid)({
 })
@@ -86,6 +89,7 @@ export const StatNumber = styled(Typography)({
   fontWeight: "400",
   lineHeight: "76px",
   letterSpacing: "-3px",
+  fontFamily: "'Inter'",
   width: "90%",
   margin: "auto",
 });
@@ -96,7 +100,7 @@ export const StatText = styled(Typography)({
   color: "#444444",
   width: "90%",
   margin: "auto",
-
+  fontFamily: "'Inter'",
 });
 export const ServiceButton = styled(Button)({
   background: "#033D66",
@@ -111,6 +115,7 @@ export const ColHeaderText = styled(Typography)({
   color: "#003565",
   width: "90%",
   margin: "auto",
+  fontFamily: "'Inter'",
 });
 export  const ColBodyText = styled(Typography)({
   fontSize: "18px",
@@ -118,5 +123,6 @@ export  const ColBodyText = styled(Typography)({
   color: "#444444",
   lineHeight: "41px",
   width:"90%",
-  margin:"auto"
+  margin:"auto",
+  fontFamily:"'Inter'",
 });
