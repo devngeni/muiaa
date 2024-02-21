@@ -1,4 +1,5 @@
 import { styled, Grid, Box, Typography, Button } from "@mui/material";
+import {keyframes} from "@mui/system"
 
 const baseFontSize = {
   fontSize: "16px", // Set a base font size for default screens
@@ -9,6 +10,18 @@ const baseFontSize = {
 export const HomeMainContainer = styled(Box)({
   backgroundImage: "linear-gradient(to right, #033D66, #14263E)",
 });
+
+const spin = keyframes`
+0%{
+  background-image: url(./assets/bgIMage.svg);
+}
+50%{
+  background-image: url(./assets/bgIMage2.svg);
+}
+100%{
+  background-image: url(./assets/bgIMage.svg);
+}
+`
 export const HeroMainContainer = styled(Grid)({
   width: "100vw",
   height: "80vh",
@@ -17,6 +30,7 @@ export const HeroMainContainer = styled(Grid)({
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   // animation: `${backgroundChange} 10s linear infinite`, // 10s duration, linear timing, infinite loop
+  // animation: `${spin} 10s linear infinite`,
   "@media (max-width: 600px)": {
     height: "100vh",
   },
@@ -36,7 +50,6 @@ export const BgMask = styled(Box)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  // Add a mask to the background image
 });
 export const ContentContainer = styled(Box)({
   width: "100%",
@@ -100,8 +113,8 @@ export const NavyStatContainer = styled(Box)({
   maxWidth: "1400px",
   margin: "auto",
   borderRadius: "10px",
-  minHeight: "200px",
   marginTop: "-100px",
+  paddingBottom:"20px",
   zIndex: 503,
 });
 export const NavyStatGridContainer = styled(Grid)({
@@ -114,11 +127,11 @@ export const NavyStatItem = styled(Grid)({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  paddingTop: "30px",
+  paddingTop: "20px",
   fontWeight: "900",
 });
 export const NavyNumber = styled(Typography)({
-  fontSize: "65px",
+  fontSize: "48px",
   fontWeight: "bold",
   color: "#003565",
   width: "90%",

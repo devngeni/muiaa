@@ -3,6 +3,7 @@ import Image from "next/image";
 import { NavbarContainer, SearchContainer } from "@/styles/navbar-styles";
 import { Box } from "@mui/material";
 import { GrayButton, TextButtons } from "@/styles/common-styles";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -35,15 +36,17 @@ const Navbar = () => {
           <input type="text" placeholder="Search" />
         </SearchContainer>
         <Box sx={{ display: "flex", gap: "10px" }}>
-          <GrayButton sx={{ gap: "5px" }}>
-            <Image
-              src="/assets/loginIcon.svg"
-              alt=""
-              width={26.18}
-              height={26.18}
-            />{" "}
-            Login
-          </GrayButton>
+          <Link href={"/login"}>
+            <GrayButton sx={{ gap: "5px" }}>
+              <Image
+                src="/assets/loginIcon.svg"
+                alt=""
+                width={26.18}
+                height={26.18}
+              />{" "}
+              Login
+            </GrayButton>
+          </Link>
 
           <GrayButton className="Button_before">
             <Image
