@@ -9,7 +9,7 @@ export const AboutMainHero = styled(Box)({
 
 export const AboutHeroContainer = styled(Box)({
   width: "100%",
-  maxWidth: "1000px",
+  maxWidth: "1300px",
   margin: "auto",
   height: "auto",
   textAlign:"left"
@@ -17,7 +17,6 @@ export const AboutHeroContainer = styled(Box)({
 
 export const AboutUsText = styled(Typography)({
   color: "#E0D2A4",
-  paddingLeft: "30px",
   fontFamily: "'Inter'",
 });
 
@@ -28,7 +27,6 @@ export const AboutUsText2 = styled(AboutUsText)({
     letterSpacing: "-3px",
     lineHeight:"96px",
     color:"#fff",
-    width:"78%"
 })
 
 export const AboutMiniText = styled(Typography)({
@@ -38,11 +36,9 @@ export const AboutMiniText = styled(Typography)({
   fontFamily: "'Inter'",
 });
 export const AboutMiniHeader = styled(Typography)({
-  paddingLeft: "30px",
   fontSize: "60px",
   color: "#fff",
-  fontWeight: "bold",
-  width: "90%",
+  fontWeight: "400",
   margin: "auto",
   fontFamily: "'Inter'",
 });
@@ -98,7 +94,6 @@ export const StatText = styled(Typography)({
   fontWeight: "300",
   lineHeight: "28px",
   color: "#444444",
-  width: "90%",
   margin: "auto",
   fontFamily: "'Inter'",
 });

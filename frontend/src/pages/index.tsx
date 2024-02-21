@@ -127,7 +127,7 @@ export default function Home() {
               <NavyNumber>
                 <CountUp end={45} duration={10} />
               </NavyNumber>
-              <NavyText sx={{ pb: "30px" }}>
+              <NavyText sx={{ pb:{ xs:"30px", md:"0px" }}}>
                 Export/Import Transactions
               </NavyText>
             </NavyStatItem>

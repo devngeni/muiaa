@@ -43,7 +43,7 @@ function AboutHero() {
             Building the Value in dairy supplies
           </AboutUsText2>
           <br />
-          <AboutMiniText sx={{ maxWidth: "90vw", margin: "auto" }}>
+          <AboutMiniText>
             Enabling the world to move value the way information moves today.
           </AboutMiniText>
         </AboutHeroContainer>
@@ -56,11 +56,11 @@ function AboutHero() {
         <AboutHeroContainer
           sx={{
             width: "100%",
-            maxWidth: "1000px",
+            // maxWidth: "1000px",
             paddingBottom: { md: "500px", xs: "0px" },
           }}
         >
-          <AboutUsText>About us</AboutUsText>
+          <AboutUsText>Mission</AboutUsText>
           <AboutMiniHeader
             sx={{ fontSize: { md: "60px", xs: "40px" }, minHeight: "200px" }}
           >
@@ -85,7 +85,7 @@ function AboutHero() {
                     marginBottom: { md: "0", xs: "50px" },
                   }}
                 >
-                  <CowImage src="https://source.unsplash.com/1000x500/?cows" />
+                  {/* <CowImage src="https://source.unsplash.com/1000x500/?cows" /> */}
                 </Box>
               </Fade>
             </AboutDumbGridItem>
@@ -98,8 +98,12 @@ function AboutHero() {
                     marginBottom: { md: "0", xs: "50px" },
                   }}
                 >
-                  Building the value in dairy supplies using blockchain
-                  technology.
+                  Lead qualification process entail a meticulous process of
+                  evaluating & categorizing potential leads to determine their
+                  quality and likelihood of conversion. We utilize advanced data
+                  analytics, AI-powered algorithms, Machine learning, & industry
+                  expertise to assess leads and deliver a refined list that
+                  helps your business grow
                 </AboutMiniText>
               </Fade>
             </AboutDumbGridItem>
@@ -116,6 +120,12 @@ function AboutHero() {
           <CowsImage src="assets/cows.svg" />
         </Fade>
       </CowImageContainer>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <StatsContainer container>
         <StatItem item md={4} xs={12}>
           <NumbersContainer container>
@@ -205,7 +215,7 @@ function AboutHero() {
             </StatText>
             <br />
             <br />
-            <ServiceButton sx={{ marginLeft: "30px" }}>
+            <ServiceButton>
               Get our Service
             </ServiceButton>
           </Fade>
