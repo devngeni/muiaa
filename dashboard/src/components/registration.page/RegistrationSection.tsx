@@ -1,41 +1,45 @@
 import {
-  StyledInputBase,
   LoginBtn,
   LoginContainer,
   LoginTitleWrapper,
   LoginWrapper,
-  StyledOrTypo,
   StyledGoogleLoginBtn,
-  StyledForgetPass,
+  StyledInputBase,
+  StyledOrTypo,
   StyledSignUpTypo,
 } from "@/styles/loginAndRegistrationPageStyles";
 import React from "react";
 import Google from "../../../public/assets/google";
 import Link from "next/link";
 
-const LoginSection = () => {
+const RegistrationSection = () => {
   return (
     <LoginContainer>
       <LoginWrapper>
         <LoginTitleWrapper>
-          <h1>Welcome</h1>
+          <h1>Join our platform</h1>
           <p>Login to continue to MUIAA Dairy Farmers</p>
         </LoginTitleWrapper>
+        <StyledInputBase required type="text" placeholder="Username" />
         <StyledInputBase required type="email" placeholder="Email address" />
         <StyledInputBase required type="password" placeholder="Password" />
+        <StyledInputBase
+          required
+          type="password"
+          placeholder="Repeat Password"
+        />
         <StyledOrTypo>OR</StyledOrTypo>
         <StyledGoogleLoginBtn>
           <Google />
           <span>Sign up with google</span>
         </StyledGoogleLoginBtn>
-        <StyledForgetPass href="#">Forgot password?</StyledForgetPass>
-        <LoginBtn type="submit">Login</LoginBtn>
+        <LoginBtn type="submit">Create Account</LoginBtn>
         <StyledSignUpTypo>
-          Don&apos; have account? <Link href="/registration">Sign up</Link>
+          Have an account? <Link href="/login">Login</Link>
         </StyledSignUpTypo>
       </LoginWrapper>
     </LoginContainer>
   );
 };
 
-export default LoginSection;
+export default RegistrationSection;
