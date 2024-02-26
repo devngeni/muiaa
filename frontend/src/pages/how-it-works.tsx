@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import {
@@ -33,6 +34,13 @@ import { Fade } from "react-awesome-reveal";
 function HotItWorks() {
   return (
     <>
+      <Head>
+        <title>MUIAA</title>
+        <meta name="description" content="HOW-IT-WORKS | MUIRURI & ASSOCIATES LTD" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/assets/logomini.png" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+      </Head>
       <Navbar />
       <Box>
         <WorksMainHero>
@@ -91,7 +99,13 @@ function HotItWorks() {
             item
             xs={12}
             md={6}
-            sx={{ width: "90%", maxWidth: "90vw", margin: "auto" }}
+            sx={{
+              width: "90%",
+              maxWidth: "90vw",
+              margin: "auto",
+              maxHeight: { md: "600px", xs: "auto" },
+              overflowY: "scroll",
+            }}
           >
             <Grid container sx={{ marginTop: { md: "150px", xs: "20px" } }}>
               <Grid item md={3} sx={{ textAlign: "center" }}>
@@ -129,30 +143,94 @@ function HotItWorks() {
             </Grid>
             <Grid container sx={{ marginTop: "60px" }}>
               <Grid item md={3} sx={{ textAlign: "center" }}>
-                <img
-                  src="./assets/OrangeContract.svg"
-                  style={{ width: "100px" }}
-                />
-                <br />
-                <br />
-                <img src="./assets/line.svg" style={{ height: "100px" }} />
+                <Fade direction="down">
+                  <img
+                    src="./assets/OrangeContract.svg"
+                    style={{ width: "80px" }}
+                  />
+                  <br />
+                  <br />
+                  <img src="./assets/line.svg" style={{ height: "100px" }} />
+                </Fade>
               </Grid>
               <Grid item md={9}>
-                <UnparalleledMainText sx={{ color: "#fff" }}>
-                  Order processing
-                </UnparalleledMainText>
-                <br />
-                <UnparalleledSubText
-                  sx={{ maxWidth: "500px", color: "#E0D2A4" }}
-                >
-                  We implement Smart logistics contracts on the XDC blockchain
-                  to facilitate seamless transportation arrangements and
-                  optimize routes, reducing transportation costs.
-                </UnparalleledSubText>
-                <br />
-                <br />
-                <br />
-                <br />
+                <Fade direction="down">
+                  <UnparalleledMainText sx={{ color: "#fff" }}>
+                    Order processing
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
+                  >
+                    We implement Smart logistics contracts on the XDC blockchain
+                    to facilitate seamless transportation arrangements and
+                    optimize routes, reducing transportation costs.
+                  </UnparalleledSubText>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </Fade>
+              </Grid>
+            </Grid>
+            <Grid container sx={{ marginTop: "60px" }}>
+              <Grid item md={3} sx={{ textAlign: "center" }}>
+                <Fade direction="down">
+                  <img
+                    src="./assets/traceability.svg"
+                    style={{ width: "70px" }}
+                  />
+                  <br />
+                  <br />
+
+                  <img src="./assets/line.svg" style={{ height: "100px" }} />
+                </Fade>
+              </Grid>
+              <Grid item md={9}>
+                <Fade direction="down">
+                  <UnparalleledMainText sx={{ color: "#fff" }}>
+                    Tokenization and traceability
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
+                  >
+                    We reecord transportation details on the blockchain,
+                    including shipment status, location, and estimated time of
+                    arrival.
+                  </UnparalleledSubText>
+                </Fade>
+              </Grid>
+            </Grid>
+            <Grid container sx={{ marginTop: "60px" }}>
+              <Grid item md={3} sx={{ textAlign: "center" }}>
+                <Fade direction="down">
+                  <img
+                    src="./assets/SearchOrange.svg"
+                    style={{ width: "100px" }}
+                  />
+                  <br />
+                  <br />
+                  <img src="./assets/line.svg" style={{ height: "100px" }} />
+                </Fade>
+              </Grid>
+              <Grid item md={9}>
+                <Fade direction="down">
+                  <UnparalleledMainText sx={{ color: "#fff" }}>
+                    Delivery
+                  </UnparalleledMainText>
+                  <br />
+                  <UnparalleledSubText
+                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
+                  >
+                    We enable cross-border payments using XDC tokens, This
+                    eliminates currency exchange fees and delays.
+                  </UnparalleledSubText>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </Fade>
               </Grid>
             </Grid>
           </PLatformItem>
