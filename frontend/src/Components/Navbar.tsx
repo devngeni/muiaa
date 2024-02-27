@@ -59,8 +59,8 @@ function Navbar() {
           <a href="/" style={{ color: "#fff" }}>
             Home
           </a>
-          <a href="/how-it-works">How it works</a>
-          <a href="/about">About</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/about">About Us</a>
         </NavbarLinksContainer>
         {/* NavBarButtonsContainer for larger screens */}
         <NavBarButtonsContainer
@@ -124,14 +124,14 @@ function Navbar() {
           <a href="/" style={{ color: "#fff", fontWeight: "bolder" }}>
             <ButtonCustom>Home</ButtonCustom>
           </a>
-          <a href="/about" style={{ color: "#fff", fontWeight: "bolder" }}>
-            <ButtonCustom>About</ButtonCustom>
-          </a>
           <a
             href="/how-it-works"
             style={{ color: "#fff", fontWeight: "bolder" }}
           >
-            <ButtonCustom>How it works</ButtonCustom>
+            <ButtonCustom>How It Works</ButtonCustom>
+          </a>
+          <a href="/about" style={{ color: "#fff", fontWeight: "bolder" }}>
+            <ButtonCustom>About Us</ButtonCustom>
           </a>
           <br />
           <br />
