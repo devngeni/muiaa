@@ -27,7 +27,7 @@ export const LoginWrapper = styled(Box)(({ theme }) => ({
   background: "#fff",
   boxShadow: "2px 4px 13px 0px #0000001A",
   flexDirection: "column",
-  gap: "10px",
+  gap: "15px",
 
   [theme.breakpoints.down("lg")]: {
     width: "50%",
