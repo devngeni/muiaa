@@ -40,7 +40,7 @@ function AboutHero() {
               lineHeight: { md: "96px", xs: "55px" },
             }}
           >
-            Building the Value in dairy supplies
+            Building the value in dairy supplies using blockchain technology.
           </AboutUsText2>
           <br />
           <AboutMiniText>
@@ -64,8 +64,8 @@ function AboutHero() {
           <AboutMiniHeader
             sx={{ fontSize: { md: "60px", xs: "40px" }, minHeight: "200px" }}
           >
-            Committed to delivering transparency, efficiency, and traceability
-            in the supply chain
+            Our goal? To bring transparency,efficiency and traceability to every
+            step of the supply chain.
           </AboutMiniHeader>
           <br />
           <br />
@@ -98,12 +98,14 @@ function AboutHero() {
                     marginBottom: { md: "0", xs: "50px" },
                   }}
                 >
-                  Lead qualification process entail a meticulous process of
-                  evaluating & categorizing potential leads to determine their
-                  quality and likelihood of conversion. We utilize advanced data
-                  analytics, AI-powered algorithms, Machine learning, & industry
-                  expertise to assess leads and deliver a refined list that
-                  helps your business grow
+                  Our mission is to spearhead a transformative era in
+                  cross-border cattle feed distribution,uniting Kenya and
+                  Zanzibar through innovative technology and sustainable
+                  practices. Powered by the XDC blockchain,Our decentralised
+                  platform offers farmers and distributors a seamless ordering
+                  process, real-time monitoring, and automated smart contracts,
+                  while our dedication to quality and education propels us
+                  towards redefining the future of feed distribution.
                 </AboutMiniText>
               </Fade>
             </AboutDumbGridItem>
@@ -215,9 +217,7 @@ function AboutHero() {
             </StatText>
             <br />
             <br />
-            <ServiceButton>
-              Get our Service
-            </ServiceButton>
+            <ServiceButton>Get our Service</ServiceButton>
           </Fade>
         </StatItem>
       </StatsContainer>
@@ -254,34 +254,40 @@ function AboutHero() {
           </Grid>
           <Grid xs={12} md={4}>
             <Fade direction="left">
-              <ColHeaderText>Collaborative Vission</ColHeaderText>
+              <ColHeaderText>Transparency</ColHeaderText>
               <br />
               <ColBodyText>
-                Lead qualification process entail a meticulous process of
-                evaluating & categorizing potential leads to determine their
-                quality and likelihood of conversion.
+                Fraud and misinformation is rampant in every business and to
+                avoid that we have to verify the authenticity and quality of
+                feed. This empowers you with real time insights into the impact
+                and sustainability initiatives being undertaken on the ground
+                .You can trace thanks to blockchain in supply chains.
               </ColBodyText>
             </Fade>
           </Grid>
           <Grid xs={12} md={4}>
             <Fade direction="up">
-              <ColHeaderText>Powerful Innovation</ColHeaderText>
+              <ColHeaderText>Cost efficiency </ColHeaderText>
               <br />
               <ColBodyText>
-                Lead qualification process entail a meticulous process of
-                evaluating & categorizing potential leads to determine their
-                quality and likelihood of conversion.
+                Using Smart agriculture gadgets empower farmers to enhance
+                control, predictability, and efficiency in livestock raising and
+                crop cultivation.With streamlined supply chains ,less wastage
+                ,and timely payments ,you are saving money and gaining control.
+                This reduces reliance on fluctuating supplies.
               </ColBodyText>
             </Fade>
           </Grid>
           <Grid xs={12} md={4}>
             <Fade direction="right">
-              <ColHeaderText>International Reach</ColHeaderText>
+              <ColHeaderText>Empowerment</ColHeaderText>
               <br />
               <ColBodyText>
-                Lead qualification process entail a meticulous process of
-                evaluating & categorizing potential leads to determine their
-                quality and likelihood of conversion.
+                Small-scale farmers can negotiate better terms, access
+                information, and connect with a wider network of suppliers and
+                buyers through blockchain technology.With personalised profiles
+                and loan management, you'll have top-notch digital
+                record-keeping.
               </ColBodyText>
             </Fade>
           </Grid>
