@@ -17,9 +17,15 @@ function Footer() {
         </Grid>
         <Grid item xs={6} md={4}>
           <FooterHeader sx={{ color: "#E9BC6D" }}>Quick Links</FooterHeader>
+          <a href="/">
           <FooterText>Home</FooterText>
+          </a>
+          <a href="/how-it-works">
           <FooterText>How it Works</FooterText>
+          </a>
+          <a href="/about">
           <FooterText>About</FooterText>
+          </a>
         </Grid>
         <Grid item xs={12} md={4}>
           <FooterHeader sx={{ color: "#E9BC6D" }}>Our Socials</FooterHeader>
@@ -54,7 +60,7 @@ function Footer() {
             sx={{
               maxWidth: "1200px",
               display: "flex",
-              flexWrap:"wrap",
+              flexWrap: "wrap",
               margin: "auto",
               alignItems: "center",
               justifyContent: "space-around",
