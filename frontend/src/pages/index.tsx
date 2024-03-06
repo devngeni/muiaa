@@ -60,7 +60,7 @@ export default function Home() {
               {/* <Fade direction="down"> */}
               <HeroMainText
                 sx={{
-                  fontSize: { md: "60px", sm: "30px", xs: "27px" },
+                  fontSize: { lg: "60px", md: "50px", sm: "30px", xs: "27px" },
                   letterSpacing: { md: "-3px", xs: "-1px" },
                   textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)", // Adjust values as needed
                 }}
@@ -127,7 +127,7 @@ export default function Home() {
               <NavyNumber>
                 <CountUp end={45} duration={10} />
               </NavyNumber>
-              <NavyText sx={{ pb:{ xs:"30px", md:"0px" }}}>
+              <NavyText sx={{ pb: { xs: "30px", md: "0px" } }}>
                 Export/Import Transactions
               </NavyText>
             </NavyStatItem>
@@ -469,8 +469,16 @@ export default function Home() {
         }}
       >
         <Grid item md={4} xs={0}>
-          <Box sx={{ width: "100%", height: { md: "650px" } }}>
-            <img src="./assets/asset22.svg" style={{ width: "100%" }} />
+          <Box
+            sx={{
+              width: "100%",
+              height: { md: "650px" },
+              background: "url(./assets/asset22.svg)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            {/* <img src="./assets/asset22.svg" style={{ width: "100%" }} /> */}
           </Box>
         </Grid>
         <Grid
@@ -496,7 +504,7 @@ export default function Home() {
           <UnparalleledSubText
             sx={{
               fontSize: { md: "24px", xs: "16px" },
-              lineHeight: { md: "40px", xs: "22px" },
+              lineHeight: { md: "28px", xs: "22px" },
               color: "#1A1A1A",
             }}
           >
@@ -507,8 +515,10 @@ export default function Home() {
           </UnparalleledSubText>
         </Grid>
         <Grid item md={4} xs={0}>
-          <Box sx={{ width: "100%", height: { md: "650px", xs: "auto" } }}>
-            <img src="./assets/asset24.svg" style={{ width: "100%" }} />
+          <Box sx={{ width: "100%", height: { md: "650px", xs: "auto" },background: "url(./assets/asset24.svg)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat", }}>
+            {/* <img src="./assets/asset24.svg" style={{ width: "100%" }} /> */}
           </Box>
         </Grid>
       </Grid>
