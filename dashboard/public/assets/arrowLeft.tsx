@@ -1,24 +1,15 @@
-import React from "react";
+import React from 'react';
 
-const  ArrowLeft=()=> {
+const ArrowLeft = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="72"
-      fill="none"
-      viewBox="0 0 14 72"
-    >
-      <path
-        fill="#E3E3E3"
-        d="M14 10C14 4.477 9.523 0 4 0H0v72h4c5.523 0 10-4.477 10-10V10z"
-      ></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="72" fill="none" viewBox="0 0 14 72">
+      <path fill="#E3E3E3" d="M14 10C14 4.477 9.523 0 4 0H0v72h4c5.523 0 10-4.477 10-10V10z"></path>
       <path
         fill="#fff"
         d="M10.177 30a.684.684 0 01.45.16.918.918 0 01.29.443c.057.18.064.376.023.562a.959.959 0 01-.255.473l-4.726 4.847 4.726 4.845a.89.89 0 01.21.282 1.098 1.098 0 01.07.735.99.99 0 01-.151.33.807.807 0 01-.25.23.66.66 0 01-.617.029.776.776 0 01-.265-.206L4.27 37.188a.926.926 0 01-.2-.317 1.08 1.08 0 010-.774.927.927 0 01.2-.316l5.41-5.548a.708.708 0 01.496-.233z"
       ></path>
     </svg>
   );
-}
+};
 
 export default ArrowLeft;
