@@ -20,7 +20,7 @@ const Navbar = () => {
           </Box>
           <Box>
             <TextButtons>Support</TextButtons>
-            <TextButtons>Track Order</TextButtons>
+           <Link href={'/track-order/overview'}> <TextButtons>Track Order</TextButtons></Link>
           </Box>
         </Box>
 
