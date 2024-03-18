@@ -59,3 +59,10 @@ export const GrayButton = styled(Button)(() => ({
     },
   },
 }));
+
+
+export const StyledSidebarWrapper = styled(Box)({
+  "display":"flex",
+  "flex-direction":"row",
+  "gap":"10px",
+});
