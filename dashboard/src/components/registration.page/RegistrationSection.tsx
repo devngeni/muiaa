@@ -6,11 +6,11 @@ import {
   StyledGoogleLoginBtn,
   StyledInputBase,
   StyledOrTypo,
-  StyledSignUpTypo,
-} from "@/styles/loginAndRegistrationPageStyles";
-import React from "react";
-import Google from "../../../public/assets/google";
-import Link from "next/link";
+  StyledSignUpTypo
+} from '@/styles/loginAndRegistrationPageStyles';
+import React from 'react';
+import Google from '../../../public/assets/google';
+import Link from 'next/link';
 
 const RegistrationSection = () => {
   return (
@@ -23,11 +23,7 @@ const RegistrationSection = () => {
         <StyledInputBase required type="text" placeholder="Username" />
         <StyledInputBase required type="email" placeholder="Email address" />
         <StyledInputBase required type="password" placeholder="Password" />
-        <StyledInputBase
-          required
-          type="password"
-          placeholder="Repeat Password"
-        />
+        <StyledInputBase required type="password" placeholder="Repeat Password" />
         <StyledOrTypo>OR</StyledOrTypo>
         <StyledGoogleLoginBtn>
           <Google />

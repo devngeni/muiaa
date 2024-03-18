@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Google = ()=> {
+const Google = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,12 +12,7 @@ const Google = ()=> {
     >
       <path fill="url(#pattern0)" d="M0 0H32V32H0z"></path>
       <defs>
-        <pattern
-          id="pattern0"
-          width="1"
-          height="1"
-          patternContentUnits="objectBoundingBox"
-        >
+        <pattern id="pattern0" width="1" height="1" patternContentUnits="objectBoundingBox">
           <use transform="scale(.01087)" xlinkHref="#image0_847_499"></use>
         </pattern>
         <image
@@ -29,6 +24,6 @@ const Google = ()=> {
       </defs>
     </svg>
   );
-}
+};
 
 export default Google;

@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const Wallet= ()=> {
+const Wallet = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="34"
-      height="35"
-      fill="none"
-      viewBox="0 0 34 35"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" fill="none" viewBox="0 0 34 35">
       <path
         stroke="#444"
         strokeLinecap="round"
@@ -18,6 +12,6 @@ const Wallet= ()=> {
       ></path>
     </svg>
   );
-}
+};
 
 export default Wallet;

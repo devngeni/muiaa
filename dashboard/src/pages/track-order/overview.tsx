@@ -1,14 +1,13 @@
-import Sidebar from '@/components/common-components/sidebar';
-import WithSidebarLayout from '@/components/layouts/with-sidebar'
-import React from 'react'
+import WithSidebarLayout from '@/components/layouts/with-sidebar';
+import OverviewSection from '@/components/overview.page/OverviewSection';
+import React from 'react';
 
-const Overview=()=> {
+const Overview = () => {
   return (
-    <WithSidebarLayout pageTitle='Overview | Muiaa'>
-        <div>overview</div>
+    <WithSidebarLayout pageTitle="Overview | Muiaa">
+      <OverviewSection />
     </WithSidebarLayout>
-    
-  )
-}
+  );
+};
 
 export default Overview;

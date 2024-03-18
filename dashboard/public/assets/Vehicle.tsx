@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const Vehicle=()=> {
+const Vehicle = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="34"
-      height="35"
-      fill="none"
-      viewBox="0 0 34 35"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" fill="none" viewBox="0 0 34 35">
       <path
         stroke="#444"
         strokeWidth="2"
@@ -16,6 +10,6 @@ const Vehicle=()=> {
       ></path>
     </svg>
   );
-}
+};
 
 export default Vehicle;
