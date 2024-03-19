@@ -3,19 +3,14 @@ import React from 'react'
 import {
   ProductCategoryTitle,
   ProductContainer,
-  ProductDetailContainer,
-  ProductDetailItem,
   ProductDetailLayoutContainer,
   ProductDetailLayoutItem,
-  ProductImage,
-  ProductMiniText,
-  ProductSubText,
-  ProductText,
 } from "@/styles/product-styles";
 import ProductItemComponent from "@/components/common-components/ProductItemComponent";
-import { ButtonContainer, OrangeButton, GrayButton } from '@/styles/bghero-styled';
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-
+import ProductExtendedDetails from '@/components/common-components/ProductExtendedDetails';
+import { Box } from '@mui/material';
+import SellerInfo from '@/components/common-components/SellerInfo';
+import CustomerFeedback from '@/components/common-components/CustomerFeedback';
 
 
 function Productdetail() {
@@ -89,53 +84,11 @@ function Productdetail() {
     <DefaultLayout>
       <ProductDetailLayoutContainer container>
         <ProductDetailLayoutItem item md={8} sm={12}>
-          <ProductDetailContainer container>
-            <ProductDetailItem item md={6} sm={12}>
-              <ProductImage
-                src="https://source.unsplash.com/1000x1000/?product"
-                alt="product"
-                sx={{ maxHeight: "350px", width: "95%", margin: "auto" }}
-              />
-            </ProductDetailItem>
-            <ProductDetailItem item md={6} sm={12}>
-              <ProductMiniText>
-                More From
-                <span style={{ color: "#003565", fontWeight: "800" }}>
-                  {" "}
-                  Wonder Feeds
-                </span>
-              </ProductMiniText>
-              <ProductSubText sx={{ color: "#000" }}>
-                DairyBoost 5000, a premium feed blend, enriched with essential
-                nutrients, designed to maximize milk output while ensuring
-                robust cow health
-              </ProductSubText>
-              <ProductText>Ksh 1,102.25</ProductText>
-              <ProductMiniText>
-                Origin
-                <span style={{ color: "#003565", fontWeight: "800" }}>
-                  {" "}
-                  Kenya
-                </span>
-              </ProductMiniText>
-              <br />
-              <hr />
-              <ProductSubText sx={{ color: "#000", pt: "20px" }}>
-                Min Order: 250kg
-              </ProductSubText>
-              <ButtonContainer sx={{padding:"0"}}>
-                <OrangeButton sx={{ width: "82%", background: "#033D66" }}>
-                  Place order
-                </OrangeButton>
-                <GrayButton>
-                  <FavoriteBorderIcon />
-                </GrayButton>
-              </ButtonContainer>
-            </ProductDetailItem>
-          </ProductDetailContainer>
+            <ProductExtendedDetails />
         </ProductDetailLayoutItem>
         <ProductDetailLayoutItem item md={4} sm={12}>
-          ==
+          <SellerInfo />
+          <CustomerFeedback/>
         </ProductDetailLayoutItem>
       </ProductDetailLayoutContainer>
       <ProductCategoryTitle>People also viewed</ProductCategoryTitle>
