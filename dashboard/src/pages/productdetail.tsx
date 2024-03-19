@@ -84,11 +84,11 @@ function Productdetail() {
     <DefaultLayout>
       <ProductDetailLayoutContainer container>
         <ProductDetailLayoutItem item md={8} sm={12}>
-            <ProductExtendedDetails />
+          <ProductExtendedDetails product={true} />
         </ProductDetailLayoutItem>
         <ProductDetailLayoutItem item md={4} sm={12}>
           <SellerInfo />
-          <CustomerFeedback/>
+          <CustomerFeedback />
         </ProductDetailLayoutItem>
       </ProductDetailLayoutContainer>
       <ProductCategoryTitle>People also viewed</ProductCategoryTitle>

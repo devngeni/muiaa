@@ -24,9 +24,10 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 import { Box, styled } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
 
 
-function ProductExtendedDetails() {
+function ProductExtendedDetails({product}) {
     const AccDets = styled(AccordionDetails)({
       fontWeight: "300",
       fontSize: "15px",
@@ -39,6 +40,12 @@ function ProductExtendedDetails() {
       lineHeight: "28px",
       color: "#000",
     });
+    const DeleteOrderButton = styled(Button)({
+      border:"1.5px solid red",
+      color:"red",
+      boxShadow:"none"
+
+    })
   return (
     <>
       <Box
@@ -83,10 +90,31 @@ function ProductExtendedDetails() {
             <ProductSubText sx={{ color: "#000", pt: "20px" }}>
               Min Order: 250kg
             </ProductSubText>
+            <ProductSubText sx={{ color: "#000", pt: "20px" }}>
+              Rating : <StarIcon sx={{ color: "#E8AD4B" }} />
+              <StarIcon sx={{ color: "#E8AD4B" }} />
+              <StarIcon sx={{ color: "#E8AD4B" }} />
+              <StarIcon sx={{ color: "#E8AD4B" }} />
+              <StarIcon sx={{ color: "#E8E8E8" }} />
+            </ProductSubText>
+            <br/>
             <ButtonContainer sx={{ padding: "0" }}>
-              <OrangeButton sx={{ width: "82%", background: "#033D66" }}>
-                Place order
-              </OrangeButton>
+              {/*  render orange button if product is true  else render graybutton */}
+              {product ? (
+                <OrangeButton
+                  sx={{ width: "82%", background: "#FFA500" }} // Orange button style
+                  variant="contained"
+                >
+                  Place order
+                </OrangeButton>
+              ) : (
+                <DeleteOrderButton
+                  sx={{ width: "82%", background: "transparent" }} // Gray button style
+                  variant="contained"
+                >
+                  Delete Order
+                </DeleteOrderButton>
+              )}
               <GrayButton>
                 <FavoriteBorderIcon />
               </GrayButton>
