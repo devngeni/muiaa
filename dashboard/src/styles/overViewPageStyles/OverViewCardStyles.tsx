@@ -2,7 +2,8 @@ import { Box, styled } from '@mui/material';
 
 export const StyledOverViewCardContainer = styled(Box)(() => ({
   cursor: 'pointer',
-  minWidth: '350',
+  minWidth:"245px",
+  maxWidth:"300px",
   display: 'flex',
   flexDirection: 'row',
   gap: '20px',

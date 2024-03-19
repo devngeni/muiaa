@@ -9,3 +9,15 @@ export interface OrderSectionPropsType {
   title: string;
   handleOnOrderSelect: (orderId: string) => void;
 }
+
+
+export interface OrderTrackCardPropsType {
+
+  title:string
+  status:string,
+  timeStamp?:string
+  img?:string
+  desc?:string
+  name?:string,
+  designation?:string
+};
