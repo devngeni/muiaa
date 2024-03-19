@@ -4,14 +4,15 @@ import {
   StyledOverViewCardContainer,
   StyledOverviewCardTexWrapper
 } from '@/styles/overViewPageStyles';
+import { Typography } from '@mui/material';
 
 const OverviewCard = ({ value, title, icon }: OverViewCardPropsType) => {
   return (
     <StyledOverViewCardContainer>
       {icon}
       <StyledOverviewCardTexWrapper>
-        <h2>{value}</h2>
-        <h4>{title}</h4>
+        <Typography variant='h2'>{value}</Typography>
+        <Typography variant='h4'>{title}</Typography>
       </StyledOverviewCardTexWrapper>
     </StyledOverViewCardContainer>
   );

@@ -64,7 +64,7 @@ const Sidebar = () => {
   };
 
   return (
-    <StyledSidebarContainer>
+    <StyledSidebarContainer showIconsOnly={showIconsOnly}>
       <StyledSidebarChildContainer>
         {menuItem.map((item, index) => {
           return (

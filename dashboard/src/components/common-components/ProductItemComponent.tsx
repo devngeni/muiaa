@@ -10,6 +10,7 @@ import {
   ProductText,
 } from "@/styles/product-styles";
 import StarIcon from "@mui/icons-material/Star";
+import Link from "next/link";
 
 function ProductItemComponent({
   id,
@@ -21,7 +22,7 @@ function ProductItemComponent({
 }) {
   return (
     <ProductItem key={id} item xs={6} sm={6} md={4} lg={3} xl={3}>
-        <a href="/productdetail">
+        <Link href="/productdetail">
       <ProductSubItem>
         <ProductImage src={imageSrc} alt="product" />
         <ProductSubText>{description}</ProductSubText>
@@ -34,7 +35,7 @@ function ProductItemComponent({
           </ProductMiniText>
         </ProductFooterContainer>
       </ProductSubItem>
-        </a>
+        </Link>
     </ProductItem>
   );
 }

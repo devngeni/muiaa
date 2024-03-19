@@ -9,6 +9,7 @@ import Pending from '../../../public/assets/overview/pending';
 import Shipped from '../../../public/assets/overview/shipped';
 import Delivered from '../../../public/assets/overview/delivered';
 import { Grid } from '@mui/material';
+import OrderTrackSection from './OrderTrackSection';
 
 const OverviewSection = () => {
 
@@ -20,7 +21,7 @@ const OverviewSection = () => {
   return (
     <StyledOverViewSectionContainer>
       <StyledOrderListContainer>
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           <Grid item xs>
             <OverViewCard title="Total Orders" value="13" icon={<Order />} />
           </Grid>
@@ -36,6 +37,7 @@ const OverviewSection = () => {
         </Grid>
         <OrderSection handleOnOrderSelect={handleOnOrderSelect} title="My Orders" />
       </StyledOrderListContainer>
+      <OrderTrackSection/>
     </StyledOverViewSectionContainer>
   );
 };
