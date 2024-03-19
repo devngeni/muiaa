@@ -1,11 +1,11 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { HeadMetaDataProps } from "@/types/layout-types";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { HeadMetaDataProps } from '@/types/layout-types';
 
 const HeadMetaData = ({ pageTitle }: HeadMetaDataProps) => {
   const router = useRouter();
-  const title = pageTitle ? `${pageTitle}` : "Muiaa";
-  const ogUrl = router.pathname ? `${router.pathname}` : "";
+  const title = pageTitle ? `${pageTitle}` : 'Muiaa';
+  const ogUrl = router.pathname ? `${router.pathname}` : '';
 
   return (
     <Head>

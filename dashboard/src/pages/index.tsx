@@ -1,5 +1,5 @@
-import DefaultLayout from "@/components/layouts/defaultLayout";
-import React, { ReactElement } from "react";
+import DefaultLayout from '@/components/layouts/defaultLayout';
+import React, { ReactElement } from 'react';
 
 const Home = () => {
   return <div>Home</div>;

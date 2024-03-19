@@ -1,1 +1,1 @@
-export * from "./LoginPageStyles";
+export * from './LoginPageStyles';
