@@ -63,3 +63,26 @@ export const StyledSidebarWrapper = styled(Box)({
   'flex-direction': 'row',
   gap: '10px'
 });
+
+export const TopBarContainer = styled(Box)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '10px',
+  justifyContent: 'space-between',  
+  borderBottom: '1px solid #E8E8E8',
+  margin:"20px  auto",
+  maxWidth:"1300px",
+  alignItems:"center",
+  paddingBottom:"20px"
+});
+
+export const MidCardContainer = styled(Box)({
+  maxWidth:"680px",
+  background:"#fff",
+  padding:"40px",
+  minHeight:"500px",
+  width:"100%",
+  boxShadow: "0px 7px 29px 0px rgba(100, 100, 111, 0.2)",
+  margin:"auto",
+  borderRadius:"10px",
+})

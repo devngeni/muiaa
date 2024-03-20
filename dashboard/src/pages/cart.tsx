@@ -1,8 +1,6 @@
 import React from "react";
 import DefaultLayout from "@/components/layouts/defaultLayout";
 import {
-  ProductCategoryTitle,
-  ProductContainer,
   ProductDetailLayoutContainer,
   ProductDetailLayoutItem,
 } from "@/styles/product-styles";
@@ -12,11 +10,10 @@ import {
 } from "@/styles/SellerInfo-styles";
 import { Box, Grid, Input, styled, LinearProgress } from "@mui/material";
 import {
-  ButtonContainer,
   OrangeButton,
-  GrayButton,
 } from "@/styles/bghero-styled";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { TopBarContainer } from "@/styles/common-styles";
+import { useRouter } from "next/router";
 
 function cart() {
   const CustomInput = styled(Input)({
@@ -29,8 +26,22 @@ function cart() {
     width: "65px",
     height: "70px",
   });
+  const router  = useRouter();
+  const navigate  = () => {
+    router.push("/paymentmethod")
+  }
+
   return (
     <DefaultLayout>
+      <TopBarContainer>
+        <p>Back to shopping</p>
+        <OrangeButton
+          sx={{ width: "450px", height: "55px", background: "#033D66", fontWeight:"600", maxWidth:"40vw" }}
+          onClick={() => navigate()}
+        >
+          Checkout Ksh 270,456.23
+        </OrangeButton>
+      </TopBarContainer>
       <ProductDetailLayoutContainer container>
         <ProductDetailLayoutItem item md={8} sm={12}>
           <Box

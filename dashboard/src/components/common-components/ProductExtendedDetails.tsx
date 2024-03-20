@@ -25,6 +25,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 import { Box, styled } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import { useRouter } from 'next/router';
 
 
 function ProductExtendedDetails({product}) {
@@ -46,6 +47,10 @@ function ProductExtendedDetails({product}) {
       boxShadow:"none"
 
     })
+    const router = useRouter()
+    const navigate = () => {
+      router.push("/orderdetail")
+    }
   return (
     <>
       <Box
@@ -97,13 +102,14 @@ function ProductExtendedDetails({product}) {
               <StarIcon sx={{ color: "#E8AD4B" }} />
               <StarIcon sx={{ color: "#E8E8E8" }} />
             </ProductSubText>
-            <br/>
+            <br />
             <ButtonContainer sx={{ padding: "0" }}>
               {/*  render orange button if product is true  else render graybutton */}
               {product ? (
                 <OrangeButton
                   sx={{ width: "82%", background: "#FFA500" }} // Orange button style
                   variant="contained"
+                  onClick={() => navigate()}
                 >
                   Place order
                 </OrangeButton>

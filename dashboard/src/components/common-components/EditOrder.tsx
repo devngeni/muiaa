@@ -10,6 +10,7 @@ import {
   GrayButton,
 } from "@/styles/bghero-styled";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import {useRouter} from 'next/router';
 
 function EditOrder() {
   const ProductImageLogo = styled("img")({
@@ -21,6 +22,10 @@ function EditOrder() {
     border:"1px solid gray",
     borderRadius:"10px"
   })
+  const router = useRouter()
+  const navigate = () => {
+    router.push("/cart")
+  }
   return (
     <>
       <SellerMainContainer>
@@ -105,6 +110,7 @@ function EditOrder() {
                   <OrangeButton
                     sx={{ width: "80%", background: "#033D66" }} // Orange button style
                     variant="contained"
+                    onClick={() => navigate()}
                   >
                     Proceed to Checkout
                   </OrangeButton>
