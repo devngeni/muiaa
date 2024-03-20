@@ -1,14 +1,14 @@
 import DefaultLayout from "@/components/layouts/defaultLayout";
 import { TopBarContainer, MidCardContainer } from "@/styles/common-styles";
 import { Box, Grid, styled } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
-function success() {
+function Success() {
   const PaymentImg = styled("img")({
     width: "auto",
     height: "35px",
   });
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = useState("");
 
   const handleChange = (event: any) => {
     setAge(event.target.value as string);
@@ -45,4 +45,4 @@ function success() {
   );
 }
 
-export default success;
+export default Success;

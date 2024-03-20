@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-function invoice() {
+function Invoice() {
         const PaymentImg = styled("img")({
           width: "auto",
           height: "35px",
@@ -309,4 +309,4 @@ function invoice() {
   );
 }
 
-export default invoice;
+export default Invoice;

@@ -1,7 +1,7 @@
-import WithSidebarLayout from '@/components/layouts/with-sidebar';
-import OverviewSection from '@/components/overview.page/OverviewSection';
+import WithSidebarLayout from "@/components/layouts/with-sidebar";
+import OverviewSection from "@/components/overview.page/OverviewSection";
 import DefaultLayout from "@/components/layouts/defaultLayout";
-import React from 'react';
+import React from "react";
 
 const Overview = () => {
   return (

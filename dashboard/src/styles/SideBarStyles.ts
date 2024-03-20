@@ -10,6 +10,7 @@ export const StyledSidebarContainer = styled(Box)(
     flexDirection: "column",
     boxShadow: "1px 0px 5px #4444447a",
     transition: "width 0.3s ease",
+    background: "#fff",
   })
 );
 
