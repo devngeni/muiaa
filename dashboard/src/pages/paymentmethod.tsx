@@ -4,6 +4,7 @@ import { MidCardContainer, TopBarContainer } from "@/styles/common-styles";
 import { Payment } from "@mui/icons-material";
 import { Input, Box, styled, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
+import {useRouter} from "next/router";  // Added import
 
 function Paymentmethod() {
     const PaymentImg = styled("img")({
@@ -11,10 +12,15 @@ function Paymentmethod() {
         height:"35px",
     });
       const [age, setAge] = React.useState("");
+      const router = useRouter();  // Corrected typo
 
       const handleChange = (event: any) => {
         setAge(event.target.value as string);
       };
+      const navigate = () => {
+        router.push("/success")
+      }
+
 
   return (
     <>
@@ -157,6 +163,7 @@ function Paymentmethod() {
               background: "#033D66",
               fontWeight: "600",
             }}
+            onClick={() => navigate()}
           >
             Checkout Ksh 270,456.23
           </OrangeButton>

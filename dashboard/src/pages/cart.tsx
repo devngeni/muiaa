@@ -36,7 +36,13 @@ function cart() {
       <TopBarContainer>
         <p>Back to shopping</p>
         <OrangeButton
-          sx={{ width: "450px", height: "55px", background: "#033D66", fontWeight:"600", maxWidth:"40vw" }}
+          sx={{
+            width: "450px",
+            height: "55px",
+            background: "#033D66",
+            fontWeight: "600",
+            maxWidth: "40vw",
+          }}
           onClick={() => navigate()}
         >
           Checkout Ksh 270,456.23
@@ -184,6 +190,19 @@ function cart() {
                     <CustomInput type="date" placeholder="Choose Country" />
                   </Box>
                   <br />
+                  <OrangeButton
+                    sx={{
+                      width: "450px",
+                      height: "55px",
+                      background: "#033D66",
+                      fontWeight: "600",
+                      maxWidth: "40vw",
+                      mt:"50px"
+                    }}
+                    onClick={() => navigate()}
+                  >
+                    Checkout Ksh 270,456.23
+                  </OrangeButton>
                 </Grid>
               </Grid>
             </SellerHeaderContainer>
