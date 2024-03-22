@@ -15,7 +15,7 @@ import {
 import { TopBarContainer } from "@/styles/common-styles";
 import { useRouter } from "next/router";
 
-function cart() {
+function Cart() {
   const CustomInput = styled(Input)({
     border: "1px solid gray",
     borderRadius: "10px",
@@ -213,4 +213,4 @@ function cart() {
   );
 }
 
-export default cart;
+export default Cart;

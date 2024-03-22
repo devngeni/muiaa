@@ -6,12 +6,12 @@ import React from "react";
 import { OrangeButton } from "@/styles/bghero-styled";
 import { useRouter  } from "next/router";
 
-function success() {
+function Success() {
   const PaymentImg = styled("img")({
     width: "auto",
     height: "35px",
   });
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = useState("");
 
   const handleChange = (event: any) => {
     setAge(event.target.value as string);
@@ -147,4 +147,4 @@ function success() {
   );
 }
 
-export default success;
+export default Success;

@@ -139,7 +139,7 @@ function ProductExtendedDetails({product}) {
         </AccSummary>
         <AccDets>
           Discover our revolutionary dairy feed blend meticulously crafted to
-          optimize your herd's health and performance. Our expertly formulated
+          optimize your herd&apos;s health and performance. Our expertly formulated
           feed, enriched with a carefully balanced blend of essential nutrients,
           vitamins, and minerals, is designed to elevate milk production,
           enhance overall cow vitality, and ensure superior milk quality.
@@ -151,7 +151,7 @@ function ProductExtendedDetails({product}) {
           diverse nutritional needs, fostering optimal growth, increased milk
           yields, and healthy reproductive cycles. Trust our commitment to
           excellence in delivering a scientifically advanced dairy feed solution
-          that not only maximizes your farm's productivity but also prioritizes
+          that not only maximizes your farm&apos;s productivity but also prioritizes
           the well-being of your prized cattle.
         </AccDets>
       </Accordion>
