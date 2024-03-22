@@ -7,11 +7,11 @@ import {
   StyledOrTypo,
   StyledGoogleLoginBtn,
   StyledForgetPass,
-  StyledSignUpTypo,
-} from "@/styles/loginAndRegistrationPageStyles";
-import React from "react";
-import Google from "../../../public/assets/google";
-import Link from "next/link";
+  StyledSignUpTypo
+} from '@/styles/loginAndRegistrationPageStyles';
+import React from 'react';
+import Google from '../../../public/assets/google';
+import Link from 'next/link';
 
 const LoginSection = () => {
   return (

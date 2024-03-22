@@ -14,10 +14,11 @@ body {
 
 body {
   color: #000000;
-  background: #f9f9f9;
+  background: "#ffff";
+  /* background: #f9f9f9; */
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #444444;
 }
