@@ -120,3 +120,6 @@ export  const ColBodyText = styled(Typography)({
   margin:"auto",
   fontFamily:"'Inter'",
 });
+export  const ColBodyText1 = styled(ColBodyText)({
+
+});
