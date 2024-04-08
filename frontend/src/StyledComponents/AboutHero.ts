@@ -126,3 +126,6 @@ export  const ColBodyText1 = styled(ColBodyText)({
 export  const BodyWrapper = styled(Box)({
 
 });
+export  const BodyWrapper2 = styled(Box)({
+
+});
