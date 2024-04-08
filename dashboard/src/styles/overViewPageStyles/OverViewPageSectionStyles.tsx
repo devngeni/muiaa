@@ -12,6 +12,9 @@ export const StyledOrderListContainer = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   gap: "40px",
+  "@media screen and (max-width:768px)": {
+    padding: "20px",
+  },
 }));
 
 export const StyledOverViewCardWrapper = styled(Grid)(() => ({
