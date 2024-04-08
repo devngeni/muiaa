@@ -1,13 +1,16 @@
 import {
+  OrderTrackingCloseBtnWrapper,
   OrderTrackSectionContainer,
   ProgressMapBtnStyle,
   StyledOrderActionWrapper,
   StyledOrderTypoGraphy,
 } from "@/styles/overViewPageStyles";
-import React from "react";
+import React, { useState } from "react";
 import { OrderTrackCard } from "./";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
+import CloseIcon from "@mui/icons-material/Close";
+import { OrderTrackSectionPropsType } from "@/types/Itypes";
 
 const orderTrackSectionMock = [
   {
@@ -56,10 +59,18 @@ const orderTrackSectionMock = [
   },
 ];
 
-const OrderTrackSection = () => {
+const OrderTrackSection = ({
+  isSectionVisible,
+  handleRemoveSelectedOrder,
+}: OrderTrackSectionPropsType) => {
   return (
-    <OrderTrackSectionContainer>
-      <StyledOrderTypoGraphy variant="h5">CR89899-23</StyledOrderTypoGraphy>
+    <OrderTrackSectionContainer isVisible={isSectionVisible}>
+      <OrderTrackingCloseBtnWrapper>
+        <Button onClick={() => handleRemoveSelectedOrder()}>
+          <CloseIcon />
+        </Button>
+        <StyledOrderTypoGraphy variant="h5">CR89899-23</StyledOrderTypoGraphy>
+      </OrderTrackingCloseBtnWrapper>
       {orderTrackSectionMock.map((item, index) => {
         const { title, status, timeStamp, img, desc, inCharge } = item;
         return (

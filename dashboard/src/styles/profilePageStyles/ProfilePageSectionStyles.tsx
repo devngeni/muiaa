@@ -5,12 +5,20 @@ export const ProfilePageSectionContainer = styled(Box)(() => ({
   display: "flex",
   padding: "75px",
   gap: "50px",
+  "@media screen and (max-width:768px)": {
+    flexDirection: "column",
+  },
 }));
 
 export const ProfileTilesContainer = styled(Box)(() => ({
   width: "50%",
   display: "flex",
   flexDirection: "column",
+  "@media screen and (max-width:768px)": {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 }));
 
 export const ProfileTilesFlexWrapper = styled(Box)(

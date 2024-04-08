@@ -20,6 +20,9 @@ export const ProfileItemFlexWrapper = styled(Box)(() => ({
     fontWeight: "500",
     lineHeight: "20px",
   },
+  "@media screen and (max-width:850px)": {
+    width: "100%",
+  },
 }));
 
 export const ProfilePhotoCngBtn = styled(Button)(() => ({

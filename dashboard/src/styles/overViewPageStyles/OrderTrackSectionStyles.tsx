@@ -1,13 +1,51 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 
-export const OrderTrackSectionContainer = styled(Box)({
-  width: "45%",
-  borderLeft: "3px dotted #E3E3E3",
-  padding: "70px",
+export const OrderTrackSectionContainer = styled(Box)(
+  ({ isVisible }: { isVisible: Boolean }) => ({
+    width: "45%",
+    borderLeft: "3px dotted #E3E3E3",
+    padding: "70px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "30px",
+    transform: "translateX(0)",
+    transition: "transform 0.3s ease-in-out",
+    "@media (max-width: 1200px)": {
+      position: "fixed",
+      top: 0,
+      right: 0,
+      width: "300px",
+      height: "100%",
+      padding: "20px",
+      borderLeft: "none",
+      borderRight: "3px dotted #E3E3E3",
+      backgroundColor: "#fff",
+      zIndex: 999,
+      overflowY: "auto",
+      transform: `${isVisible ? "translateX(0%)" : "translateX(100%)"}`,
+    },
+  })
+);
+
+export const OrderTrackingCloseBtnWrapper = styled(Box)(() => ({
   display: "flex",
-  flexDirection: "column",
-  gap: "30px",
-});
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "10px",
+  button: {
+    display: "none",
+    svg: {
+      path: {
+        color: "#000000",
+      },
+    },
+  },
+  "@media (max-width: 1200px)": {
+    button: {
+      display: "block",
+    },
+  },
+}));
 
 export const StyledOrderTypoGraphy = styled(Typography)({
   color: "#14263E",
