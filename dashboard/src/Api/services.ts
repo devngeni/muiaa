@@ -11,7 +11,7 @@ export const Auth = createApi({
   endpoints: (builder) => ({
     getUserDetails: builder.query({
       query: (token: string) => ({
-        url: `/auth0/`,
+        url: `auth0/`,
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
