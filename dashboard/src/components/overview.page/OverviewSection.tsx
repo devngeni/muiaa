@@ -2,7 +2,7 @@ import {
   StyledOrderListContainer,
   StyledOverViewSectionContainer,
 } from "@/styles/overViewPageStyles";
-import React from "react";
+import React, { useState } from "react";
 import { OrderSection, OverViewCard } from "./";
 import Order from "../../../public/assets/overview/order";
 import Pending from "../../../public/assets/overview/pending";
@@ -12,7 +12,14 @@ import { Grid } from "@mui/material";
 import OrderTrackSection from "./OrderTrackSection";
 
 const OverviewSection = () => {
-  const handleOnOrderSelect = (orderId: string) => {};
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>();
+  const handleOnOrderSelect = (orderId: string) => {
+    setSelectedOrderId(orderId);
+  };
+
+  const handleRemoveSelectedOrder = () => {
+    setSelectedOrderId(undefined);
+  };
 
   return (
     <StyledOverViewSectionContainer>
@@ -40,7 +47,10 @@ const OverviewSection = () => {
           title="My Orders"
         />
       </StyledOrderListContainer>
-      <OrderTrackSection />
+      <OrderTrackSection
+        isSectionVisible={selectedOrderId !== undefined}
+        handleRemoveSelectedOrder={handleRemoveSelectedOrder}
+      />
     </StyledOverViewSectionContainer>
   );
 };

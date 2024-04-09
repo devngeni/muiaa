@@ -2,9 +2,16 @@ import { Box, OutlinedInput, Table, TableCell, styled } from "@mui/material";
 
 export const StyledOrderSectionContainer = styled(Box)(() => ({
   width: "100%",
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   gap: "10px",
+}));
+
+export const OrderTableWrapper = styled(Box)(() => ({
+  width: "100%",
+  maxWidth: "100vw",
+  overflowY: "auto",
 }));
 
 export const StyledOrderSectionNav = styled(Box)(() => ({
@@ -20,6 +27,11 @@ export const StyledOrderSectionNav = styled(Box)(() => ({
     fontWeight: "700",
     lineHeight: "normal",
   },
+  "@media screen and (max-width:600px)": {
+    flexDirection: "column",
+    alignItems: "start",
+    gap: "10px",
+  },
 }));
 
 export const StyledOrderSearchField = styled(OutlinedInput)(() => ({
@@ -34,6 +46,9 @@ export const StyledOrderSearchField = styled(OutlinedInput)(() => ({
   fontFamily: "Inter",
   fontSize: "0.875rem",
   fontWeight: "400",
+  "@media screen and (max-width:600px)": {
+    width: "100%",
+  },
 }));
 
 export const StyledOrderTable = styled(Table)(() => ({

@@ -36,3 +36,8 @@ export interface NotificationDetailsPropsType {
   orderStatus: string;
   desc: string;
 }
+
+export interface OrderTrackSectionPropsType {
+  isSectionVisible: boolean;
+  handleRemoveSelectedOrder: () => void;
+}
