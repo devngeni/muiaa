@@ -15,6 +15,9 @@ export const StyledOverViewCardContainer = styled(Box)(() => ({
   ":hover": {
     transform: "scale(1.05)",
   },
+  "@media screen and (max-width:600px)": {
+    maxWidth: "100%",
+  },
 }));
 
 export const StyledOverviewCardTexWrapper = styled(Box)(() => ({

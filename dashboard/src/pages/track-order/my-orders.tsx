@@ -6,11 +6,17 @@ import {
   StyledMyOrderPageContainer,
   StyledOrderSectionWrapper,
 } from "@/styles/myOrderPageStyles";
-import React from "react";
+import React, { useState } from "react";
 
 const MyOrders = () => {
-  const handleSelectedOrder = () => {};
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>();
+  const handleOnOrderSelect = (orderId: string) => {
+    setSelectedOrderId(orderId);
+  };
 
+  const handleRemoveSelectedOrder = () => {
+    setSelectedOrderId(undefined);
+  };
   return (
     <DefaultLayout>
       <WithSidebarLayout pageTitle="My Orders | Muiaa">
@@ -18,10 +24,13 @@ const MyOrders = () => {
           <StyledOrderSectionWrapper>
             <OrderSection
               title="All Orders"
-              handleOnOrderSelect={handleSelectedOrder}
+              handleOnOrderSelect={handleOnOrderSelect}
             />
           </StyledOrderSectionWrapper>
-          <OrderTrackSection />
+          <OrderTrackSection
+            isSectionVisible={selectedOrderId !== undefined}
+            handleRemoveSelectedOrder={handleRemoveSelectedOrder}
+          />
         </StyledMyOrderPageContainer>
       </WithSidebarLayout>
     </DefaultLayout>

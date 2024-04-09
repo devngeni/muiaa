@@ -11,6 +11,9 @@ export const StyledSidebarContainer = styled(Box)(
     boxShadow: "1px 0px 5px #4444447a",
     transition: "width 0.3s ease",
     background: "#fff",
+    "@media screen and (max-width: 1200px)": {
+      display: "none",
+    },
   })
 );
 
