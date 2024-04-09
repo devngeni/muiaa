@@ -33,8 +33,12 @@ import {
 import { Grid, Box, Button, styled } from "@mui/material";
 import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
+
+import dotenv from "dotenv";
+dotenv.config();
 
 export default function Home() {
   const Type = styled(TypeAnimation)({
@@ -43,6 +47,11 @@ export default function Home() {
   const ImageHere = styled("img")({
 
   })
+  const router = useRouter();
+  const navigate = () =>  {
+    router.push(`${process.env.NEXT_PUBLIC_BACKEND_URI}/auth0/login`);
+  }
+  
   return (
     <>
       <Head>
@@ -93,6 +102,7 @@ export default function Home() {
                         width: { md: "90%", xs: "100%" },
                         mb: "30px",
                       }}
+                      onClick={() => navigate()}
                     >
                       Explore App
                     </BlueButton>
