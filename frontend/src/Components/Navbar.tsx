@@ -11,6 +11,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box, styled } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import dotenv from "dotenv";
+dotenv.config();
 
 function Navbar() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -69,7 +71,11 @@ function Navbar() {
           xs={6}
           sx={{ display: { md: "flex", xs: "none" } }}
         >
-          <NavButton href="#">Explore App</NavButton>
+          <NavButton
+            href={`${process.env.NEXT_PUBLIC_BACKEND_URI}/auth0/login`}
+          >
+            Explore App
+          </NavButton>
           <NavButton2 href="#">Get in Touch</NavButton2>
         </NavBarButtonsContainer>
         <MenuIcon
