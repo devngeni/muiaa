@@ -72,7 +72,7 @@ function Navbar() {
           sx={{ display: { md: "flex", xs: "none" } }}
         >
           <NavButton
-            href={`${process.env.NEXT_PUBLIC_BACKEND_URI}/auth0/login`}
+            href={`${process.env.NEXT_PUBLIC_BACKEND_URI}auth0/login`}
           >
             Explore App
           </NavButton>
