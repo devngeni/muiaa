@@ -123,12 +123,7 @@ export  const ColBodyText = styled(Typography)({
 export  const ColBodyText1 = styled(ColBodyText)({
 
 });
-export  const BodyWrapper = styled(Box)({
 
-});
-export  const CardWrapper2 = styled(BodyWrapper)({
-
-});
-export  const CardWrapper3 = styled(Box)({
+export  const CardWrapper1 = styled(Box)({
 
 });
