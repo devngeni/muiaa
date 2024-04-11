@@ -16,6 +16,25 @@ import AccountDetails from "./AccountDetails";
 
 const ProfilePageSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(1);
+  const token = sessionStorage.getItem("auth_token")
+
+    function parseJwt(token) {
+      var base64Url = token.split(".")[1];
+      var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      var jsonPayload = decodeURIComponent(
+        window
+          .atob(base64)
+          .split("")
+          .map(function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join("")
+      );
+
+      return JSON.parse(jsonPayload);
+    }
+
+    const userData = parseJwt(sessionStorage.getItem("auth_token"));
 
   return (
     <ProfilePageSectionContainer>
@@ -60,9 +79,9 @@ const ProfilePageSection = () => {
           <ArrowRight />
         </ProfileTilesFlexWrapper>
       </ProfileTilesContainer>
-      {selectedIndex === 1 && <ProfileDetails />}
-      {selectedIndex === 2 && <PersonalInfo />}
-      {selectedIndex === 3 && <AccountDetails />}
+      {selectedIndex === 1 && <ProfileDetails userData={userData} />}
+      {selectedIndex === 2 && <PersonalInfo userData={userData} />}
+      {selectedIndex === 3 && <AccountDetails userData={userData} />}
     </ProfilePageSectionContainer>
   );
 };

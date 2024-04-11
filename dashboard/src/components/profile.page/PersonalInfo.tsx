@@ -14,8 +14,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import InsertImg from "../../../public/assets/overview/insertImg";
 
-const PersonalInfo = () => {
+const PersonalInfo = (userData: any) => {
   const [selectedCountry, setSelectedCountry] = useState("");
+  console.log(userData)
 
   return (
     <ProfileDetailsContainer>
@@ -29,11 +30,17 @@ const PersonalInfo = () => {
       </ProfileItemFlexWrapper>
       <ProfileItemFlexWrapper>
         <ProfileInputLabel>First Name</ProfileInputLabel>
-        <TextField placeholder="Enter your first name" />
+        <TextField
+          placeholder="Enter your first name"
+          value={userData.userData.given_name}
+        />
       </ProfileItemFlexWrapper>
       <ProfileItemFlexWrapper>
         <ProfileInputLabel>Last Name</ProfileInputLabel>
-        <TextField placeholder="Enter your first name" />
+        <TextField
+          placeholder="Enter your first name"
+          value={userData.userData.family_name}
+        />
       </ProfileItemFlexWrapper>
       <ProfileItemFlexWrapper>
         <ProfileInputLabel>Country / Region</ProfileInputLabel>

@@ -21,12 +21,34 @@ const Navbar = () => {
       setOpen(false);
     }
   }, [isDesktop]);
-    
-    
-  const { data, error, isLoading } = useGetUserDetailsQuery(
-    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im13dTVSYzUyTTQtamUwWDJUeU15TiJ9.eyJnaXZlbl9uYW1lIjoiQ29sbGlucyIsImZhbWlseV9uYW1lIjoiS29lY2giLCJuaWNrbmFtZSI6ImNvbGxpbnNrb2VjaGNrMzQiLCJuYW1lIjoiQ29sbGlucyBLb2VjaCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMZzBWT2N5aGk0OHV6cWRNbDRya2FoY3U0bUVjbFk3dmRFdHRSWmRqYnBPX0E9czk2LWMiLCJsb2NhbGUiOiJlbi1HQiIsInVwZGF0ZWRfYXQiOiIyMDI0LTAzLTIxVDEwOjA4OjIyLjQ5NFoiLCJlbWFpbCI6ImNvbGxpbnNrb2VjaGNrMzRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LWF1ZW1vNG9jcHNiengydjcudXMuYXV0aDAuY29tLyIsImF1ZCI6IjNmNWhueXJFeURMTm9OUlhWRkZtYTkwU2dkeHdPWVdPIiwiaWF0IjoxNzExMDE1NzAzLCJleHAiOjE3MTEwNTE3MDMsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTAzNDM0NTY0ODI1NzkzMDQ3ODI0Iiwic2lkIjoiTG90M1l1eEhHcmtTeVdWNmhpaXJ2SnZGa2ZYRXluR2ciLCJub25jZSI6IkJqNHliek54blJkeXRqZHVKcjRfYnFBNEY0dUI1eVloZzNUeEhOb2VyY2cifQ.POJs-Syg4jK1DBaKKPxiBw6kchvHt7RS5GbX-9cpBZVdbCvaRnRicsgDXMwgobMyY042E2CHHrMhL-kEEltt_ZLXQdYOw8nq3WfIlLsWnM-7gUSscOEM4UT6TDJOGlJiVz8Llxa0nSQBuGwnyhtlU8JUqYqjZ3EXmciX4mKEp-tGQaj5qQmlGKD_q0JH3O2tC7PK__T_63k97lZJbttUe6cLXrzVLItIfpjuYW0bTfiHehevYBjJoICGEroPrauPBhiUU23rJtv4PKCiRRGmK5iRdejAKdNXcv_bOdaEZ8FTWbnFBQUdW77rNQs_0fXQ5niqBirOtNsfrIcx1K8QIg"
-  );
-  console.log(data);
+
+  let { token }: any = router.query;
+  if (token) {
+    sessionStorage.setItem("auth_token", token);
+  } else if(!token){
+    if(!sessionStorage.getItem("auth_token")){
+      router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`);
+    }
+  }
+  token = sessionStorage.getItem("auth_token")
+  function parseJwt(token) {
+    var base64Url = token.split(".")[1];
+    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    var jsonPayload = decodeURIComponent(
+      window
+        .atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
+
+    return JSON.parse(jsonPayload);
+  }
+
+  console.log(parseJwt(sessionStorage.getItem("auth_token")),"====>><<====")
+  const userData = parseJwt(sessionStorage.getItem("auth_token"));
 
   return (
     <NavbarContainer>
@@ -77,16 +99,8 @@ const Navbar = () => {
            {data?.given_name}
            </Box> */}
         <Box sx={{ display: "flex", gap: "10px" }}>
-          <Link href={"/login"}>
-            <GrayButton sx={{ gap: "5px" }}>
-              <Image
-                src="/assets/loginIcon.svg"
-                alt=""
-                width={26.18}
-                height={26.18}
-              />
-              Login
-            </GrayButton>
+          <Link href={"/track-order/my-account"}>
+            <GrayButton>{userData.given_name}</GrayButton>
           </Link>
 
           <GrayButton className="Button_before">

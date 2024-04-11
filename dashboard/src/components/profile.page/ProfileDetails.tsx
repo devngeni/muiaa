@@ -14,8 +14,9 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import InsertImg from "../../../public/assets/overview/insertImg";
 
-const ProfileDetails = () => {
+const ProfileDetails = (userData:any) => {
   const imagPickerRef = useRef<HTMLElement | null>(null);
+  console.log(userData)
 
   return (
     <ProfileDetailsContainer>
@@ -27,22 +28,24 @@ const ProfileDetails = () => {
       </ProfileItemFlexWrapper>
       <ProfileItemFlexWrapper>
         <ProfileInputLabel>Username</ProfileInputLabel>
-        <TextField placeholder="Username" />
+        <TextField
+          placeholder={userData.userData.name}
+          value={userData.userData.name}
+        />
       </ProfileItemFlexWrapper>
       <ProfileItemFlexWrapper>
         <ProfileInputLabel>Photo</ProfileInputLabel>
         <ProfileDetailsFlexRow>
           <Image
-            src={"/assets/overview/avatar.jpg"}
+            src={`${userData.userData.picture}`}
             alt="avatar"
             width={48}
             height={48}
           />
-          <ProfilePhotoCngBtn>Change</ProfilePhotoCngBtn>
         </ProfileDetailsFlexRow>
       </ProfileItemFlexWrapper>
 
-      <ProfileItemFlexWrapper>
+      {/* <ProfileItemFlexWrapper>
         <ProfileInputLabel>Cover Photo</ProfileInputLabel>
         <CoverPhotoWrapper>
           <InsertImg />
@@ -51,7 +54,7 @@ const ProfileDetails = () => {
           </Typography>
           <Typography variant="body1">PNG, JPG, GIF up to 10MB</Typography>
         </CoverPhotoWrapper>
-      </ProfileItemFlexWrapper>
+      </ProfileItemFlexWrapper> */}
       <ProfileUpdateBtn>Save</ProfileUpdateBtn>
     </ProfileDetailsContainer>
   );
