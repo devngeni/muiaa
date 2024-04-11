@@ -45,6 +45,8 @@ function Navbar() {
     },
   });
 
+
+
   return (
     <NavbarContainer>
       <NavbarMiniContainer container>

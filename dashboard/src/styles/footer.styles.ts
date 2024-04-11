@@ -1,11 +1,19 @@
-import { Box, styled } from '@mui/material';
+import { Box, Grid, styled } from '@mui/material';
 
 export const FooterContainer = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'space-around',
   background: '#14263E',
   color: '#FFFFFF',
   padding: '10px 20px',
-  height: '89px'
+  minHeight: '89px',
+  flexWrap:"wrap"
 }));
+ export const FooterLinksContainer = styled(Grid)({
+  maxWidth:"500px"
+ })
+
+ export const FooterLink = styled(Grid)({
+  cursor:"pointer"
+ })

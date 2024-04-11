@@ -9,7 +9,7 @@ import {
 import { TextField } from "@mui/material";
 import React from "react";
 
-const AccountDetails = () => {
+const AccountDetails = (userData: any) => {
   return (
     <ProfileDetailsContainer>
       <ProfileItemFlexWrapper>
