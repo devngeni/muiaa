@@ -30,7 +30,6 @@ const Navbar = () => {
     }
   }
 token = sessionStorage.getItem("auth_token");
-// Move the function declaration outside of the block
 function parseJwt(token:any) {
     if (token) {
     var base64Url = token.split(".")[1];
@@ -46,10 +45,7 @@ function parseJwt(token:any) {
     );
 
     return JSON.parse(jsonPayload);
-  } else {
-      router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`)
   }
-  // Call the function after it has been declared
 }
   console.log(parseJwt(sessionStorage.getItem("auth_token")), "====>><<====");
   const userData = parseJwt(sessionStorage.getItem("auth_token"));
