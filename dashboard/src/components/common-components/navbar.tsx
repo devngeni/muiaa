@@ -1,4 +1,3 @@
-import { useGetUserDetailsQuery } from "@/Api/services";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { NavbarContainer, SearchContainer } from "@/styles/navbar-styles";
@@ -30,8 +29,10 @@ const Navbar = () => {
       router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`);
     }
   }
-  token = sessionStorage.getItem("auth_token")
-  function parseJwt(token) {
+token = sessionStorage.getItem("auth_token");
+// Move the function declaration outside of the block
+function parseJwt(token:any) {
+    if (token) {
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     var jsonPayload = decodeURIComponent(
@@ -45,12 +46,14 @@ const Navbar = () => {
     );
 
     return JSON.parse(jsonPayload);
+  } else {
+      router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`)
   }
-
-  console.log(parseJwt(sessionStorage.getItem("auth_token")),"====>><<====")
+  // Call the function after it has been declared
+}
+  console.log(parseJwt(sessionStorage.getItem("auth_token")), "====>><<====");
   const userData = parseJwt(sessionStorage.getItem("auth_token"));
-
-  return (
+  return(
     <NavbarContainer>
       <Box className="navbar_items">
         <Box sx={{ display: "flex", gap: "30px", alignItems: "center" }}>
