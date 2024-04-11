@@ -6,11 +6,13 @@ import { GrayButton, TextButtons } from "@/styles/common-styles";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DropDownModal from "./dropDownModal";
+import {jwtDecode} from "jwt-decode";
 
 const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const toggleDropDownModal = () => setOpen(!open);
+  const [userData, setUserData] = React.useState<any>();
 
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up(1000));
@@ -21,35 +23,20 @@ const Navbar = () => {
     }
   }, [isDesktop]);
 
-  let { token }: any = router.query;
+  
+  const { token }:any = router.query;
   if (token) {
-    sessionStorage.setItem("auth_token", token);
-  } else if(!token){
-    if(!sessionStorage.getItem("auth_token")){
-      router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`);
-    }
+    sessionStorage.setItem("auth_token", JSON.stringify(router.query.token));
   }
-token = sessionStorage.getItem("auth_token");
-function parseJwt(token:any) {
-    if (token) {
-    var base64Url = token.split(".")[1];
-    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-    var jsonPayload = decodeURIComponent(
-      window
-        .atob(base64)
-        .split("")
-        .map(function (c) {
-          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-        })
-        .join("")
-    );
-
-    return JSON.parse(jsonPayload);
+  const auth_token = JSON.parse(sessionStorage.getItem("auth_token"));
+  useEffect(() => {
+    setUserData(jwtDecode(auth_token));
+    console.log(userData)
+  }, []);
+  if (!auth_token) {
+    console.log("Auth token not found");
   }
-}
-  console.log(parseJwt(sessionStorage.getItem("auth_token")), "====>><<====");
-  const userData = parseJwt(sessionStorage.getItem("auth_token"));
-  return(
+  return (
     <NavbarContainer>
       <Box className="navbar_items">
         <Box sx={{ display: "flex", gap: "30px", alignItems: "center" }}>
@@ -99,7 +86,7 @@ function parseJwt(token:any) {
            </Box> */}
         <Box sx={{ display: "flex", gap: "10px" }}>
           <Link href={"/track-order/my-account"}>
-            <GrayButton>{userData.given_name}</GrayButton>
+            <GrayButton>{userData?.given_name}</GrayButton>
           </Link>
 
           <GrayButton className="Button_before">
