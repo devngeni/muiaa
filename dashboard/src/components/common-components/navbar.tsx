@@ -34,7 +34,7 @@ const Navbar = () => {
     console.log(userData)
   }, []);
   if (!auth_token) {
-    console.log("Auth token not found");
+    router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`);
   }
   return (
     <NavbarContainer>
