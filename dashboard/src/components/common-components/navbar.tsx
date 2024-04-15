@@ -17,6 +17,11 @@ const Navbar = () => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up(1000));
 
+  function removeSlashes(str) {
+    // Use regular expression to remove slashes from the beginning and end of the string
+    return str.replace(/^\\|\\$/g, "");
+  }
+
   useEffect(() => {
     if (!isDesktop) {
       setOpen(false);
@@ -27,11 +32,12 @@ const Navbar = () => {
   if (token) {
     sessionStorage.setItem("auth_token", JSON.stringify(token));
   }
-  const auth_token = JSON.parse(sessionStorage.getItem("auth_token"));
-  console.log(auth_token);
-  const profile_data = decode(auth_token).payload;
+  const auth_token:string = JSON.stringify(sessionStorage.getItem("auth_token"));
+  const cleaned_token = removeSlashes(auth_token);
+  const profile_data = decode(cleaned_token);
+  const profile_data_cleaned = profile_data.payload
   useEffect(() => {
-    setUserData(profile_data);
+    setUserData(profile_data_cleaned);
     console.log(userData);
   }, []);
   if (!auth_token) {
