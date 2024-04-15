@@ -15,5 +15,8 @@ export const FooterContainer = styled(Box)(() => ({
  })
 
  export const FooterLink = styled(Grid)({
-  cursor:"pointer"
+  cursor:"pointer",
+  minHeight:"50px",
+  display:"flex",
+  alignItems:"center"
  })
