@@ -204,8 +204,8 @@ export const UnparalleledGridItem = styled(Grid)({
 export const UnparalleledContentContainer = styled(Typography)({
   width: "95%",
   margin: "auto",
-  border: "1px solid #000",
-  backgroundColor: "#F5F6F7",
+  // border: "1px solid #000",
+  // backgroundColor: "#F5F6F7",
   borderRadius: "10px",
   padding: "20px",
   minHeight: "360px",
@@ -223,7 +223,7 @@ export const OrangeText = styled(Typography)({
 export const UnparalleledMainText = styled(Typography)({
   color: "#003565",
   fontSize: "28px",
-  fontWeight: "700",
+  fontWeight: "500",
   lineHeight: "32px",
   fontFamily: "'Inter'",
   width: "90%",
@@ -232,7 +232,7 @@ export const UnparalleledMainText = styled(Typography)({
   },
 });
 export const UnparalleledSubText = styled(Typography)({
-  color: "#003565",
+  color: "#444444",
   fontSize: "16px",
   fontWeight: "300",
   fontFamily: "'Inter'",

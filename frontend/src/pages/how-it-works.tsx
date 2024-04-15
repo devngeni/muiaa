@@ -36,7 +36,10 @@ function HotItWorks() {
     <>
       <Head>
         <title>MUIAA</title>
-        <meta name="description" content="HOW-IT-WORKS | MUIRURI & ASSOCIATES LTD" />
+        <meta
+          name="description"
+          content="HOW-IT-WORKS | MUIRURI & ASSOCIATES LTD"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logomini.png" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -266,7 +269,7 @@ function HotItWorks() {
               sx={{
                 color: "#000",
                 fontWeight: "900",
-                fontSize: { md: "60px", xs: "30px" },
+                fontSize: { md: "48px", xs: "30px" },
                 width: "80%",
                 margin: "auto",
                 mt: { md: "100px", xs: "20px" },
@@ -278,9 +281,23 @@ function HotItWorks() {
               We believe that in a world that{" "}
               <span style={{ color: "#DFBC6D" }}>
                 {" "}
-                turns you into a business, we are able to use technology
+                turns you into a business
               </span>{" "}
-              to deliver to you an unparalleled dairy feeds supply.
+            </Typography>
+            <Typography
+              sx={{
+                color: "#000",
+                fontWeight: "300",
+                fontSize: { md: "28px", xs: "25px" },
+                width: "80%",
+                margin: "auto",
+                mt: { md: "10px", xs: "5px" },
+                lineHeight: "44px",
+                fontFamily: "'Inter'",
+              }}
+            >
+              we are able to use technology to deliver to you an unparalleled
+              dairy feeds supply.
             </Typography>
           </PLatformItem>
         </PlatformContainer>
@@ -342,14 +359,14 @@ function HotItWorks() {
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
               <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
-                How does it help Farmers
+                How do I place an order on MUIAA Feeds
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
             <WhiteBackgroundAccordionDetails>
               <AccordionText2>
-                It helps farmers show that they produce top-quality dairy and
-                helps them reach more people who care about where their food
-                comes from.
+                You can place an order through either Whatsapp or our Webstore.
+                Simply reach out to us through the provided channels, and our
+                team will guide you through the process.
               </AccordionText2>
             </WhiteBackgroundAccordionDetails>
           </WhiteBackgroundAccordion>
@@ -359,43 +376,85 @@ function HotItWorks() {
               expandIcon={<MaximizeIcon />}
             >
               <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
-                Is it easy to use?
+                How does blockchain technology benefit MUIAA Feeds?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
             <WhiteBackgroundAccordionDetails>
               <AccordionText2>
-                Yes, it's easy! You can scan a code or use an app to find out
-                everything you need to know about the dairy products you're
-                getting. It's like a digital tag that ensures you're getting the
-                best.
+                Blockchain technology ensures transparency and security by
+                recording supplier details, contracts, and quality assurance
+                information in a tamper-proof manner.
               </AccordionText2>
             </WhiteBackgroundAccordionDetails>
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
               <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
-                Is my information safe?
+                What information is typically included in supplier contracts?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
             <WhiteBackgroundAccordionDetails>
               <AccordionText2>
-                Absolutely! Your personal details are kept super safe and can't
-                be seen by anyone else. This means you can use the platform
-                without worrying about your privacy.
+                Supplier contracts usually include details such as feed quality
+                standards, pricing agreements, delivery schedules, and payment
+                terms.
               </AccordionText2>
             </WhiteBackgroundAccordionDetails>
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
               <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
-                How does it help farmers?
+                How does MUIAA Feeds optimize transportation processes?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
             <WhiteBackgroundAccordionDetails>
               <AccordionText2>
-                It helps farmers show that they produce top-quality dairy and
-                helps them reach more people who care about where their food
-                comes from
+                We utilize Smart logistics contracts on the XDC blockchain to
+                streamline transportation arrangements and optimize routes. This
+                helps in reducing transportation costs and ensures efficient
+                delivery of orders.
+              </AccordionText2>
+            </WhiteBackgroundAccordionDetails>
+          </WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordion>
+            <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+              <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
+                How does tokenization contribute to traceability?
+              </AccordionText>
+            </WhiteBackgroundAccordionSummary>
+            <WhiteBackgroundAccordionDetails>
+              <AccordionText2>
+                Tokenization allows us to record transportation details on the
+                blockchain, including shipment status, location, and estimated
+                time of arrival.
+              </AccordionText2>
+            </WhiteBackgroundAccordionDetails>
+          </WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordion>
+            <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+              <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
+                What are the advantages of using XDC tokens for cross-border
+                payments?
+              </AccordionText>
+            </WhiteBackgroundAccordionSummary>
+            <WhiteBackgroundAccordionDetails>
+              <AccordionText2>
+                Using XDC tokens for cross-border payments eliminates currency
+                exchange fees and delays, making transactions faster and more
+                cost-effective for both parties involved.
+              </AccordionText2>
+            </WhiteBackgroundAccordionDetails>
+          </WhiteBackgroundAccordion>
+          <WhiteBackgroundAccordion>
+            <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
+              <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
+                Is MUIAA Feeds available for international orders?
+              </AccordionText>
+            </WhiteBackgroundAccordionSummary>
+            <WhiteBackgroundAccordionDetails>
+              <AccordionText2>
+                Yes, MUIAA Feeds facilitates cross-border transactions, allowing
+                customers from different regions to place orders seamlessly.
               </AccordionText2>
             </WhiteBackgroundAccordionDetails>
           </WhiteBackgroundAccordion>

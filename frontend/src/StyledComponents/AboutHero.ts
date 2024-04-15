@@ -3,9 +3,11 @@ import { Box, Button, Grid, Typography, styled } from "@mui/material"
 export const AboutMainHero = styled(Box)({
   width: "100vw",
   height: "auto",
-  backgroundImage:"url('https://giphy.com/embed/7VzgMsB6FLCilwS30v')",
+  backgroundImage:"url('assets/aboutbg.png')",
   backgroundColor: "#033D66",
   paddingTop:"8vh",
+  backgroudSize:"cover",
+  backgroundRepeat:"no-repeat"
 });
 export const AboutHeroContainer = styled(Box)({
   width: "100%",
