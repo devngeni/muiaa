@@ -6,7 +6,6 @@ import { GrayButton, TextButtons } from "@/styles/common-styles";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DropDownModal from "./dropDownModal";
-import {jwtDecode} from "jwt-decode";
 import { decode } from "jwt-js-decode";
 
 const Navbar = () => {
@@ -25,8 +24,6 @@ const Navbar = () => {
   }, [isDesktop]);
 
   const { token }: any = router.query;
-  console.log(token);
-  console.log(decode(token).payload.given_name);
   if (token) {
     sessionStorage.setItem("auth_token", JSON.stringify(token));
   }
