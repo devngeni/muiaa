@@ -30,7 +30,7 @@ import {
   UnparalleledMainText,
   UnparalleledSubText,
 } from "@/StyledComponents/HomeHero";
-import { Grid, Box, Button, styled } from "@mui/material";
+import { Grid, Box, Button, styled, Typography } from "@mui/material";
 import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
 import { useRouter } from "next/router";
@@ -41,17 +41,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default function Home() {
-  const Type = styled(TypeAnimation)({
-
-  })
-  const ImageHere = styled("img")({
-
-  })
+  const Type = styled(TypeAnimation)({});
+  const ImageHere = styled("img")({});
   const router = useRouter();
-  const navigate = () =>  {
+  const navigate = () => {
     router.push(`${process.env.NEXT_PUBLIC_BACKEND_URI}auth0/login`);
-  }
-  
+  };
+
   return (
     <>
       <Head>
@@ -80,6 +76,7 @@ export default function Home() {
               <br />
               <br />
               <Fade direction="up">
+                s
                 <HeroMiniText>
                   Revolutionizing the cattle feed industry between Kenya and
                   Zanzibar. Leveraging the power of the XDC blockchain, our
@@ -104,7 +101,7 @@ export default function Home() {
                       }}
                       onClick={() => navigate()}
                     >
-                      Explore App
+                      Make an Order
                     </BlueButton>
                   </Grid>
                   <Grid item md={6} xs={12}>
@@ -178,19 +175,34 @@ export default function Home() {
         <SeamlessGridItem item md={12} xs={12}>
           <SeamlessMainText
             sx={{
-              mt: "100px",
-              width: { md: "80%", xs: "100%" },
-              fontSize: { md: "60px", xs: "30px" },
+              width: { md: "60%", xs: "100%" },
+              fontSize: { md: "48px", xs: "30px" },
               letterSpacing: { md: "-3px", xs: "-1px" },
+              textAlign: "center",
+              margin: "auto",
+              pt: "40px",
             }}
           >
-            By seamlessly integrating blockchain technology, we offer farmers
-            and distributors a decentralized platform for feed ordering,
-            real-time traceability, and smart contract automation.
+            We offer farmers and distributors a decentralized platform
           </SeamlessMainText>
+          <Typography
+            sx={{
+              width: { md: "60%", xs: "100%" },
+              fontSize: { md: "28px", xs: "20px" },
+              textAlign: "center",
+              margin: "auto",
+              color: "#1A1A1A",
+              lineHeight: "44px",
+              fontWeight: "300",
+              pt: "20px",
+            }}
+          >
+            for feed ordering, real-time traceability, and smart contract
+            automation by seamlessly integrating blockchain technology,
+          </Typography>
           <br />
           <UnparalleledMainContainer container>
-            <UnparalleledGridItem item md={8}>
+            <UnparalleledGridItem item md={6}>
               <Fade direction="left">
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
@@ -199,7 +211,6 @@ export default function Home() {
                       <UnparalleledMainText>
                         Unparalleled access to high- quality feed products
                       </UnparalleledMainText>
-                      <br />
                       <br />
                       <UnparalleledSubText>
                         Leveraging the security and transparency of blockchain
@@ -215,49 +226,53 @@ export default function Home() {
                 </UnparalleledContentContainer>
               </Fade>
             </UnparalleledGridItem>
-            <UnparalleledGridItem item md={4}>
+            <UnparalleledGridItem item md={6}>
               <Fade direction="right">
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
                   <Grid container>
-                    <Grid item xs={12}>
-                      <img src="assets/process.svg" />
-                    </Grid>
-                    <Grid item xs={12}>
+                    <Grid item md={6} xs={12}>
                       <UnparalleledMainText>
                         Reliable supply chain
                       </UnparalleledMainText>
+                      <br/>
                       <UnparalleledSubText>
                         providing feeds to agricultural farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
+                      <br/>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                      <img src="assets/process.svg" />
                     </Grid>
                   </Grid>
                 </UnparalleledContentContainer>
               </Fade>
             </UnparalleledGridItem>
-            <UnparalleledGridItem item md={4}>
+            <UnparalleledGridItem item md={6}>
               <Fade direction="left">
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
                   <Grid container>
-                    <Grid item xs={12}>
-                      <img src="assets/process.svg" />
-                    </Grid>
-                    <Grid item xs={12}>
+                    <Grid item md={6} xs={12}>
                       <UnparalleledMainText>
                         Reliable supply chain
                       </UnparalleledMainText>
+                      <br/>
                       <UnparalleledSubText>
                         providing feeds to agricultural farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
+                      <br/>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                      <img src="assets/cowanimation.svg" />
                     </Grid>
                   </Grid>
                 </UnparalleledContentContainer>
               </Fade>
             </UnparalleledGridItem>
-            <UnparalleledGridItem item md={8}>
+            <UnparalleledGridItem item md={6}>
               <Fade direction="right">
                 <UnparalleledContentContainer>
                   <OrangeText>Dairy</OrangeText>
@@ -267,7 +282,6 @@ export default function Home() {
                         Unparalleled access to high- quality feed products
                       </UnparalleledMainText>
                       <br />
-                      <br />
                       <UnparalleledSubText>
                         Leveraging the security and transparency of blockchain
                         for every step from supplier sourcing to end-user
@@ -276,7 +290,7 @@ export default function Home() {
                       <br />
                     </Grid>
                     <Grid item md={6} xs={12}>
-                      <img src="assets/dairy.svg" />
+                      <img src="assets/processing.svg" />
                     </Grid>
                   </Grid>
                 </UnparalleledContentContainer>
@@ -312,7 +326,7 @@ export default function Home() {
             }}
           >
             Hence, a blockchain-based platform that{" "}
-            <span style={{ color: "#DFBC6D", fontWeight: "bold" }}>
+            <span style={{ color: "#0F3EA4", fontWeight: "bold" }}>
               connects dairy farmers, feed suppliers, distributors, and
               regulatory authorities
             </span>{" "}
@@ -514,7 +528,7 @@ export default function Home() {
           <UnparalleledSubText
             sx={{
               fontSize: { md: "24px", xs: "16px" },
-              lineHeight: { md: "28px", xs: "22px" },
+              lineHeight: { md: "40px", xs: "30px" },
               color: "#1A1A1A",
             }}
           >
@@ -525,9 +539,15 @@ export default function Home() {
           </UnparalleledSubText>
         </Grid>
         <Grid item md={4} xs={0}>
-          <Box sx={{ width: "100%", height: { md: "650px", xs: "auto" },background: "url(./assets/asset24.svg)",
+          <Box
+            sx={{
+              width: "100%",
+              height: { md: "650px", xs: "auto" },
+              background: "url(./assets/asset24.svg)",
               backgroundSize: "cover",
-              backgroundRepeat: "no-repeat", }}>
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             {/* <img src="./assets/asset24.svg" style={{ width: "100%" }} /> */}
           </Box>
         </Grid>
@@ -635,7 +655,7 @@ export default function Home() {
           >
             <Fade direction="up">
               <ImageHere
-                src="assets/phone.svg"
+                src="assets/snapshot.png"
                 sx={{ marginTop: { md: "-80px", xs: "0" } }}
               />
             </Fade>
@@ -721,7 +741,7 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: { lg: "80px", md: "60px", xs: "40px" },
+            fontSize: { lg: "48px", md: "44px", xs: "40px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
@@ -730,7 +750,7 @@ export default function Home() {
             marginTop: { md: "0", xs: "150px" },
           }}
         >
-          It Powers the chain
+          Powered by blockchain
         </SeamlessMainText>
         <br />
         <Grid
@@ -1050,7 +1070,7 @@ export default function Home() {
           waiting for?
         </UnparalleledSubText>
         <br />
-        <BlueButton sx={{ maxWidth: "250px" }}>Explore App</BlueButton>
+        <BlueButton sx={{ maxWidth: "250px" }}>Make an Order</BlueButton>
         <br />
         <br />
         <br />

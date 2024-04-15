@@ -84,9 +84,7 @@ function AboutHero() {
                     overflow: "hidden",
                     marginBottom: { md: "0", xs: "50px" },
                   }}
-                >
-                  {/* <CowImage src="https://source.unsplash.com/1000x500/?cows" /> */}
-                </Box>
+                ></Box>
               </Fade>
             </AboutDumbGridItem>
             <AboutDumbGridItem item xs={12} sm={6}>
@@ -293,10 +291,10 @@ function AboutHero() {
           </Grid>
         </Grid>
       </AboutHeroContainer>
-      <AboutMainHero
+      <Box
         sx={{
           minHeight: "auto",
-          backgroundColor: "#fff",
+          backgroundColor: "#fff !important",
           textAlign: "center",
         }}
       >
@@ -327,11 +325,11 @@ function AboutHero() {
             Enabling the world to move value the way information moves today.
           </AboutMiniText>
           <br /> <br />
-          <ServiceButton>Explore App</ServiceButton>
+          <ServiceButton>Make an Order</ServiceButton>
         </AboutHeroContainer>
         <br />
         <br />
-      </AboutMainHero>
+      </Box>
     </>
   );
 }
