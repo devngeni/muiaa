@@ -53,7 +53,7 @@ function HotItWorks() {
                 <Typography
                   sx={{
                     color: "#ffff",
-                    fontWeight: "900",
+                    fontWeight: "500",
                     fontSize: { md: "60px", xs: "40px" },
                     minHeight: { md: "200px", xs: "200px" },
                     maxWidth: "1000px",
@@ -82,14 +82,15 @@ function HotItWorks() {
             <Typography
               sx={{
                 color: "#ffff",
-                fontWeight: "900",
-                fontSize: { md: "60px", xs: "40px" },
+                fontWeight: "600",
+                fontSize: { md: "48px", xs: "36px" },
                 width: { md: "65%", xs: "90%" },
                 margin: "auto",
                 mt: "100px",
                 lineHeight: "72px",
                 letterSpacing: "-3px",
                 fontFamily: "'Inter'",
+                maxWidth:"400px"
               }}
             >
               How our platform Works{" "}
@@ -268,7 +269,7 @@ function HotItWorks() {
             <Typography
               sx={{
                 color: "#000",
-                fontWeight: "900",
+                fontWeight: "600",
                 fontSize: { md: "48px", xs: "30px" },
                 width: "80%",
                 margin: "auto",
@@ -315,10 +316,10 @@ function HotItWorks() {
             <Typography
               sx={{
                 color: "#ffff",
-                fontWeight: "900",
-                fontSize: { md: "60px", xs: "35px" },
+                fontWeight: "700",
+                fontSize: { md: "35px", xs: "27px" },
                 margin: "auto",
-                lineHeight: "",
+                lineHeight: "42px",
                 letterSpacing: "-2px",
                 fontFamily: "'Inter'",
               }}
@@ -351,7 +352,7 @@ function HotItWorks() {
               mb: "50px",
               mt: "70px",
               maxWidth: "80vw",
-              fontSize: { md: "60px", xs: "35px" },
+              fontSize: { md: "45px", xs: "35px" },
             }}
           >
             Technical FAQ's

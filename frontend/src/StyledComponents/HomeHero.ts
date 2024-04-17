@@ -62,7 +62,7 @@ export const ContentContainer = styled(Box)({
 export const HeroMainText = styled(Typography)({
   ...baseFontSize,
   fontSize: "60px",
-  fontWeight: "900",
+  fontWeight: "700",
   color: "#1A1A1A",
   textAlign: "left",
   width: "80%",
@@ -131,18 +131,19 @@ export const NavyStatItem = styled(Grid)({
   fontWeight: "900",
 });
 export const NavyNumber = styled(Typography)({
-  fontSize: "48px",
-  fontWeight: "bold",
+  fontSize: "36px",
+  fontWeight: "700",
   color: "#003565",
   width: "90%",
   margin: "auto",
   fontFamily: "'Inter'",
 });
 export const NavyText = styled(Typography)({
-  fontSize: "24px",
+  fontSize: "20px",
   fontWeight: "300",
   color: "#003565",
   fontFamily: "'Inter'",
+  lineHeight:"24px",
   width: "90%",
 });
 export const NavySection = styled(Box)({
@@ -168,7 +169,7 @@ export const NavyTextContainer = styled(Box)({
 });
 export const WhiteText = styled(Typography)({
   color: "#fff",
-  fontWeight: "bold",
+  fontWeight: "500",
   width: "160%",
   margin: "auto",
   textAlign: "center",
@@ -195,6 +196,8 @@ export const SeamlessMainText = styled(Typography)({
   width: "80%",
   letterSpacing: "-3px",
   fontFamily: "'Inter'",
+  fontWeight:"600",
+  maxWidth:"800px"
 });
 export const UnparalleledMainContainer = styled(Grid)({
 })
@@ -218,13 +221,14 @@ export const OrangeText = styled(Typography)({
   marginBottom: "30px",
   width: "100%",
   fontFamily: "'Inter'",
+  lineHeight:"17px"
 });
 
 export const UnparalleledMainText = styled(Typography)({
   color: "#003565",
-  fontSize: "28px",
+  fontSize: "32px",
   fontWeight: "500",
-  lineHeight: "32px",
+  lineHeight: "38px",
   fontFamily: "'Inter'",
   width: "90%",
   "@media (max-width: 600px)": {
@@ -236,7 +240,7 @@ export const UnparalleledSubText = styled(Typography)({
   fontSize: "16px",
   fontWeight: "300",
   fontFamily: "'Inter'",
-  lineHeight: "21px",
+  lineHeight: "24px",
   width: "90%",
   "@media (max-width: 800px)": {
     fontSize: "12px",
