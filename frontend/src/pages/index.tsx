@@ -90,7 +90,7 @@ export default function Home() {
                   sx={{
                     width: "auto",
                     maxWidth: { xs: "300px", md: "500px" },
-                    margin: "auto",
+                    margin: {md:"0",sm:"auto" },
                   }}
                 >
                   <Grid item md={6} xs={12}>
@@ -312,7 +312,7 @@ export default function Home() {
             letterSpacing: { md: "-3px", xs: "-1px" },
           }}
         >
-          Remarkable transformation fueled by digital solutions
+          Remarkable transformation fueled by digital solutions.
         </SeamlessMainText>
       </Box>
       <Grid container sx={{ width: "85%", margin: "auto" }}>
