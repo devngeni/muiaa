@@ -65,8 +65,7 @@ export default function Home() {
               {/* <Fade direction="down"> */}
               <HeroMainText
                 sx={{
-                  fontSize: { lg: "60px", md: "50px", sm: "30px", xs: "27px" },
-                  letterSpacing: { md: "-3px", xs: "-1px" },
+                  letterSpacing: { md: "-2px", xs: "-1px" },
                   textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)", // Adjust values as needed
                 }}
               >
@@ -90,7 +89,7 @@ export default function Home() {
                   sx={{
                     width: "auto",
                     maxWidth: { xs: "300px", md: "500px" },
-                    margin: {md:"0",sm:"auto" },
+                    margin: { md: "0", xs: "auto" },
                   }}
                 >
                   <Grid item md={6} xs={12}>
@@ -146,6 +145,7 @@ export default function Home() {
             display: "flex",
             justifyContent: "center",
             minHeight: { md: "400px", xs: "200px" },
+            alignItems: "center",
           }}
         >
           <br />
@@ -155,12 +155,14 @@ export default function Home() {
               width: { xs: "100%", md: "70%" },
               margin: "auto",
               minHeight: { md: "600px", xs: "200px" },
+              display: "flex",
             }}
           >
             <WhiteText
               sx={{
                 fontSize: { md: "60px", xs: "35px" },
-                display: "inline-block",
+                minWidth: { md: "160%", xs: "100%" },
+                margin: "auto",
                 marginLeft: { md: "-30%", xs: "0" },
                 pt: { xs: "100px", md: "0" },
                 pb: { xs: "100px", md: "0" },
@@ -176,7 +178,7 @@ export default function Home() {
           <SeamlessMainText
             sx={{
               width: { md: "60%", xs: "100%" },
-              fontSize: { md: "48px", xs: "30px" },
+              fontSize: "calc(1.875rem + ((1vw - 6px) * 1.6026))",
               letterSpacing: { md: "-3px", xs: "-1px" },
               textAlign: "center",
               margin: "auto",
@@ -235,12 +237,12 @@ export default function Home() {
                       <UnparalleledMainText>
                         Reliable supply chain
                       </UnparalleledMainText>
-                      <br/>
+                      <br />
                       <UnparalleledSubText>
                         providing feeds to agricultural farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
-                      <br/>
+                      <br />
                     </Grid>
                     <Grid item md={6} xs={12}>
                       <img src="assets/process.svg" />
@@ -258,12 +260,12 @@ export default function Home() {
                       <UnparalleledMainText>
                         Reliable supply chain
                       </UnparalleledMainText>
-                      <br/>
+                      <br />
                       <UnparalleledSubText>
                         providing feeds to agricultural farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
-                      <br/>
+                      <br />
                     </Grid>
                     <Grid item md={6} xs={12}>
                       <img src="assets/cowanimation.svg" />
@@ -308,7 +310,7 @@ export default function Home() {
             color: "#191919",
             fontWeight: "700",
             width: { md: "50%", xs: "100%" },
-            fontSize: { lg: "60px", md: "40px", xs: "30px" },
+            fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
             letterSpacing: { md: "-3px", xs: "-1px" },
           }}
         >
@@ -319,14 +321,14 @@ export default function Home() {
         <Grid md={6} xs={12}>
           <UnparalleledSubText
             sx={{
-              fontSize: { md: "28px", xs: "24px" },
+              fontSize: "calc(1.7rem + ((1vw - 0.375rem) * 0.1709))",
               lineHeight: { md: "44px", xs: "35px" },
               width: { md: "65%", xs: "100%" },
               color: "#1A1A1A",
             }}
           >
             Hence, a blockchain-based platform that{" "}
-            <span style={{ color: "#0F3EA4", fontWeight: "bold" }}>
+            <span style={{ color: "#0F3EA4", fontWeight: "600" }}>
               connects dairy farmers, feed suppliers, distributors, and
               regulatory authorities
             </span>{" "}
@@ -340,14 +342,18 @@ export default function Home() {
         </Grid>
         <Grid md={6} xs={12}>
           <Grid container>
-            <Grid md={6} xs={12}>
+            <Grid
+              md={6}
+              xs={12}
+              sx={{ textAlign: { xs: "center", md: "start" } }}
+            >
               <Fade direction="left">
                 <img src="./assets/notes.svg" />
                 <br />
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "32px",
+                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
                     fontWeight: "700",
                     width: "100%",
                   }}
@@ -358,7 +364,7 @@ export default function Home() {
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: { md: "65%", xs: "80%" },
+                    width: { md: "65%", xs: "90%" },
                     color: "#444444",
                   }}
                 >
@@ -374,14 +380,18 @@ export default function Home() {
               <br />
               <br />
             </Grid>
-            <Grid md={6} xs={12}>
+            <Grid
+              md={6}
+              xs={12}
+              sx={{ textAlign: { xs: "center", md: "start" } }}
+            >
               <Fade direction="right">
                 <img src="./assets/search.svg" />
                 <br />
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "32px",
+                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
                     fontWeight: "700",
                     width: "100%",
                   }}
@@ -392,7 +402,7 @@ export default function Home() {
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: { md: "65%", xs: "80%" },
+                    width: { md: "65%", xs: "90%" },
                     color: "#444444",
                   }}
                 >
@@ -409,14 +419,18 @@ export default function Home() {
               <br />
               <br />
             </Grid>
-            <Grid md={6} xs={12}>
+            <Grid
+              md={6}
+              xs={12}
+              sx={{ textAlign: { xs: "center", md: "start" } }}
+            >
               <Fade direction="left">
                 <img src="./assets/quality.svg" />
                 <br />
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "32px",
+                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
                     fontWeight: "700",
                     width: "100%",
                   }}
@@ -427,7 +441,7 @@ export default function Home() {
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: { md: "65%", xs: "80%" },
+                    width: { md: "65%", xs: "90%" },
                     color: "#444444",
                   }}
                 >
@@ -444,14 +458,18 @@ export default function Home() {
               <br />
               <br />
             </Grid>
-            <Grid md={6} xs={12}>
+            <Grid
+              md={6}
+              xs={12}
+              sx={{ textAlign: { xs: "center", md: "start" } }}
+            >
               <Fade direction="right">
                 <img src="./assets/tokenization.svg" />
                 <br />
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "32px",
+                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
                     fontWeight: "700",
                     width: "100%",
                   }}
@@ -462,7 +480,7 @@ export default function Home() {
                   sx={{
                     fontSize: "16px",
                     lineHeight: "22px",
-                    width: { md: "65%", xs: "80%" },
+                    width: { md: "65%", xs: "90%" },
                     color: "#444444",
                   }}
                 >
@@ -561,7 +579,7 @@ export default function Home() {
             color: "#191919",
             fontWeight: "900",
             fontSize: { lg: "80px", md: "60px", xs: "40px" },
-            letterSpacing: "-3px",
+            letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
@@ -573,10 +591,10 @@ export default function Home() {
         <UnparalleledSubText
           sx={{
             fontSize: "28px",
-            lineHeight: "44px",
+            lineHeight: { md: "44px", xs: "30px" },
             color: "#1A1A1A",
             textAlign: "center",
-            width: "100%",
+            width: { xs: "96%", md: "100%" },
             maxWidth: "700px",
             margin: "auto",
           }}
@@ -594,7 +612,12 @@ export default function Home() {
       <Box sx={{ width: "100%", maxWidth: "1400px", margin: "auto" }}>
         <Grid
           container
-          sx={{ height: "622px", background: "#FFDE59", borderRadius: "20px" }}
+          sx={{
+            height: { md: "622px", xs: "100%" },
+            background: "#FFDE59",
+            borderRadius: "20px",
+            paddingBottom: { xs: "20px", md: "0px" },
+          }}
         >
           <Grid
             item
@@ -651,12 +674,18 @@ export default function Home() {
             item
             md={4}
             xs={12}
-            sx={{ display: "flex", alignItems: "center" }}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <Fade direction="up">
               <ImageHere
                 src="assets/snapshot.png"
-                sx={{ marginTop: { md: "-80px", xs: "0" } }}
+                sx={{
+                  marginTop: { md: "-80px", xs: "80px" },
+                }}
               />
             </Fade>
           </Grid>
@@ -730,24 +759,21 @@ export default function Home() {
         sx={{
           width: "100%",
           textAlign: "center",
-          marginTop: { xs: "100px", md: "10px" },
+          //marginTop: { xs: "100px", md: "10px" },
         }}
       >
-        <br />
-        <br />
-        <br />
-        <br />
         <SeamlessMainText
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: { lg: "48px", md: "44px", xs: "40px" },
-            letterSpacing: "-3px",
+            fontSize: "calc(2.2rem + ((1vw - 0.375rem) * 0.5128))",
+            letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
             margin: "auto",
-            marginTop: { md: "0", xs: "150px" },
+             marginTop: { md: "100PX", xs: "0" },
+            marginBottom: { md: "0", xs: "20px" },
           }}
         >
           Powered by blockchain
@@ -767,7 +793,7 @@ export default function Home() {
               <Fade direction="down">
                 <Box
                   sx={{
-                    width: "95%",
+                    width: { xs: "90%", md: "95%" },
                     margin: "auto",
                     borderRadius: "10px",
                     background: "#F0F0F0",
@@ -812,7 +838,7 @@ export default function Home() {
             <Fade direction="down">
               <Box
                 sx={{
-                  width: "95%",
+                  width: { xs: "90%", md: "95%" },
                   margin: "auto",
                   borderRadius: "10px",
                   background: "#F0F0F0",
@@ -857,7 +883,7 @@ export default function Home() {
               <Fade direction="down">
                 <Box
                   sx={{
-                    width: "95%",
+                    width: { xs: "90%", md: "95%" },
                     margin: "auto",
                     borderRadius: "10px",
                     background: "#F0F0F0",
@@ -903,7 +929,7 @@ export default function Home() {
               <Fade direction="up">
                 <Box
                   sx={{
-                    width: "95%",
+                    width: { xs: "90%", md: "95%" },
                     margin: "auto",
                     borderRadius: "10px",
                     background: "#F0F0F0",
@@ -948,7 +974,7 @@ export default function Home() {
             <Fade direction="up">
               <Box
                 sx={{
-                  width: "95%",
+                  width: { xs: "90%", md: "95%" },
                   margin: "auto",
                   borderRadius: "10px",
                   background: "#F0F0F0",
@@ -993,7 +1019,7 @@ export default function Home() {
               <Fade direction="up">
                 <Box
                   sx={{
-                    width: "95%",
+                    width: { xs: "90%", md: "95%" },
                     margin: "auto",
                     borderRadius: "10px",
                     background: "#F0F0F0",
@@ -1045,8 +1071,8 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: { md: "80px", xs: "40px" },
-            letterSpacing: "-3px",
+            fontSize: "calc(2.5rem + ((1vw - 6px) * 4.2735))",
+            letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
