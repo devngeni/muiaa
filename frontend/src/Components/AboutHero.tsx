@@ -36,8 +36,8 @@ function AboutHero() {
           <AboutUsText>About us</AboutUsText>
           <AboutUsText2
             sx={{
-              fontSize: { md: "80px", xs: "40px" },
-              lineHeight: { md: "96px", xs: "55px" },
+              fontSize: { md: "48px", xs: "35px" },
+              lineHeight: { md: "60px", xs: "55px" },
             }}
           >
             Building the value in dairy supplies using blockchain technology.
@@ -62,7 +62,7 @@ function AboutHero() {
         >
           <AboutUsText>Mission</AboutUsText>
           <AboutMiniHeader
-            sx={{ fontSize: { md: "60px", xs: "40px" }, minHeight: "200px" }}
+            sx={{ fontSize: { md: "48px", xs: "35px" }, minHeight: "200px" }}
           >
             Our goal? To bring transparency,efficiency and traceability to every
             step of the supply chain.
@@ -302,14 +302,16 @@ function AboutHero() {
           sx={{
             background: "#fff",
             textAlign: "center",
-            maxWidth: "100vw",
+            maxWidth: "100%",
           }}
         >
           <AboutUsText2
             sx={{
               color: "#000",
-              width: "100%",
-              fontSize: { md: "80px", xs: "40px" },
+              width: "100vw",
+              textAlign:"center",
+              fontSize: { md: "48px", xs: "35px" },
+              margin:"0"
             }}
           >
             Get Started

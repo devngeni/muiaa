@@ -23,10 +23,11 @@ export const AboutUsText = styled(Typography)({
 });
 
 export const AboutUsText2 = styled(AboutUsText)({
-    fontSize: "80px",
-    fontWeight: "900",
+    // fontSize: "80px",
+    // maxWidth:"1200px",
+    fontWeight: "500",
     paddingTop: "10px",
-    letterSpacing: "-3px",
+    // letterSpacing: "-3px",
     lineHeight:"96px",
     color:"#fff",
 })
@@ -38,7 +39,7 @@ export const AboutMiniText = styled(Typography)({
   fontFamily: "'Inter'",
 });
 export const AboutMiniHeader = styled(Typography)({
-  fontSize: "60px",
+  fontSize: "48px",
   color: "#fff",
   fontWeight: "400",
   margin: "auto",

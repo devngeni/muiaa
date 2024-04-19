@@ -578,8 +578,8 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: { lg: "80px", md: "60px", xs: "40px" },
-            letterSpacing: "-2px",
+            fontSize: { lg: "48px", md: "35px", xs: "30px" },
+            letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
