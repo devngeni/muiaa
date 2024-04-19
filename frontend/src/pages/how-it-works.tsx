@@ -466,7 +466,7 @@ function HotItWorks() {
               sx={{
                 color: "#fff",
                 fontWeight: "900",
-                fontSize: { md: "80px", sm: "40px" },
+                fontSize: { md: "48px", sm: "35px" },
                 letterSpacing: "-3px",
                 textAlign: "center",
                 width: "100%",

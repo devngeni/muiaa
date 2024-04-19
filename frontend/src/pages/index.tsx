@@ -560,7 +560,7 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: { lg: "80px", md: "60px", xs: "40px" },
+            fontSize: { lg: "48px", md: "35px", xs: "30px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
@@ -1044,8 +1044,8 @@ export default function Home() {
         <SeamlessMainText
           sx={{
             color: "#191919",
-            fontWeight: "900",
-            fontSize: { md: "80px", xs: "40px" },
+            fontWeight: "600",
+            fontSize: { md: "48px", xs: "35px" },
             letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
