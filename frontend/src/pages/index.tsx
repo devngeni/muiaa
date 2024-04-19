@@ -45,7 +45,7 @@ export default function Home() {
   const ImageHere = styled("img")({});
   const router = useRouter();
   const navigate = () => {
-    router.push(`${process.env.NEXT_PUBLIC_BACKEND_URI}auth0/login`);
+    router.push(`https://api.muiaafeeds.com/auth0/login`);
   };
 
   return (
@@ -1071,7 +1071,7 @@ export default function Home() {
           sx={{
             color: "#191919",
             fontWeight: "900",
-            fontSize: "calc(2.5rem + ((1vw - 6px) * 4.2735))",
+            fontSize: "calc(2.5rem + ((0.5vw - 6px) * 4.2735))",
             letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",

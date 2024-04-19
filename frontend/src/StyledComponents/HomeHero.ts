@@ -38,16 +38,22 @@ export const HeroMainContainer = styled(Grid)({
     height: "100vh",
   },
 });
-export const BgMask = styled(Box)({
-  width: "100%",
-  height: "100%",
-  backgroundImage:
-    "linear-gradient(to right, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-});
+
+export const BgMask = styled(Box)(({ theme }) => ({
+  width: '100%',
+  height: '100%',
+  backgroundImage: 'linear-gradient(to right, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  [theme.breakpoints.down('md')]: {
+    backgroundImage: 'linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)',
+    "*":{
+      textAlign:"center"
+    }
+  },
+}));
 export const ContentContainer = styled(Box)({
   width: "100%",
   //maxWidth: "1400px",

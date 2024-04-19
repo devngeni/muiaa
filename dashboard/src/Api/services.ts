@@ -11,7 +11,7 @@ export const Auth = createApi({
   endpoints: (builder) => ({
     getUserDetails: builder.query({
       query: (token: string) => ({
-        url: `auth0/`,
+        url: `user/current`,
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -20,8 +20,6 @@ export const Auth = createApi({
     }),
   }),
 });
-// Export hooks for usage in functional components, which are
-// auto-generated based on the defined endpoints
 export const { useGetUserDetailsQuery }: any = Auth;
 
 export const Billing = createApi({

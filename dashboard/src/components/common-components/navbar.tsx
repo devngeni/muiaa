@@ -6,14 +6,13 @@ import { GrayButton, TextButtons } from "@/styles/common-styles";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DropDownModal from "./dropDownModal";
-import { decode } from "jwt-js-decode";
+import { useGetUserDetailsQuery } from "@/Api/services";
 
 const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const toggleDropDownModal = () => setOpen(!open);
   const [userData, setUserData] = React.useState<any>();
-
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up(1000));
 
@@ -28,22 +27,12 @@ const Navbar = () => {
     }
   }, [isDesktop]);
 
-  const { token }: any = router.query;
-  if (token) {
-    sessionStorage.setItem("auth_token", JSON.stringify(token));
-  }
-  const auth_token:string = JSON.stringify(sessionStorage.getItem("auth_token"));
-  const cleaned_token = removeSlashes(auth_token);
-  const profile_data = decode(cleaned_token);
-  const profile_data_cleaned = profile_data.payload
+  const auth_token:string = sessionStorage.getItem("auth_token");
+  // const cleaned_token = removeSlashes(auth_token);
+  const userDataFetched = useGetUserDetailsQuery(auth_token)
   useEffect(() => {
-    setUserData(profile_data_cleaned);
-    console.log(userData);
-  }, []);
-  if (!auth_token) {
-    // router.push(`${process.env.NEXT_PUBLIC_LANDING_PAGE}`);
-    sessionStorage.setItem("auth_token","eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im13dTVSYzUyTTQtamUwWDJUeU15TiJ9.eyJnaXZlbl9uYW1lIjoiQ29sbGlucyIsImZhbWlseV9uYW1lIjoiS29lY2giLCJuaWNrbmFtZSI6ImNvbGxpbnNrb2VjaGNrMzQiLCJuYW1lIjoiQ29sbGlucyBLb2VjaCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NJOHR2a1g3OWNjU2p6M1JmTXlMUmNSVXhNdUd2aFZXcW9PTDRrcnZvcUwwc0pGRDd2WT1zOTYtYyIsImxvY2FsZSI6ImVuLUdCIiwidXBkYXRlZF9hdCI6IjIwMjQtMDQtMTVUMTA6MTc6NTkuNTgxWiIsImVtYWlsIjoiY29sbGluc2tvZWNoY2szNEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9kZXYtYXVlbW80b2Nwc2J6eDJ2Ny51cy5hdXRoMC5jb20vIiwiYXVkIjoiM2Y1aG55ckV5RExOb05SWFZGRm1hOTBTZ2R4d09ZV08iLCJpYXQiOjE3MTMxNzYyODAsImV4cCI6MTcxMzIxMjI4MCwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDM0MzQ1NjQ4MjU3OTMwNDc4MjQiLCJzaWQiOiJQeEFVenlneG1YTEhDUG5TTFcwdXZDNG91ZHdxdjhCZSIsIm5vbmNlIjoiRFdrb2JZZjZnOTlJYUNhMkZNVkJMNWdOSkNhOWd3SFZWNXd2NEhFZWQ3ayJ9.azsVG7XIkBMEFMnkDIAcFJsdxXTjDKSYJXTILUQUnk4Arg3Qjtl9iFI21inOI7BYl_wQU-7t7SpUdIyssib9m2v8wCh4BoFklOP7Ynt8kqSgeJ56FGNZgTjm71E58OycxS3DWLmlHuHub1GoACdlZW7hksIuVTNwtL9xXoeJ2XX_Xqn7PzLsu00fH-9oxiX5smjlB894CuS0w1-S5tENvAlCZAVr5wf-lczs345phXysMYqnyZNS1ZNo5kRt4x4n1dQhf39PyAbwBYIx3mD5w7NpFx1gk4VRimKnwhn1AGrQP4UqVnT6GfTJmMwkpi1SFz7p77mOaU_Ia42KjYBarw");
-  }
+    setUserData(userDataFetched?.data?.data);
+  }, [userData]);
   return (
     <NavbarContainer>
       <Box className="navbar_items">
@@ -94,7 +83,7 @@ const Navbar = () => {
            </Box> */}
         <Box sx={{ display: "flex", gap: "10px" }}>
           <Link href={"/track-order/my-account"}>
-            <GrayButton>{userData?.given_name}</GrayButton>
+            <GrayButton>{userData?.name}</GrayButton>
           </Link>
 
           <GrayButton className="Button_before">
