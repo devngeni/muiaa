@@ -45,7 +45,7 @@ export default function Home() {
   const ImageHere = styled("img")({});
   const router = useRouter();
   const navigate = () => {
-    router.push(`${process.env.NEXT_PUBLIC_BACKEND_URI}auth0/login`);
+    router.push(`https://api.muiaafeeds.com/auth0/login`);
   };
 
   return (
