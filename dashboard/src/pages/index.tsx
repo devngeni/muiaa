@@ -2,6 +2,7 @@ import DefaultLayout from "@/components/layouts/defaultLayout";
 import React, { ReactElement, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Typography } from "@mui/material";
 
 const Home = () => {
   const router = useRouter();
@@ -17,34 +18,23 @@ const Home = () => {
         console.log("token found");
       }, 2000); // Simulating a delay of 2 seconds for demonstration
     }
-    else 
-    setTimeout(() => {
-    if (token === undefined) {
-        if (token === undefined) {
-          console.log("token not found");
-          // router.push("https://muiaafeeds.com");
-        }
-      } 
-      }, 2000);
-
-    // Hide loader after redirection
     setLoading(false);
   }, [router]);
 
   return (
     <>
-      {loading ? ( // Render loader if loading state is true
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             height: "100vh",
+            flexDirection: "column",
           }}
         >
+          <Typography sx={{marginBottom:"10px"}}>Preparing assets ...</Typography>
           <CircularProgress />
         </div>
-      ) : null}
     </>
   );
 };
