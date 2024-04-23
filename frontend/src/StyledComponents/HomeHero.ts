@@ -40,18 +40,20 @@ export const HeroMainContainer = styled(Grid)({
 });
 
 export const BgMask = styled(Box)(({ theme }) => ({
-  width: '100%',
-  height: '100%',
-  backgroundImage: 'linear-gradient(to right, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  [theme.breakpoints.down('md')]: {
-    backgroundImage: 'linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)',
-    "*":{
-      textAlign:"center"
-    }
+  width: "100%",
+  height: "100%",
+  backgroundImage:
+    "linear-gradient(to right, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  [theme.breakpoints.down("md")]: {
+    backgroundImage:
+      "linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 80%)",
+    "*": {
+      textAlign: "center",
+    },
   },
 }));
 export const ContentContainer = styled(Box)({
@@ -102,7 +104,7 @@ export const BlueButton = styled(Button)({
   borderRadius: "5px",
   width: "90%",
   height: "50px",
-  fontSize: "20px",
+  fontSize: "calc(1rem + ((1vw - 6px) * 0.4274))",
   background: "#033D66",
   fontWeight: "bold",
   textTransform: "capitalize",

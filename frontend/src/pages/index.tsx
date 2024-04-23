@@ -533,9 +533,8 @@ export default function Home() {
             sx={{
               color: "#191919",
               fontWeight: "700",
-              fontSize: { md: "40px", xs: "28px" },
-              letterSpacing: "0.02em",
-              lineHeight: "35px",
+              fontSize: "calc(1.75rem + ((1vw - 6px) * 1.0684))",
+               lineHeight: "45px",
               width: { md: "80%", xs: "100%" },
             }}
           >
@@ -579,7 +578,6 @@ export default function Home() {
             color: "#191919",
             fontWeight: "900",
             fontSize: { lg: "48px", md: "35px", xs: "30px" },
-            letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
