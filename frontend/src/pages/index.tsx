@@ -579,7 +579,7 @@ export default function Home() {
             color: "#191919",
             fontWeight: "900",
             fontSize: { lg: "48px", md: "35px", xs: "30px" },
-            letterSpacing: "-3px",
+            // letterSpacing: "-3px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
