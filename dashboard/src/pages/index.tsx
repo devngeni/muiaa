@@ -3,6 +3,7 @@ import React, { ReactElement, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Typography } from "@mui/material";
+import Head from "next/head";
 
 const Home = () => {
   const router = useRouter();
@@ -23,18 +24,27 @@ const Home = () => {
 
   return (
     <>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-            flexDirection: "column",
-          }}
-        >
-          <Typography sx={{marginBottom:"10px"}}>Preparing assets ...</Typography>
-          <CircularProgress />
-        </div>
+      <Head>
+        <title>MUIAA</title>
+        <meta name="description" content="HOME | MUIRURI & ASSOCIATES LTD" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/assets/logomini.png" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+      </Head>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          flexDirection: "column",
+        }}
+      >
+        <Typography sx={{ marginBottom: "10px" }}>
+          Preparing assets ...
+        </Typography>
+        <CircularProgress />
+      </div>
     </>
   );
 };

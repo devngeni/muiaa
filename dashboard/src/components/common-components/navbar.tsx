@@ -13,13 +13,9 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const toggleDropDownModal = () => setOpen(!open);
   const [userData, setUserData] = React.useState<any>();
+  const [userName, setUsername] = React.useState("");
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up(1000));
-
-  function removeSlashes(str) {
-    // Use regular expression to remove slashes from the beginning and end of the string
-    return str.replace(/^\\|\\$/g, "");
-  }
 
   useEffect(() => {
     if (!isDesktop) {
@@ -28,16 +24,16 @@ const Navbar = () => {
   }, [isDesktop]);
 
   const auth_token:string = sessionStorage.getItem("auth_token");
-  // const cleaned_token = removeSlashes(auth_token);
   const userDataFetched = useGetUserDetailsQuery(auth_token)
   useEffect(() => {
     setUserData(userDataFetched?.data?.data);
-  }, [userData]);
+    setUsername(userDataFetched?.data?.data?.name);
+  }, [userData, userName]);
   return (
     <NavbarContainer>
       <Box className="navbar_items">
         <Box sx={{ display: "flex", gap: "30px", alignItems: "center" }}>
-          <Box className="logo" onClick={() => router.push("/")}>
+          <Box className="logo" onClick={() => router.push("/home")}>
             <Image
               src="/assets/logo.png"
               alt="logo"
@@ -77,13 +73,9 @@ const Navbar = () => {
           </Box>
           <input type="text" placeholder="Search" />
         </SearchContainer>
-        {/* <Box sx={{ display: 'flex', gap: '10px' }}>
-          <br/>
-           {data?.given_name}
-           </Box> */}
         <Box sx={{ display: "flex", gap: "10px" }}>
           <Link href={"/track-order/my-account"}>
-            <GrayButton>{userData?.name}</GrayButton>
+            <GrayButton>{userName}</GrayButton>
           </Link>
 
           <GrayButton className="Button_before">
