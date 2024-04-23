@@ -533,9 +533,8 @@ export default function Home() {
             sx={{
               color: "#191919",
               fontWeight: "700",
-              fontSize: { md: "40px", xs: "28px" },
-              letterSpacing: "0.02em",
-              lineHeight: "35px",
+              fontSize: "calc(1.75rem + ((1vw - 6px) * 1.0684))",
+               lineHeight: "45px",
               width: { md: "80%", xs: "100%" },
             }}
           >
