@@ -129,6 +129,6 @@ export  const BodyWrapper = styled(Box)({
 export  const CardWrapper2 = styled(BodyWrapper)({
 
 });
-export  const CardWrapper3 = styled(BodyWrapper)({
+export  const CardWrapper3 = styled(Box)({
 
 });
