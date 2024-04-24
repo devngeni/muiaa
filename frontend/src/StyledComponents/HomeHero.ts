@@ -28,9 +28,6 @@ export const HeroMainContainer = styled(Grid)({
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  // animation: `${backgroundChange} 10s linear infinite`, // 10s duration, linear timing, infinite loop
-  // animation: `${spin} 10s linear infinite`,
-
   "@media screen and (max-width: 600px)": {
     height: "90vh",
   },
@@ -129,9 +126,9 @@ export const NavyStatContainer = styled(Box)({
   maxWidth: "1400px",
   margin: "auto",
   borderRadius: "10px",
-  marginTop: "-100px",
   paddingBottom: "20px",
   zIndex: 503,
+  boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.1)",
 });
 export const NavyStatGridContainer = styled(Grid)({
   width: "100%",
@@ -243,7 +240,7 @@ export const OrangeText = styled(Typography)({
 
 export const UnparalleledMainText = styled(Typography)({
   color: "#003565",
-  fontSize: "calc(1.5rem + ((1vw - 0.375rem) * 0.8547))",
+  fontSize: "calc(1.3rem + ((1vw - 0.375rem) * 0.8547))",
   fontWeight: "500",
   lineHeight: "38px",
   fontFamily: "'Inter'",

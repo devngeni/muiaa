@@ -5,7 +5,6 @@ export const AboutMainHero = styled(Box)({
   height: "auto",
   backgroundImage:"url('assets/aboutbg.png')",
   backgroundColor: "#033D66",
-  paddingTop:"8vh",
   backgroudSize:"cover",
   backgroundRepeat:"no-repeat"
 });
@@ -54,7 +53,7 @@ export const CowImageContainer = styled(Box)({
   width: "1200px",
   height: "600px",
   maxWidth:"95vw",
-  marginTop:"-400px"
+  marginTop:"-300px"
 });
 export const CowsImage = styled('img')({
     width:"100%",
