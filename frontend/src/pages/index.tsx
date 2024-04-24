@@ -42,7 +42,10 @@ dotenv.config();
 
 export default function Home() {
   const Type = styled(TypeAnimation)({});
-  const ImageHere = styled("img")({});
+  const ImageHere = styled("img")({
+    width:"75%",
+    borderRadius:"10px"
+  });
   const router = useRouter();
   const navigate = () => {
     router.push(`https://api.muiaafeeds.com/auth0/login`);
@@ -115,31 +118,8 @@ export default function Home() {
             </ContentContainer>
           </BgMask>
         </HeroMainContainer>
-        <NavyStatContainer sx={{ marginTop: { md: "-100px", xs: "-50px" } }}>
-          <NavyStatGridContainer container>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={50} duration={10} /> +
-              </NavyNumber>
-              <NavyText>Dairy Farmers</NavyText>
-            </NavyStatItem>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={266} duration={10} />
-              </NavyNumber>
-              <NavyText>Smart Contracts</NavyText>
-            </NavyStatItem>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={45} duration={10} />
-              </NavyNumber>
-              <NavyText sx={{ pb: { xs: "30px", md: "0px" } }}>
-                Export/Import Transactions
-              </NavyText>
-            </NavyStatItem>
-          </NavyStatGridContainer>
-        </NavyStatContainer>
-        <NavySection
+
+        {/* <NavySection
           sx={{
             textAlign: "center",
             display: "flex",
@@ -171,8 +151,32 @@ export default function Home() {
               Uniting Kenya and Zanzibar through innovative technology
             </WhiteText>
           </NavyTextContainer>
-        </NavySection>
+        </NavySection> */}
       </HomeMainContainer>
+      <NavyStatContainer sx={{ marginTop: { xs: "-50px" }, }}>
+          <NavyStatGridContainer container>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>
+                <CountUp end={50} duration={10} /> +
+              </NavyNumber>
+              <NavyText>Dairy Farmers</NavyText>
+            </NavyStatItem>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>
+                <CountUp end={266} duration={10} />
+              </NavyNumber>
+              <NavyText>Smart Contracts</NavyText>
+            </NavyStatItem>
+            <NavyStatItem md={4} xs={12}>
+              <NavyNumber>
+                <CountUp end={45} duration={10} />
+              </NavyNumber>
+              <NavyText sx={{ pb: { xs: "30px", md: "0px" } }}>
+                Export/Import Transactions
+              </NavyText>
+            </NavyStatItem>
+          </NavyStatGridContainer>
+        </NavyStatContainer>
       <SeamlessMainContainer container>
         <SeamlessGridItem item md={12} xs={12}>
           <SeamlessMainText
@@ -677,13 +681,14 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              textAlign:"center"
             }}
           >
             <Fade direction="up">
               <ImageHere
-                src="assets/snapshot.png"
+                src="assets/snapshot.jpg"
                 sx={{
-                  marginTop: { md: "-80px", xs: "80px" },
+                  marginTop: { md: "-60px", xs: "80px" },
                 }}
               />
             </Fade>
@@ -1069,8 +1074,8 @@ export default function Home() {
         <SeamlessMainText
           sx={{
             color: "#191919",
-            fontWeight: "900",
-            fontSize: "calc(2.5rem + ((0.5vw - 6px) * 4.2735))",
+            fontWeight: "600",
+            fontSize: "calc(2rem + ((0.5vw - 6px) * 4.2735))",
             letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",

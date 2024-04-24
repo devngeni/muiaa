@@ -23,6 +23,7 @@ import { Grid, Box, styled } from "@mui/material";
 import CountUp from "react-countup";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
+import ImageCarousel from "./ImageCarousel";
 
 function AboutHero() {
   const CowImage = styled("img")({
@@ -31,38 +32,41 @@ function AboutHero() {
   });
   return (
     <>
-      <AboutMainHero>
+      <AboutMainHero sx={{padding:"20px"}}>
         <AboutHeroContainer>
+          <br/>
+          <br/>
           <AboutUsText>About us</AboutUsText>
+          <br/>
+          <br/>
           <AboutUsText2
             sx={{
-              fontSize: { md: "48px", xs: "35px" },
+              fontSize: { md: "48px", xs: "30px" },
               lineHeight: { md: "60px", xs: "55px" },
             }}
           >
             Building the value in dairy supplies using blockchain technology.
           </AboutUsText2>
           <br />
+          <br />
           <AboutMiniText>
             Enabling the world to move value the way information moves today.
           </AboutMiniText>
         </AboutHeroContainer>
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <ImageCarousel />
         <br />
         <AboutHeroContainer
           sx={{
             width: "100%",
-            // maxWidth: "1000px",
-            paddingBottom: { md: "500px", xs: "0px" },
+            // marginBottom: { md: "400px", xs: "0px" },
+            minHeight:{md:"750px", xs:"auto"}
           }}
         >
           <AboutUsText>Mission</AboutUsText>
+          <br/>
           <AboutMiniHeader
-            sx={{ fontSize: { md: "48px", xs: "35px" }, minHeight: "200px" }}
+            sx={{ fontSize: { md: "48px", xs: "30px" }, minHeight: {md:"200px", xs:"100px"} }}
           >
             Our goal? To bring transparency,efficiency and traceability to every
             step of the supply chain.
@@ -71,27 +75,11 @@ function AboutHero() {
           <br />
           <br />
           <AboutDumbGrid container>
-            <AboutDumbGridItem
-              item
-              xs={12}
-              sm={6}
-              sx={{ display: "flex", alignItems: "center" }}
-            >
-              <Fade direction="left">
-                <Box
-                  sx={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    marginBottom: { md: "0", xs: "50px" },
-                  }}
-                ></Box>
-              </Fade>
-            </AboutDumbGridItem>
-            <AboutDumbGridItem item xs={12} sm={6}>
+            <AboutDumbGridItem item xs={12}>
               <Fade direction="right">
                 <AboutMiniText
                   sx={{
-                    maxWidth: "90%",
+                    maxWidth: "100%",
                     margin: "auto",
                     marginBottom: { md: "0", xs: "50px" },
                   }}
@@ -112,7 +100,7 @@ function AboutHero() {
       </AboutMainHero>
       <CowImageContainer
         sx={{
-          marginTop: { md: "-400px", xs: "100px" },
+          marginTop: { md: "-250px", xs: "100px" },
           height: { md: "600px", xs: "auto" },
         }}
       >
@@ -126,7 +114,7 @@ function AboutHero() {
       <br />
       <br />
       <br />
-      <StatsContainer container>
+      <StatsContainer container sx={{padding:"20px"}}>
         <StatItem item md={4} xs={12}>
           <NumbersContainer container>
             <NumbersItem
@@ -227,6 +215,7 @@ function AboutHero() {
         sx={{
           width: "100%",
           maxWidth: "1350px",
+          padding:"20px",
           paddingBottom: "100px",
         }}
       >
@@ -296,6 +285,7 @@ function AboutHero() {
           minHeight: "auto",
           backgroundColor: "#fff !important",
           textAlign: "center",
+          padding:"20px"
         }}
       >
         <AboutHeroContainer
@@ -308,10 +298,10 @@ function AboutHero() {
           <AboutUsText2
             sx={{
               color: "#000",
-              width: "100vw",
+              width: "auto",
               textAlign:"center",
-              fontSize: { md: "48px", xs: "35px" },
-              margin:"0"
+              fontSize: "calc(2rem + ((0.5vw - 6px) * 4.2735))",
+              margin:"0",
             }}
           >
             Get Started

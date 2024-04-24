@@ -465,8 +465,8 @@ function HotItWorks() {
             <SeamlessMainText
               sx={{
                 color: "#fff",
-                fontWeight: "900",
-                fontSize: { md: "48px", sm: "35px" },
+                fontWeight: "600",
+                fontSize: "calc(2rem + ((0.5vw - 6px) * 4.2735))",
                 letterSpacing: "-3px",
                 textAlign: "center",
                 width: "100%",
