@@ -537,7 +537,7 @@ export default function Home() {
             sx={{
               color: "#191919",
               fontWeight: "700",
-              fontSize: "calc(1.75rem + ((1vw - 6px) * 1.0684))",
+              fontSize: "calc(1.55rem + ((0.6vw - 6px) * 1.0684))",
                lineHeight: "45px",
               width: { md: "80%", xs: "100%" },
             }}
@@ -548,8 +548,8 @@ export default function Home() {
           <br />
           <UnparalleledSubText
             sx={{
-              fontSize: { md: "24px", xs: "16px" },
-              lineHeight: { md: "40px", xs: "30px" },
+              fontSize: { md: "20px", xs: "16px" },
+              lineHeight: { md: "32px", xs: "25px" },
               color: "#1A1A1A",
             }}
           >
