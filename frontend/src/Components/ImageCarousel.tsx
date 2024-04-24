@@ -44,7 +44,7 @@ const ImageCarousel = () => {
         <Box sx={{  textAlign: "center" }}>
           <img
             src="/assets/aboutcarousel/13.png"
-            style={{ width: "80%", margin: "auto", border: "1px solid yellow" }}
+            style={{ width: "80%", margin: "auto" }}
           />
         </Box>
       </Box>
