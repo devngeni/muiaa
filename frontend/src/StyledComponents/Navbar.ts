@@ -1,4 +1,5 @@
 import { Box, Button, Grid, styled } from "@mui/material";
+import { transform } from "next/dist/build/swc";
 
 export const NavbarContainer = styled(Box)({
   width: "100vw",
@@ -35,6 +36,32 @@ export const NavbarLinksContainer = styled(Grid)({
   alignItems: "center",
   height: "100%",
   width: "30%",
+  a: {
+    position: "relative",
+    fontSize: "18px",
+    "&.active": {
+      color: "#FFDE59 ",
+      fontWeight: "700",
+    },
+    "::after": {
+      position: "absolute",
+      left: 0,
+      bottom: -4,
+      content: "''",
+      display: "block",
+      height: "2px",
+      width: "100%",
+      background: "#FFDE59",
+      transition: "all 0.3s ease-in-out",
+      transform: "scaleX(0)",
+    },
+    "&:hover": {
+      color: "#FFDE59",
+      "::after": {
+        transform: "scaleX(1)",
+      },
+    },
+  },
 });
 
 export const NavBarButtonsContainer = styled(Grid)({
@@ -52,8 +79,12 @@ export const NavButton = styled(Button)({
   borderRadius: "5px",
   width: "40%",
   height: "40px",
-  fontSize: "10px",
-  fontWeight: "900",
+  fontSize: "16px",
+  fontWeight: "600",
+  "@media screen and (max-width:1024px)": {
+    width: "fit-content",
+    fontSize: "14px",
+  },
   "&:hover": {
     background: "#E9BC6D",
     color: "#003565",
