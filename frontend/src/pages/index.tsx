@@ -43,8 +43,9 @@ dotenv.config();
 export default function Home() {
   const Type = styled(TypeAnimation)({});
   const ImageHere = styled("img")({
-    width:"75%",
-    borderRadius:"10px"
+    width: "100%",
+    borderRadius: "5%",
+    boxShadow: "0px 4px 40.6px 0px #0000001A",
   });
   const router = useRouter();
   const navigate = () => {
@@ -69,7 +70,10 @@ export default function Home() {
               <HeroMainText
                 sx={{
                   letterSpacing: { md: "-2px", xs: "-1px" },
-                  textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)", // Adjust values as needed
+                  fontSize: { xs: "28px", md: "60px" },
+                  lineHeight: { xs: "38px", md: "60px" },
+                  width: { xs: "90%", sm: "70%", md: "70%" },
+                  // Adjust values as needed
                 }}
               >
                 Advance cross-border cattle feed distribution enterprise.
@@ -78,8 +82,13 @@ export default function Home() {
               <br />
               <br />
               <Fade direction="up">
-                s
-                <HeroMiniText>
+                <HeroMiniText
+                  sx={{
+                    fontSize: { xs: "18px", md: "24px" },
+                    lineHeight: { xs: "24px", md: "36px" },
+                    width: { xs: "90%", sm: "70%", md: "70%" },
+                  }}
+                >
                   Revolutionizing the cattle feed industry between Kenya and
                   Zanzibar. Leveraging the power of the XDC blockchain, our
                   platform ensures a transparent, efficient, and cost-effective
@@ -99,7 +108,7 @@ export default function Home() {
                     <BlueButton
                       sx={{
                         width: { md: "90%", xs: "100%" },
-                        mb: "30px",
+                        mb: { xs: "15px", sm: "30px" },
                       }}
                       onClick={() => navigate()}
                     >
@@ -108,7 +117,10 @@ export default function Home() {
                   </Grid>
                   <Grid item md={6} xs={12}>
                     <OrangeButton
-                      sx={{ width: { md: "90%", xs: "100%" }, mb: "30px" }}
+                      sx={{
+                        width: { md: "90%", xs: "100%" },
+                        mb: { xs: "40px", sm: "30px" },
+                      }}
                     >
                       Get in touch
                     </OrangeButton>
@@ -153,40 +165,42 @@ export default function Home() {
           </NavyTextContainer>
         </NavySection> */}
       </HomeMainContainer>
-      <NavyStatContainer sx={{ marginTop: { xs: "-50px" }, }}>
-          <NavyStatGridContainer container>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={50} duration={10} /> +
-              </NavyNumber>
-              <NavyText>Dairy Farmers</NavyText>
-            </NavyStatItem>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={266} duration={10} />
-              </NavyNumber>
-              <NavyText>Smart Contracts</NavyText>
-            </NavyStatItem>
-            <NavyStatItem md={4} xs={12}>
-              <NavyNumber>
-                <CountUp end={45} duration={10} />
-              </NavyNumber>
-              <NavyText sx={{ pb: { xs: "30px", md: "0px" } }}>
-                Export/Import Transactions
-              </NavyText>
-            </NavyStatItem>
-          </NavyStatGridContainer>
-        </NavyStatContainer>
+      <NavyStatContainer sx={{ marginTop: { xs: "-50px" } }}>
+        <NavyStatGridContainer container>
+          <NavyStatItem md={4} xs={12}>
+            <NavyNumber>
+              <CountUp end={50} duration={10} /> +
+            </NavyNumber>
+            <NavyText>Dairy Farmers</NavyText>
+          </NavyStatItem>
+          <NavyStatItem md={4} xs={12}>
+            <NavyNumber>
+              <CountUp end={266} duration={10} />
+            </NavyNumber>
+            <NavyText>Smart Contracts</NavyText>
+          </NavyStatItem>
+          <NavyStatItem md={4} xs={12}>
+            <NavyNumber>
+              <CountUp end={45} duration={10} />
+            </NavyNumber>
+            <NavyText sx={{ pb: { xs: "30px", md: "0px" } }}>
+              Export/Import Transactions
+            </NavyText>
+          </NavyStatItem>
+        </NavyStatGridContainer>
+      </NavyStatContainer>
       <SeamlessMainContainer container>
         <SeamlessGridItem item md={12} xs={12}>
           <SeamlessMainText
             sx={{
               width: { md: "60%", xs: "100%" },
-              fontSize: "calc(1.875rem + ((1vw - 6px) * 1.6026))",
+              fontSize: { xs: "28px", md: "40px", xl: "48px" },
               letterSpacing: { md: "-3px", xs: "-1px" },
               textAlign: "center",
               margin: "auto",
-              pt: "40px",
+              pt: "70px",
+              lineHeight: { xs: "35px", md: "60px" },
+              fontWeight: "500",
             }}
           >
             We offer farmers and distributors a decentralized platform
@@ -194,11 +208,11 @@ export default function Home() {
           <Typography
             sx={{
               width: { md: "60%", xs: "100%" },
-              fontSize: { md: "28px", xs: "20px" },
+              fontSize: { md: "24px", xl: "28px" },
               textAlign: "center",
               margin: "auto",
               color: "#1A1A1A",
-              lineHeight: "44px",
+              lineHeight: { xs: "30px", md: "44px" },
               fontWeight: "300",
               pt: "20px",
             }}
@@ -211,11 +225,15 @@ export default function Home() {
             <UnparalleledGridItem item md={6}>
               <Fade direction="left">
                 <UnparalleledContentContainer>
-                  <OrangeText>Dairy</OrangeText>
                   <Grid container>
                     <Grid item md={6} xs={12}>
-                      <UnparalleledMainText>
-                        Unparalleled access to high- quality feed products
+                      <UnparalleledMainText
+                        sx={{
+                          textAlign: { xs: "center", md: "left" },
+                          margin: { xs: "auto", md: "0" },
+                        }}
+                      >
+                        Unparalleled access to high-quality feed products
                       </UnparalleledMainText>
                       <br />
                       <UnparalleledSubText>
@@ -235,10 +253,14 @@ export default function Home() {
             <UnparalleledGridItem item md={6}>
               <Fade direction="right">
                 <UnparalleledContentContainer>
-                  <OrangeText>Dairy</OrangeText>
                   <Grid container>
                     <Grid item md={6} xs={12}>
-                      <UnparalleledMainText>
+                      <UnparalleledMainText
+                        sx={{
+                          textAlign: { xs: "center", md: "left" },
+                          margin: { xs: "auto", md: "0" },
+                        }}
+                      >
                         Reliable supply chain
                       </UnparalleledMainText>
                       <br />
@@ -258,10 +280,14 @@ export default function Home() {
             <UnparalleledGridItem item md={6}>
               <Fade direction="left">
                 <UnparalleledContentContainer>
-                  <OrangeText>Dairy</OrangeText>
                   <Grid container>
                     <Grid item md={6} xs={12}>
-                      <UnparalleledMainText>
+                      <UnparalleledMainText
+                        sx={{
+                          textAlign: { xs: "center", md: "left" },
+                          margin: { xs: "auto", md: "0" },
+                        }}
+                      >
                         Reliable supply chain
                       </UnparalleledMainText>
                       <br />
@@ -281,10 +307,14 @@ export default function Home() {
             <UnparalleledGridItem item md={6}>
               <Fade direction="right">
                 <UnparalleledContentContainer>
-                  <OrangeText>Dairy</OrangeText>
                   <Grid container>
                     <Grid item md={6} xs={12}>
-                      <UnparalleledMainText>
+                      <UnparalleledMainText
+                        sx={{
+                          textAlign: { xs: "center", md: "left" },
+                          margin: { xs: "auto", md: "0" },
+                        }}
+                      >
                         Unparalleled access to high- quality feed products
                       </UnparalleledMainText>
                       <br />
@@ -308,43 +338,56 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <Box sx={{ width: "85%", margin: "auto", mb: "50px" }}>
-        <SeamlessMainText
-          sx={{
-            color: "#191919",
-            fontWeight: "700",
-            width: { md: "50%", xs: "100%" },
-            fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
-            letterSpacing: { md: "-3px", xs: "-1px" },
-          }}
-        >
-          Remarkable transformation fueled by digital solutions.
-        </SeamlessMainText>
-      </Box>
-      <Grid container sx={{ width: "85%", margin: "auto" }}>
-        <Grid md={6} xs={12}>
-          <UnparalleledSubText
+
+      <Grid
+        container
+        sx={{
+          width: "100%",
+          padding: "6%",
+          margin: "auto",
+          background: "#F5F6F7",
+        }}
+      >
+        <Grid md={5} xs={12}>
+          <SeamlessMainText
             sx={{
-              fontSize: "calc(1.7rem + ((1vw - 0.375rem) * 0.1709))",
-              lineHeight: { md: "44px", xs: "35px" },
-              width: { md: "65%", xs: "100%" },
-              color: "#1A1A1A",
+              color: "#191919",
+              fontWeight: "400",
+              fontSize: { xs: "28px", md: "40px", xl: "48px" },
+              letterSpacing: { md: "-3px", xs: "-1px" },
+              textAlign: "left",
+              marginBottom: "50px",
+              width: { xs: "100%", md: "80%" },
             }}
           >
-            Hence, a blockchain-based platform that{" "}
-            <span style={{ color: "#0F3EA4", fontWeight: "600" }}>
+            Transforming farming fueled by digital solutions
+          </SeamlessMainText>
+
+          <UnparalleledSubText
+            sx={{
+              fontSize: { md: "22px", xl: "28px" },
+              lineHeight: { md: "22px", xl: "39px" },
+              color: "#1A1A1A",
+              fontWeight: "400",
+              paragraphSpacing: "20px",
+            }}
+          >
+            Hence, a blockchain-based platform that
+            <span style={{ color: "#0F3EA4", fontWeight: "400" }}>
               connects dairy farmers, feed suppliers, distributors, and
-              regulatory authorities
-            </span>{" "}
-            can address these challenges. The platform ensures transparency,
-            traceability, and quality assurance throughout the feed supply
-            chain.
+              regulatory
+            </span>
+            authorities can address these challenges.
+            <br />
+            <br />
+            We guarantee transparency, traceability and quality assurance
+            throughout the feed supply chain.
           </UnparalleledSubText>
           <br />
           <br />
           <br />
         </Grid>
-        <Grid md={6} xs={12}>
+        <Grid md={7} xs={12}>
           <Grid container>
             <Grid
               md={6}
@@ -357,8 +400,8 @@ export default function Home() {
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
-                    fontWeight: "700",
+                    fontSize: { xs: "28px", md: "32px" },
+                    fontWeight: "400",
                     width: "100%",
                   }}
                 >
@@ -367,8 +410,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
-                    width: { md: "65%", xs: "90%" },
+                    lineHeight: "24.64px",
+                    width: "90%",
                     color: "#444444",
                   }}
                 >
@@ -395,9 +438,9 @@ export default function Home() {
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
-                    fontWeight: "700",
-                    width: "100%",
+                    fontSize: { xs: "28px", md: "32px" },
+                    fontWeight: "400",
+                    width: "90%",
                   }}
                 >
                   Tokenization
@@ -405,8 +448,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
-                    width: { md: "65%", xs: "90%" },
+                    lineHeight: "24.64px",
+                    width: "90%",
                     color: "#444444",
                   }}
                 >
@@ -433,10 +476,9 @@ export default function Home() {
                 <br />
                 <SeamlessMainText
                   sx={{
-                    color: "#191919",
-                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
-                    fontWeight: "700",
-                    width: "100%",
+                    fontSize: { xs: "28px", md: "32px" },
+                    fontWeight: "400",
+                    width: "90%",
                   }}
                 >
                   Traceability
@@ -444,8 +486,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
-                    width: { md: "65%", xs: "90%" },
+                    lineHeight: "24.64px",
+                    width: "90%",
                     color: "#444444",
                   }}
                 >
@@ -473,9 +515,9 @@ export default function Home() {
                 <SeamlessMainText
                   sx={{
                     color: "#191919",
-                    fontSize: "calc(1.75rem + ((1vw - 6px) * 0.8547))",
-                    fontWeight: "700",
-                    width: "100%",
+                    fontSize: { xs: "28px", md: "32px" },
+                    fontWeight: "400",
+                    width: "90%",
                   }}
                 >
                   Quality Assurance
@@ -483,8 +525,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
-                    width: { md: "65%", xs: "90%" },
+                    lineHeight: "24.64px",
+                    width: "90%",
                     color: "#444444",
                   }}
                 >
@@ -507,7 +549,7 @@ export default function Home() {
       <Grid
         container
         sx={{
-          width: "90%",
+          width: { xs: "100%", md: "90%" },
           margin: "auto",
           borderRadius: "20px",
           overflow: "hidden",
@@ -531,15 +573,20 @@ export default function Home() {
           item
           md={4}
           xs={12}
-          sx={{ background: "#F5F6F7", padding: { md: "50px", xs: "20px" } }}
+          sx={{
+            background: "#F5F6F7",
+            padding: { md: "50px", xs: "20px" },
+          }}
         >
           <SeamlessMainText
             sx={{
               color: "#191919",
-              fontWeight: "700",
-              fontSize: "calc(1.55rem + ((0.6vw - 6px) * 1.0684))",
-               lineHeight: "45px",
-              width: { md: "80%", xs: "100%" },
+              fontWeight: "400",
+              fontSize: { xs: "30px", md: "26px", lg: "35px", xl: "48px" },
+
+              lineHeight: { md: "33px", xl: "60px" },
+              width: "100%",
+              textAlign: "center",
             }}
           >
             Spearheading a transformative era
@@ -549,8 +596,9 @@ export default function Home() {
           <UnparalleledSubText
             sx={{
               fontSize: { md: "20px", xs: "16px" },
-              lineHeight: { md: "32px", xs: "25px" },
+              lineHeight: { md: "22px", lg: "35px", xl: "40.5px" },
               color: "#1A1A1A",
+              textAlign: "center",
             }}
           >
             in cross-border cattle feed distribution, uniting Kenya and Zanzibar
@@ -580,12 +628,11 @@ export default function Home() {
         <SeamlessMainText
           sx={{
             color: "#191919",
-            fontWeight: "900",
-            fontSize: { lg: "48px", md: "35px", xs: "30px" },
-            // letterSpacing: "-3px",
+            fontWeight: "400",
+            fontSize: { xs: "28px", md: "40px", xl: "48px" },
             textAlign: "center",
             width: "100%",
-            maxWidth: "700px",
+            lineHeight: { xs: "35px", md: "60px" },
             margin: "auto",
           }}
         >
@@ -593,13 +640,14 @@ export default function Home() {
         </SeamlessMainText>
         <UnparalleledSubText
           sx={{
-            fontSize: "28px",
-            lineHeight: { md: "44px", xs: "30px" },
+            fontSize: { md: "24px", xl: "28px" },
+            lineHeight: { xs: "35px", md: "44px" },
             color: "#1A1A1A",
             textAlign: "center",
             width: { xs: "96%", md: "100%" },
-            maxWidth: "700px",
+            maxWidth: "900px",
             margin: "auto",
+            fontWeight: "300",
           }}
         >
           We utilize the XDC blockchain, to facilitate connections between dairy
@@ -617,7 +665,7 @@ export default function Home() {
           container
           sx={{
             height: { md: "622px", xs: "100%" },
-            background: "#FFDE59",
+            background: "#003565",
             borderRadius: "20px",
             paddingBottom: { xs: "20px", md: "0px" },
           }}
@@ -639,6 +687,9 @@ export default function Home() {
                   paddingRight: "40%",
                   borderRadius: "10px",
                   textTransform: "capitalize",
+                  ":hover": {
+                    background: "#ccc",
+                  },
                 }}
               >
                 Order
@@ -648,7 +699,7 @@ export default function Home() {
               <Button
                 sx={{
                   width: "100%",
-                  color: "#000",
+                  color: "#FFFFFF",
                   padding: "10px",
                   paddingRight: "40%",
                   borderRadius: "10px",
@@ -662,7 +713,7 @@ export default function Home() {
               <Button
                 sx={{
                   width: "100%",
-                  color: "#000",
+                  color: "#FFFFFF",
                   padding: "10px",
                   paddingRight: "13%",
                   borderRadius: "10px",
@@ -681,12 +732,12 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              textAlign:"center"
+              textAlign: "center",
             }}
           >
             <Fade direction="up">
               <ImageHere
-                src="assets/snapshot.jpg"
+                src="assets/snapshot.svg"
                 sx={{
                   marginTop: { md: "-60px", xs: "80px" },
                 }}
@@ -704,6 +755,7 @@ export default function Home() {
                 width: "80%",
                 height: { md: "40%", xs: "auto" },
                 margin: "auto",
+                color: "#ece0e0",
                 "*": { lineHeight: "38px" },
               }}
             >
@@ -711,10 +763,10 @@ export default function Home() {
                 <li>
                   <UnparalleledSubText
                     sx={{
-                      fontSize: "16px",
+                      fontSize: "18px",
                       lineHeight: "22px",
                       width: "100%",
-                      color: "#444444",
+                      color: "#ece0e0",
                       textAlign: "left",
                     }}
                   >
@@ -724,10 +776,10 @@ export default function Home() {
                 <li>
                   <UnparalleledSubText
                     sx={{
-                      fontSize: "16px",
+                      fontSize: "18px",
                       lineHeight: "22px",
                       width: "100%",
-                      color: "#444444",
+                      color: "#ece0e0",
                       textAlign: "left",
                     }}
                   >
@@ -738,10 +790,10 @@ export default function Home() {
                 <li>
                   <UnparalleledSubText
                     sx={{
-                      fontSize: "16px",
+                      fontSize: "18px",
                       lineHeight: "22px",
                       width: "100%",
-                      color: "#444444",
+                      color: "#ece0e0",
                       textAlign: "left",
                     }}
                   >
@@ -769,15 +821,16 @@ export default function Home() {
         <SeamlessMainText
           sx={{
             color: "#191919",
-            fontWeight: "900",
-            fontSize: "calc(2.2rem + ((1vw - 0.375rem) * 0.5128))",
-            letterSpacing: "-2px",
+            fontWeight: "400",
+            fontSize: { xs: "28px", md: "40px", xl: "48px" },
+            letterSpacing: "-3",
             textAlign: "center",
+            lineHeight: "60px",
             width: "100%",
             maxWidth: "700px",
             margin: "auto",
-             marginTop: { md: "100PX", xs: "0" },
-            marginBottom: { md: "0", xs: "20px" },
+            marginTop: { md: "100PX", xs: "0" },
+            marginBottom: "25px",
           }}
         >
           Powered by blockchain
@@ -785,9 +838,10 @@ export default function Home() {
         <br />
         <Grid
           container
+          spacing={2}
           sx={{
             width: "100%",
-            maxWidth: "1200px",
+            maxWidth: "1350px",
             margin: "auto",
             img: { width: "50px", height: "50px", marginBottom: "10px" },
           }}
@@ -799,9 +853,9 @@ export default function Home() {
                   sx={{
                     width: { xs: "90%", md: "95%" },
                     margin: "auto",
-                    borderRadius: "10px",
+                    borderRadius: "15px",
                     background: "#F0F0F0",
-                    height: { md: "280px", xs: "auto" },
+                    minHeight: "290px",
                     mb: "20px",
                     padding: "20px",
                   }}
@@ -816,7 +870,12 @@ export default function Home() {
                     <img src="./assets/api.svg" />
                   </Box>
                   <UnparalleledMainText
-                    sx={{ fontSize: "24px", textAlign: "left" }}
+                    sx={{
+                      fontSize: { xs: "20px", md: "24px" },
+                      textAlign: "left",
+                      fontWeight: "500",
+                      lineHeight: "29.05px",
+                    }}
                   >
                     XDC APIs integrations.
                   </UnparalleledMainText>
@@ -824,10 +883,11 @@ export default function Home() {
                   <UnparalleledSubText
                     sx={{
                       fontSize: "16px",
-                      lineHeight: "22px",
                       width: "100%",
                       color: "#444444",
                       textAlign: "left",
+                      fontWeight: "400",
+                      lineHeight: "22.5px",
                     }}
                   >
                     Automate and enforce agreements between stakeholders, such
@@ -844,9 +904,9 @@ export default function Home() {
                 sx={{
                   width: { xs: "90%", md: "95%" },
                   margin: "auto",
-                  borderRadius: "10px",
+                  borderRadius: "15px",
                   background: "#F0F0F0",
-                  height: { md: "280px", xs: "auto" },
+                  minHeight: "290px",
                   mb: "20px",
                   padding: "20px",
                 }}
@@ -861,7 +921,12 @@ export default function Home() {
                   <img src="./assets/token.svg" />
                 </Box>
                 <UnparalleledMainText
-                  sx={{ fontSize: "24px", textAlign: "left" }}
+                  sx={{
+                    fontSize: { xs: "20px", md: "24px" },
+                    textAlign: "left",
+                    fontWeight: "500",
+                    lineHeight: "29.05px",
+                  }}
                 >
                   Token Creation: MUIAA Feed Tokens (MFT)
                 </UnparalleledMainText>
@@ -869,7 +934,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
+                    fontWeight: "400",
+                    lineHeight: "22.5px",
                     width: "100%",
                     color: "#444444",
                     textAlign: "left",
@@ -889,9 +955,9 @@ export default function Home() {
                   sx={{
                     width: { xs: "90%", md: "95%" },
                     margin: "auto",
-                    borderRadius: "10px",
+                    borderRadius: "15px",
                     background: "#F0F0F0",
-                    height: { md: "280px", xs: "auto" },
+                    minHeight: "290px",
                     mb: "20px",
                     padding: "20px",
                   }}
@@ -906,7 +972,12 @@ export default function Home() {
                     <img src="./assets/orderlist.svg" />
                   </Box>
                   <UnparalleledMainText
-                    sx={{ fontSize: "24px", textAlign: "left" }}
+                    sx={{
+                      fontSize: { xs: "20px", md: "24px" },
+                      textAlign: "left",
+                      fontWeight: "500",
+                      lineHeight: "29.05px",
+                    }}
                   >
                     Order Records Management on the Blockchain(Transaction
                     Hashes)
@@ -915,7 +986,8 @@ export default function Home() {
                   <UnparalleledSubText
                     sx={{
                       fontSize: "16px",
-                      lineHeight: "22px",
+                      fontWeight: "400",
+                      lineHeight: "22.5px",
                       width: "100%",
                       color: "#444444",
                       textAlign: "left",
@@ -935,9 +1007,9 @@ export default function Home() {
                   sx={{
                     width: { xs: "90%", md: "95%" },
                     margin: "auto",
-                    borderRadius: "10px",
+                    borderRadius: "15px",
                     background: "#F0F0F0",
-                    height: { md: "280px", xs: "auto" },
+                    minHeight: "290px",
                     mb: "20px",
                     padding: "20px",
                   }}
@@ -952,7 +1024,12 @@ export default function Home() {
                     <img src="./assets/map.svg" />
                   </Box>
                   <UnparalleledMainText
-                    sx={{ fontSize: "24px", textAlign: "left" }}
+                    sx={{
+                      fontSize: { xs: "20px", md: "24px" },
+                      textAlign: "left",
+                      fontWeight: "500",
+                      lineHeight: "29.05px",
+                    }}
                   >
                     Real-time Feed Tracking via Blockchain
                   </UnparalleledMainText>
@@ -960,7 +1037,8 @@ export default function Home() {
                   <UnparalleledSubText
                     sx={{
                       fontSize: "16px",
-                      lineHeight: "22px",
+                      fontWeight: "400",
+                      lineHeight: "22.5px",
                       width: "100%",
                       color: "#444444",
                       textAlign: "left",
@@ -980,9 +1058,9 @@ export default function Home() {
                 sx={{
                   width: { xs: "90%", md: "95%" },
                   margin: "auto",
-                  borderRadius: "10px",
+                  borderRadius: "15px",
                   background: "#F0F0F0",
-                  height: { md: "280px", xs: "auto" },
+                  minHeight: "290px",
                   mb: "20px",
                   padding: "20px",
                 }}
@@ -997,7 +1075,12 @@ export default function Home() {
                   <img src="./assets/contract.svg" />
                 </Box>
                 <UnparalleledMainText
-                  sx={{ fontSize: "24px", textAlign: "left" }}
+                  sx={{
+                    fontSize: { xs: "20px", md: "24px" },
+                    textAlign: "left",
+                    fontWeight: "500",
+                    lineHeight: "29.05px",
+                  }}
                 >
                   Real-time Feed Tracking via Blockchain
                 </UnparalleledMainText>
@@ -1005,7 +1088,8 @@ export default function Home() {
                 <UnparalleledSubText
                   sx={{
                     fontSize: "16px",
-                    lineHeight: "22px",
+                    fontWeight: "400",
+                    lineHeight: "22.5px",
                     width: "100%",
                     color: "#444444",
                     textAlign: "left",
@@ -1025,9 +1109,9 @@ export default function Home() {
                   sx={{
                     width: { xs: "90%", md: "95%" },
                     margin: "auto",
-                    borderRadius: "10px",
+                    borderRadius: "15px",
                     background: "#F0F0F0",
-                    height: { md: "280px", xs: "auto" },
+                    minHeight: "290px",
                     mb: "20px",
                     padding: "20px",
                   }}
@@ -1042,7 +1126,12 @@ export default function Home() {
                     <img src="./assets/distribution.svg" />
                   </Box>
                   <UnparalleledMainText
-                    sx={{ fontSize: "24px", textAlign: "left" }}
+                    sx={{
+                      fontSize: { xs: "20px", md: "24px" },
+                      textAlign: "left",
+                      fontWeight: "500",
+                      lineHeight: "29.05px",
+                    }}
                   >
                     Incentive Distribution through MFT Tokens(Royalties)
                   </UnparalleledMainText>
@@ -1050,7 +1139,8 @@ export default function Home() {
                   <UnparalleledSubText
                     sx={{
                       fontSize: "16px",
-                      lineHeight: "22px",
+                      fontWeight: "400",
+                      lineHeight: "22.5px",
                       width: "100%",
                       color: "#444444",
                       textAlign: "left",
@@ -1074,33 +1164,37 @@ export default function Home() {
         <SeamlessMainText
           sx={{
             color: "#191919",
-            fontWeight: "600",
-            fontSize: "calc(2rem + ((0.5vw - 6px) * 4.2735))",
+            fontWeight: "400",
+            lineHeight: "60px",
+            fontSize: { xs: "28px", md: "40px", xl: "48px" },
             letterSpacing: "-2px",
             textAlign: "center",
             width: "100%",
             maxWidth: "700px",
             margin: "auto",
+            marginBottom: "20px",
           }}
         >
           Get Started
         </SeamlessMainText>
         <UnparalleledSubText
           sx={{
-            fontSize: { md: "28px", xs: "16px" },
-            lineHeight: "44px",
+            fontSize: { md: "24px", xl: "28px" },
+            fontWeight: "300",
+            lineHeight: { xs: "30px", md: "44px" },
             color: "#1A1A1A",
             textAlign: "center",
-            width: { md: "100%", xs: "80%" },
+            width: { md: "100%" },
             maxWidth: "1200px",
             margin: "auto",
+            marginBottom: "20px",
           }}
         >
-          Hundreds of people already going cross-border with us. What are you
-          waiting for?
+          Hundreds of farmers and investors are already going cross-border with
+          MUIAA Feeds. What are you waiting for?
         </UnparalleledSubText>
         <br />
-        <BlueButton sx={{ maxWidth: "250px" }}>Make an Order</BlueButton>
+        <BlueButton sx={{ maxWidth: "250px" }}>Explore App</BlueButton>
         <br />
         <br />
         <br />
