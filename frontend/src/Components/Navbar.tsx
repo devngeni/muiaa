@@ -12,11 +12,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Box, styled } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import dotenv from "dotenv";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
 dotenv.config();
 
 function Navbar() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
-
+  const router = useRouter();
+  console.log(router.pathname);
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
@@ -58,11 +62,21 @@ function Navbar() {
           md={4}
           xs={0}
         >
-          <a href="/" style={{ color: "#fff" }}>
+          <Link className={router.pathname == "/" ? "active" : ""} href="/">
             Home
-          </a>
-          <a href="/how-it-works">How It Works</a>
-          <a href="/about">About Us</a>
+          </Link>
+          <Link
+            className={router.pathname == "/how-it-works" ? "active" : ""}
+            href="/how-it-works"
+          >
+            How It Works
+          </Link>
+          <Link
+            className={router.pathname == "/about" ? "active" : ""}
+            href="/about"
+          >
+            About Us
+          </Link>
         </NavbarLinksContainer>
         {/* NavBarButtonsContainer for larger screens */}
         <NavBarButtonsContainer
