@@ -42,15 +42,28 @@ export const StepContainer = styled(Box)({
   gap: "2rem",
   maxWidth:"1200px",
   width:"100%",
+  '@media (max-width: 768px)': {
+    gap: '1rem', 
+  },
 
 })
 export const StepBox = styled(Box)({
-  flexBasis: "calc(33.333% - 40px)",
+  flexBasis: "calc(33.333% - 21.5px)",
   background:"white",
   padding:"2rem",
   borderRadius:"20px",
+  '@media (max-width: 768px)': {
+    flexBasis: 'calc(50% - 21.5px)'
+  },
+
+  '@media (max-width: 480px)': {
+    flexBasis: 'calc(100% - 21.5px)', 
+  },
 })
-export const Icon = styled(Box)({
+export const ImageContainer = styled(Box)({
+  maxWidth: '100%', 
+  maxHeight: '100%', 
+  overflow: 'hidden' 
   
 })
 export const StepTitle = styled(Typography)({

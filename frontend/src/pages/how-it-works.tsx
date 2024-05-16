@@ -26,6 +26,7 @@ import {
   StepBox,
   StepTitle,
   StepText,
+  ImageContainer,
 } from "@/StyledComponents/Works";
 import { Box, Grid, Icon, Typography } from "@mui/material";
 import React from "react";
@@ -35,8 +36,30 @@ import ProductsCarousel from "@/Components/ProductsCarousel";
 import TestimonialCarousel from "@/Components/TestimonialCarousel";
 import { Fade } from "react-awesome-reveal";
 import { steps } from "@/data/platformSteps";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import PaymentIcon from '@mui/icons-material/Payment';
+import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
+import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
+import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
+import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
+import YoutubeSearchedForSharpIcon from '@mui/icons-material/YoutubeSearchedForSharp';
+import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
+import Image from "next/image";
 
+const icons=[
+  <YoutubeSearchedForSharpIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <NoteAltOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <VerifiedOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentTurnedInOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <PaymentIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <RoomOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <LocalShippingIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentTurnedInOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <PaymentIcon sx={{fontSize:40, color:"#003565"}}/>,
+]
 function HotItWorks() {
+  
   return (
     <>
       <Head>
@@ -83,20 +106,29 @@ function HotItWorks() {
           </BgOverlay>
         </WorksMainHero>
         <PlatformContainer container>
-          <StepContainer>
-            {
-              steps.map((steps)=>(
-                <StepBox>
-                  <Icon/>
-                  <StepTitle>{steps.title}</StepTitle>
-                  <StepText>{steps.description}</StepText>
+        <StepContainer>
+          {steps.map((step, index) => (
+            <StepBox key={index} sx={{ flexGrow: step.img ? 1 : 0, height: '200px', overflow: 'hidden' }}>
+              {step.img ? (
+                <ImageContainer>
+                  <img
+                    src={step.img}
+                    alt="Cow & Feeds"              
+                    style={{ width: '100%', height: '200px' }}
+                  />
+                </ImageContainer>
+              ) : (
+                <>
+                  {icons[index]}
+                  <StepTitle>{step.title}</StepTitle>
+                  <StepText>{step.description}</StepText>
+                </>
+              )}
+            </StepBox>
+          ))}
+        </StepContainer>
+      </PlatformContainer>
 
-                </StepBox>
-              ))
-            }
-          </StepContainer>
-    
-        </PlatformContainer>
         <ProductsCarousel />
         <br />
         <br />
