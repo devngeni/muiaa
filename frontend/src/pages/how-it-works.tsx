@@ -106,6 +106,8 @@ function HotItWorks() {
           </BgOverlay>
         </WorksMainHero>
         <PlatformContainer container>
+
+          <Fade direction="down">
         <StepContainer>
           {steps.map((step, index) => (
             <StepBox key={index} sx={{ flexGrow: step.img ? 1 : 0, height: '200px', overflow: 'hidden' }}>
@@ -124,9 +126,10 @@ function HotItWorks() {
                   <StepText>{step.description}</StepText>
                 </>
               )}
-            </StepBox>
+          </StepBox>
           ))}
         </StepContainer>
+          </Fade>
       </PlatformContainer>
 
         <ProductsCarousel />
