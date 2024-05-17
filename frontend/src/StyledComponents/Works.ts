@@ -1,3 +1,4 @@
+import { Padding } from "@mui/icons-material";
 import {
   Box,
   Grid,
@@ -31,7 +32,11 @@ export const PlatformContainer = styled(Grid)({
     display:"flex",
     background:"#033D66",
     padding:"1rem",
-    justifyContent:"center"
+    justifyContent:"center",
+    '@media (max-width: 768px)': {
+      padding:'1rem 0.5rem 1rem 0',
+    
+    },
 })
 export const PLatformItem = styled(Grid)({
 })
@@ -43,7 +48,9 @@ export const StepContainer = styled(Box)({
   maxWidth:"1200px",
   width:"100%",
   '@media (max-width: 768px)': {
-    gap: '1rem', 
+    gap:'1rem',
+    padding: 0,
+    justifyContent:'center'    
   },
 
 })
@@ -53,11 +60,14 @@ export const StepBox = styled(Box)({
   padding:"2rem",
   borderRadius:"20px",
   '@media (max-width: 768px)': {
-    flexBasis: 'calc(50% - 21.5px)'
+    padding:'1rem',
+    flexGrow:0
+  
   },
 
   '@media (max-width: 480px)': {
     flexBasis: 'calc(100% - 21.5px)', 
+    padding:'1rem'
   },
 })
 export const ImageContainer = styled(Box)({
