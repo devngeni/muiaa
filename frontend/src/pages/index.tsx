@@ -265,8 +265,9 @@ export default function Home() {
                       </UnparalleledMainText>
                       <br />
                       <UnparalleledSubText>
-                        providing feeds to agricultural farmers in Kenya and
-                        Zanzibar.
+                        A marketplace connecting farmers directly with
+                        suppliers, fostering transparency and competitive
+                        pricing.
                       </UnparalleledSubText>
                       <br />
                     </Grid>
@@ -288,11 +289,11 @@ export default function Home() {
                           margin: { xs: "auto", md: "0" },
                         }}
                       >
-                        Reliable supply chain
+                        Promoting partnerships within the dairy farming
                       </UnparalleledMainText>
                       <br />
                       <UnparalleledSubText>
-                        providing feeds to agricultural farmers in Kenya and
+                        Enhanced Transparency and Trust to farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
                       <br />
@@ -315,13 +316,13 @@ export default function Home() {
                           margin: { xs: "auto", md: "0" },
                         }}
                       >
-                        Unparalleled access to high- quality feed products
+                        Reducing costs through optimized logistics
                       </UnparalleledMainText>
                       <br />
                       <UnparalleledSubText>
-                        Leveraging the security and transparency of blockchain
-                        for every step from supplier sourcing to end-user
-                        delivery.
+                        Cross-border payments, and streamlined documentation,
+                        MUIAA Feeds Ltd empowers farmers and distributors with
+                        cost-saving strategies.
                       </UnparalleledSubText>
                       <br />
                     </Grid>
@@ -345,7 +346,7 @@ export default function Home() {
           width: "100%",
           padding: "6%",
           margin: "auto",
-          background: "#F5F6F7",
+          background: "#f5f6f7",
         }}
       >
         <Grid md={5} xs={12}>
@@ -415,9 +416,9 @@ export default function Home() {
                     color: "#444444",
                   }}
                 >
-                  Our platform leverages smart contracts to automate and enforce
-                  agreements between stakeholders, such as contracts between
-                  farmers and suppliers, payment terms, and quality standards.
+                  Automate and enforce agreements between stakeholders, such as
+                  contracts between farmers and suppliers, payment terms, and
+                  quality standards.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -443,7 +444,7 @@ export default function Home() {
                     width: "90%",
                   }}
                 >
-                  Tokenization
+                  Traceability
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
@@ -453,10 +454,9 @@ export default function Home() {
                     color: "#444444",
                   }}
                 >
-                  Introducing our utility token specific to the platform which
-                  serves a variety of purposes.From facilitating transactions to
-                  offering incentives and rewards, our token creates an
-                  ecosystem of participation.
+                  Each batch of feed is recorded on the blockchain, allowing for
+                  real-time tracking of its origin, transportation, and quality
+                  testing results.
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -481,7 +481,7 @@ export default function Home() {
                     width: "90%",
                   }}
                 >
-                  Traceability
+                  Quality Assurance
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
@@ -491,10 +491,9 @@ export default function Home() {
                     color: "#444444",
                   }}
                 >
-                  Each batch of feed is recorded on the blockchain, this
-                  provides you with real-time tracking capabilities, allowing
-                  you to trace its origin, transportation, and quality testing
-                  results.
+                  Feed quality data, including nutritional content and safety
+                  tests, are immutably stored on the blockchain. This builds
+                  trust among stakeholders
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -520,7 +519,7 @@ export default function Home() {
                     width: "90%",
                   }}
                 >
-                  Quality Assurance
+                  Tokenization
                 </SeamlessMainText>
                 <UnparalleledSubText
                   sx={{
@@ -530,10 +529,9 @@ export default function Home() {
                     color: "#444444",
                   }}
                 >
-                  We store feed quality data, including nutritional content and
-                  safety tests, immutably on the blockchain. This not only
-                  ensures the highest standards but also builds trust among all
-                  stakeholders involved in the process.
+                  Introduce a utility token specific to the platform. Tokens can
+                  be used for transactions, incentives, and rewards, creating an
+                  ecosystem of participation
                 </UnparalleledSubText>
               </Fade>
               <br />
@@ -890,9 +888,9 @@ export default function Home() {
                       lineHeight: "22.5px",
                     }}
                   >
-                    Automate and enforce agreements between stakeholders, such
-                    as contracts between farmers and suppliers, payment terms,
-                    and quality standards.
+                    Check on XDC endpoints and Authentication-Authorization
+                    process(Access Certificates) to determine platform
+                    capabilities.
                   </UnparalleledSubText>
                 </Box>
               </Fade>
@@ -1044,9 +1042,9 @@ export default function Home() {
                       textAlign: "left",
                     }}
                   >
-                    Automate and enforce agreements between stakeholders, such
-                    as contracts between farmers and suppliers, payment terms,
-                    and quality standards.
+                    To offer users real-time updates on the status and location
+                    of their feed orders using blockchain's decentralised
+                    ledger.
                   </UnparalleledSubText>
                 </Box>
               </Fade>
@@ -1095,9 +1093,8 @@ export default function Home() {
                     textAlign: "left",
                   }}
                 >
-                  To automate agreements between stakeholders like contracts
-                  between farmers and suppliers, payment terms, and quality
-                  standards.
+                  To automate payments between farmers and suppliers upon
+                  fulfillment of specific conditions.
                 </UnparalleledSubText>
               </Box>
             </Fade>
