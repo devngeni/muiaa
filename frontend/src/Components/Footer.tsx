@@ -1,10 +1,14 @@
-import { FooterHeader, FooterText, MainFooterContainer } from '@/StyledComponents/Footer'
-import { Grid, Box } from '@mui/material'
-import React from 'react'
+import {
+  FooterHeader,
+  FooterText,
+  MainFooterContainer,
+} from "@/StyledComponents/Footer";
+import { Grid, Box } from "@mui/material";
+import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { YouTube } from '@mui/icons-material';
+import { YouTube } from "@mui/icons-material";
 
 function Footer() {
   return (
@@ -18,13 +22,13 @@ function Footer() {
         <Grid item xs={6} md={4}>
           <FooterHeader sx={{ color: "#E9BC6D" }}>Quick Links</FooterHeader>
           <a href="/">
-          <FooterText>Home</FooterText>
+            <FooterText>Home</FooterText>
           </a>
           <a href="/how-it-works">
-          <FooterText>How it Works</FooterText>
+            <FooterText>How it Works</FooterText>
           </a>
           <a href="/about">
-          <FooterText>About</FooterText>
+            <FooterText>About</FooterText>
           </a>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -69,8 +73,12 @@ function Footer() {
             <Box sx={{ maxWidth: "240px" }}>
               <img src="assets/logo.png" />
             </Box>
-            <FooterText>
-              {" "}
+            <FooterText
+              sx={{
+                pl: { xs: "2px", md: "30px" },
+                fontSize: { xs: "12px", md: "16px" },
+              }}
+            >
               All Rights Reserved &nbsp; &nbsp; | &nbsp;&nbsp; Terms of Use
               &nbsp; &nbsp; | &nbsp;&nbsp; Privacy Policy
             </FooterText>
@@ -81,4 +89,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;
