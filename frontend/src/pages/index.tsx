@@ -288,11 +288,11 @@ export default function Home() {
                           margin: { xs: "auto", md: "0" },
                         }}
                       >
-                        Reliable supply chain
+                        Promoting partnerships within the dairy farming
                       </UnparalleledMainText>
                       <br />
                       <UnparalleledSubText>
-                        providing feeds to agricultural farmers in Kenya and
+                        Enhanced Transparency and Trust to farmers in Kenya and
                         Zanzibar.
                       </UnparalleledSubText>
                       <br />

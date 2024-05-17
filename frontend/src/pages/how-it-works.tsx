@@ -120,8 +120,8 @@ function HotItWorks() {
               ) : (
                 <>
                   {icons[index]}
-                  <StepTitle>{step.title}</StepTitle>
-                  <StepText>{step.description}</StepText>
+                  <StepTitle sx={{mb:1}}>{step.title}</StepTitle>
+                  <StepText sx={{mb:1}}>{step.description}</StepText>
                 </>
               )}
             </StepBox>
