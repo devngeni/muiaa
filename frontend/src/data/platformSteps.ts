@@ -52,8 +52,8 @@ export const steps =[
         title:"10. Final Payment",
         description:"Second half of payment delivered to supplier upon farmer acceptance"
     },
-    {
-        id:10,
-        img:"/assets/cowFeeds.svg",
-    }
+    // {
+    //     id:10,
+    //     img:"/assets/cowFeeds.svg",
+    // }
 ]

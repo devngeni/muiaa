@@ -182,7 +182,7 @@ export const NavyTextContainer = styled(Box)({
 export const WhiteText = styled(Typography)({
   color: "#fff",
   fontWeight: "500",
-  width: "160%",
+  width: "100%",
   margin: "auto",
   textAlign: "center",
   fontFamily: "'Inter'",

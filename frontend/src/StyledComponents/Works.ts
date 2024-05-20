@@ -8,6 +8,7 @@ import {
   AccordionDetails,
   Typography,
 } from "@mui/material";
+import { OrangeText } from "./HomeHero";
 
 
 export const WorksMainHero = styled(Box)({
@@ -76,6 +77,21 @@ export const ImageContainer = styled(Box)({
   overflow: 'hidden' 
   
 })
+export const Subtitle = styled(Typography)({
+  color:"#fff",
+  fontSize:"3rem",
+  fontWeight:400,
+  textAlign:"center",
+  fontFamily:"inter",
+  '@media(min-width:768px)':{
+    width:"100%",
+  },
+  '@media(max-width:480px)':{
+    fontSize:"1.5rem",
+    paddingBottom:"1rem"
+  }
+  
+})
 export const StepTitle = styled(Typography)({
   color:"#003565",
   fontSize:"1.2rem",
@@ -86,6 +102,19 @@ export const StepText = styled(Typography)({
   color:"#444444",
   fontSize:"1rem"
   
+})
+export const OrangeText1 = styled(OrangeText)({
+  fontSize:"3rem", 
+  '@media(max-width:480px)':{
+    fontSize:"1.5rem",
+  }
+})
+export const BlueText = styled(Subtitle)({
+  color:"#14263E"
+})
+export const CarouselDescText = styled(BlueText)({
+  color:"#1A1A1A",
+  fontSize:"1.75rem"
 })
 export const WhiteBox  = styled(Box)({
     width:"100%",
@@ -112,7 +141,7 @@ export const Part = styled(Box)({
   backgroundRepeat: "no-repeat",
 });
 export const  BlueSection = styled(Box)({
-    width:"100%",
+    maxWidth:"100%",
     height:"auto",
     minHeight:"35vh",
     background:"#14263E",
@@ -153,3 +182,17 @@ export const AccordionText2 = styled(Typography)({
   fontSize: "18px",
   fontFamily: "'Inter'",
 });
+
+export const CarouselIntro = styled(Box)({
+  display:"flex",
+  justifyContent: "center", 
+    alignItems: "center", 
+    width: "100%", 
+    textAlign: "center", 
+    padding: { md: "50px", xs: "20px" } 
+});
+export const CarouselIntroWrapper = styled(Box)({
+  width:"45%",
+  padding:"1rem 1rem 0",
+   '@media(max-width:480px)':{width:"100%"}
+})

@@ -8,6 +8,7 @@ import {
   WhiteText,
   SeamlessMainText,
   BlueButton,
+  OrangeText,
 } from "@/StyledComponents/HomeHero";
 import {
   AccordionText,
@@ -27,6 +28,7 @@ import {
   StepTitle,
   StepText,
   ImageContainer,
+  Subtitle,
 } from "@/StyledComponents/Works";
 import { Box, Grid, Icon, Typography } from "@mui/material";
 import React from "react";
@@ -105,9 +107,9 @@ function HotItWorks() {
             </Box>
           </BgOverlay>
         </WorksMainHero>
-        <PlatformContainer container>
-
           <Fade direction="down">
+        <PlatformContainer container>
+            <Subtitle>How our platform works</Subtitle>
         <StepContainer>
           {steps.map((step, index) => (
             <StepBox key={index} sx={{ flexGrow: step.img ? 1 : 0, height: '200px', overflow: 'hidden' }}>
@@ -129,9 +131,9 @@ function HotItWorks() {
           </StepBox>
           ))}
         </StepContainer>
-          </Fade>
       </PlatformContainer>
-
+      </Fade>
+          
         <ProductsCarousel />
         <br />
         <br />
@@ -181,7 +183,7 @@ function HotItWorks() {
               ml: "0",
               mb: "50px",
               mt: "70px",
-              maxWidth: "80vw",
+              maxWidth: "100vw",
               fontSize: { md: "45px", xs: "35px" },
             }}
           >
