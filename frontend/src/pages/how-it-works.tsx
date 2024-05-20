@@ -112,8 +112,8 @@ function HotItWorks() {
             <Subtitle>How our platform works</Subtitle>
         <StepContainer>
           {steps.map((step, index) => (
-            <StepBox key={index} sx={{ flexGrow: step.img ? 1 : 0, height: '200px', overflow: 'hidden' }}>
-              {step.img ? (
+            <StepBox key={index}>
+              {/* {step.img && (
                 <ImageContainer>
                   <img
                     src={step.img}
@@ -121,13 +121,13 @@ function HotItWorks() {
                     style={{ width: '100%', height: '200px' }}
                   />
                 </ImageContainer>
-              ) : (
+              ) 
+                } */}
                 <>
                   {icons[index]}
                   <StepTitle sx={{mb:1}}>{step.title}</StepTitle>
                   <StepText sx={{mb:1}}>{step.description}</StepText>
                 </>
-              )}
           </StepBox>
           ))}
         </StepContainer>
