@@ -732,7 +732,7 @@ function AboutHero() {
                       label={
                         <CountrySelectorLabelWrapper>
                           <ZanzibarEmoji />
-                          <span>Kenya</span>
+                          <span>Zanzibar</span>
                         </CountrySelectorLabelWrapper>
                       }
                     />
