@@ -8,6 +8,7 @@ import {
   WhiteText,
   SeamlessMainText,
   BlueButton,
+  OrangeText,
 } from "@/StyledComponents/HomeHero";
 import {
   AccordionText,
@@ -27,6 +28,7 @@ import {
   StepTitle,
   StepText,
   ImageContainer,
+  Subtitle,
 } from "@/StyledComponents/Works";
 import { Box, Grid, Icon, Typography } from "@mui/material";
 import React from "react";
@@ -105,13 +107,13 @@ function HotItWorks() {
             </Box>
           </BgOverlay>
         </WorksMainHero>
-        <PlatformContainer container>
-
           <Fade direction="down">
+        <PlatformContainer container>
+            <Subtitle>How our platform works</Subtitle>
         <StepContainer>
           {steps.map((step, index) => (
-            <StepBox key={index} sx={{ flexGrow: step.img ? 1 : 0, height: '200px', overflow: 'hidden' }}>
-              {step.img ? (
+            <StepBox key={index}>
+              {/* {step.img && (
                 <ImageContainer>
                   <img
                     src={step.img}
@@ -119,19 +121,19 @@ function HotItWorks() {
                     style={{ width: '100%', height: '200px' }}
                   />
                 </ImageContainer>
-              ) : (
+              ) 
+                } */}
                 <>
                   {icons[index]}
-                  <StepTitle>{step.title}</StepTitle>
-                  <StepText>{step.description}</StepText>
+                  <StepTitle sx={{mb:1}}>{step.title}</StepTitle>
+                  <StepText sx={{mb:1}}>{step.description}</StepText>
                 </>
-              )}
           </StepBox>
           ))}
         </StepContainer>
-          </Fade>
       </PlatformContainer>
-
+      </Fade>
+          
         <ProductsCarousel />
         <br />
         <br />
@@ -181,7 +183,7 @@ function HotItWorks() {
               ml: "0",
               mb: "50px",
               mt: "70px",
-              maxWidth: "80vw",
+              maxWidth: "100vw",
               fontSize: { md: "45px", xs: "35px" },
             }}
           >
