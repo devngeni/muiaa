@@ -1,19 +1,57 @@
-import { Box, Button, Grid, Typography, styled } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  keyframes,
+  styled,
+} from "@mui/material";
 
 export const AboutContainer = styled(Box)({});
 
-export const AboutHeroContainer = styled(Box)({
-  backgroundImage: "url('/assets/aboutUsBG.jpeg')",
+export const AboutHeroContainer = styled(Box)<{
+  bgImgUrl: string;
+  opacity: number;
+}>(({ bgImgUrl, opacity }) => ({
+  width: "100%",
+  // backgroundImage: "url('/assets/aboutUsBG.jpeg')",
   height: "90vh",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-});
+  position: "relative",
+  // backgroundRepeat: "no-repeat",
+  // backgroundSize: "cover",
+  // backgroundPosition: "center",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${bgImgUrl})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    transition: "opacity 0.5s ease-in-out",
+    opacity: opacity,
+    zIndex: 1,
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#00356569",
+    zIndex: 2,
+  },
+}));
 
 export const AboutHeroMask = styled(Box)({
   height: "100%",
   width: "100%",
-  background: "#00356582",
+  position: "relative",
+  zIndex: 3,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -147,3 +185,31 @@ export const ContactFormSubmitBtn = styled(Button)({
 export const ContractTileBox = styled(Box)({
   background: "#F0F0F0",
 });
+
+export const PartnerCarousel = styled("div")({
+  display: "flex",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  paddingBottom: "70px",
+  width: "100%",
+  justifyContent: "center",
+  gap: "20px",
+});
+
+const scroll = keyframes`
+ 0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+`;
+
+export const PartnerCarouselItem = styled("div")(({ theme }) => ({
+  display: "inline-block",
+  padding: theme.spacing(1),
+  animation: `${scroll} 20s linear infinite`,
+}));

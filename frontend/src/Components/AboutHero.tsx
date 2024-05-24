@@ -12,7 +12,7 @@ import {
   Radio,
 } from "@mui/material";
 import CountUp from "react-countup";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import {
   AboutContainer,
@@ -24,6 +24,8 @@ import {
   ContactFormSubmitBtn,
   CountrySelectorLabelWrapper,
   FormFieldWrapper,
+  PartnerCarousel,
+  PartnerCarouselItem,
   StyledInputField,
   StyledLabel,
   StyledTextAreaField,
@@ -39,11 +41,43 @@ import EmailIcon from "../../public/assets/emailIcon";
 import LocationIcon from "../../public/assets/locationIcon";
 import PhoneIcon from "../../public/assets/phoneIcon";
 
-function AboutHero() {
+const AboutHero = () => {
+  const [selectedImgIndex, setSelectedImgIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+  const aboutBgList = [
+    "aboutbgIMG.jpeg",
+    "aboutbgIMG2.png",
+    "aboutbgIMG3.jpeg",
+  ];
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setOpacity(0.6);
+      setTimeout(() => {
+        setSelectedImgIndex(
+          (prevIndex) => (prevIndex + 1) % aboutBgList.length
+        );
+        setOpacity(1);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [aboutBgList.length]);
+
+  const partnerList = [
+    "partner1.png",
+    "partner2.png",
+    "partner1.png",
+    "partner2.png",
+  ];
+
   return (
     <>
       <AboutContainer>
-        <AboutHeroContainer sx={{ height: { xs: "50vh", md: "90vh" } }}>
+        <AboutHeroContainer
+          opacity={opacity}
+          bgImgUrl={`/assets/${aboutBgList[selectedImgIndex]}`}
+          sx={{ height: { xs: "50vh", md: "90vh" } }}
+        >
           <AboutHeroMask>
             <AboutStyledText
               sx={{
@@ -324,7 +358,12 @@ function AboutHero() {
         </Box>
         <Grid
           container
-          sx={{ width: "70%", margin: "auto", pb: "50px", pt: "50px" }}
+          sx={{
+            width: "70%",
+            margin: "auto",
+            pb: { xs: "0", md: "50px" },
+            pt: "50px",
+          }}
           justifyContent={"center"}
         >
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
@@ -615,55 +654,38 @@ function AboutHero() {
               </AboutPageTeamWrapper>
             </Fade>
           </Grid>
-          <Grid item md={3} xs={12}>
-            <Fade direction="bottom-right">
-              <AboutPageTeamWrapper>
-                <Image
-                  width={215}
-                  height={216}
-                  alt="Team"
-                  src={"/assets/team/team7.png"}
-                />
-                <AboutStyledText
-                  sx={{
-                    color: "#003565",
-                    width: "100%",
-                    fontWeight: "500",
-                    lineHeight: "25px",
-                    fontSize: "20px",
-                    textAlign: "center",
-                    margin: "auto",
-                    pt: "28px",
-                  }}
-                >
-                  NGENI LABs
-                </AboutStyledText>
-                <AboutStyledText
-                  sx={{
-                    color: "#1A1A1A",
-                    width: "70%",
-                    fontWeight: "400",
-                    lineHeight: "22.5px",
-                    fontSize: "14px",
-                    textAlign: "center",
-                    margin: "auto",
-                    pt: "8px",
-                  }}
-                >
-                  Software Engineering Team
-                </AboutStyledText>
-                <TeamSocialIconsWrapper>
-                  <Link href={"#"}>
-                    <LinkedIn />
-                  </Link>
-                  <Link href={"#"}>
-                    <Twitter />
-                  </Link>
-                </TeamSocialIconsWrapper>
-              </AboutPageTeamWrapper>
-            </Fade>
-          </Grid>
         </Grid>
+
+        <Box sx={{ pt: "100px", height: "100%" }}>
+          <AboutStyledText
+            sx={{
+              textTransform: "uppercase",
+              color: "#003565",
+              fontSize: "20px",
+              fontWeight: "400",
+              mb: "20px",
+            }}
+          >
+            Our Partners
+          </AboutStyledText>
+          <PartnerCarousel>
+            {partnerList.map((partner, index) => {
+              return (
+                <PartnerCarouselItem key={index}>
+                  <Box sx={{ width: "200px" }}>
+                    <Image
+                      src={`/assets/partner/${partner}`}
+                      alt="Partner"
+                      width={200}
+                      height={200}
+                    />
+                  </Box>
+                </PartnerCarouselItem>
+              );
+            })}
+          </PartnerCarousel>
+        </Box>
+
         <Box
           sx={{
             width: "100%",
@@ -893,6 +915,6 @@ function AboutHero() {
       </AboutContainer>
     </>
   );
-}
+};
 
 export default AboutHero;

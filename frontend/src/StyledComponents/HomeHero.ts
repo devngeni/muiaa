@@ -10,37 +10,52 @@ export const HomeMainContainer = styled(Box)({
   backgroundImage: "linear-gradient(to right, #033D66, #14263E)",
 });
 
-const spin = keyframes`
-0%{
-  background-image: url(./assets/bgIMage.svg);
-}
-50%{
-  background-image: url(./assets/bgIMage2.svg);
-}
-100%{
-  background-image: url(./assets/bgIMage.svg);
-}
-`;
-export const HeroMainContainer = styled(Grid)({
+export const HeroMainContainer = styled(Grid)<{
+  bgImgUrl: string;
+  opacity: number;
+}>(({ bgImgUrl, opacity }) => ({
   width: "100vw",
   height: "100vh",
-  backgroundImage: "url(./assets/bgIMG.png)", // Initial background image
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
+  position: "relative",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${bgImgUrl})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    transition: "opacity 0.5s ease-in-out",
+    opacity: opacity,
+    zIndex: 1,
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#00356569", // Adjust the color and opacity as needed
+    zIndex: 2,
+  },
+
   "@media screen and (max-width: 600px)": {
     height: "60vh",
   },
   "@media screen and (max-width: 400px)": {
     height: "90vh",
   },
-});
+}));
 
 export const BgMask = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100%",
-
-  background: "#00356569",
+  zIndex: 999,
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -108,19 +123,24 @@ export const BlueButton = styled(Button)({
     fontWeight: "420",
   },
   "&:hover": {
-    background: "#E9BC6D",
-    color: "#003565",
+    background: "transparent",
+    border: "1px solid #fff",
+    color: "#fff",
   },
 });
 export const OrangeButton = styled(BlueButton)({
-  background: "#DFBC6D",
+  color: "#DFBC6D",
+  border: "1px solid #DFBC6D",
+  background: "transparent",
   "&:hover": {
-    background: "#003565",
-    color: "#E9BC6D",
+    color: "#003565",
+    background: "#E9BC6D",
+    border: "1px solid #E9BC6D",
   },
 });
 export const NavyStatContainer = styled(Box)({
   backgroundColor: "#fff",
+  position: "relative",
   width: "80%",
   maxWidth: "1400px",
   margin: "auto",
@@ -133,15 +153,36 @@ export const NavyStatGridContainer = styled(Grid)({
   width: "100%",
   height: "100%",
 });
-export const NavyStatItem = styled(Grid)({
-  textAlign: "center",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  paddingTop: "20px",
-  fontWeight: "900",
-});
+export const NavyStatItem = styled(Grid)<{ noAfter?: boolean }>(
+  ({ noAfter }) => ({
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    paddingTop: "20px",
+    fontWeight: "900",
+    position: "relative",
+    ...(noAfter
+      ? {}
+      : {
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            borderRight: "2px dotted #003565",
+            height: "70%",
+            right: 0,
+            bottom: 0,
+          },
+        }),
+
+    "@media screen and (max-width: 768px)": {
+      "&::after": {
+        display: "none",
+      },
+    },
+  })
+);
 export const NavyNumber = styled(Typography)({
   fontSize: "36px",
   fontWeight: "700",
@@ -182,7 +223,7 @@ export const NavyTextContainer = styled(Box)({
 export const WhiteText = styled(Typography)({
   color: "#fff",
   fontWeight: "500",
-  width: "100%",
+  width: "160%",
   margin: "auto",
   textAlign: "center",
   fontFamily: "'Inter'",
@@ -251,7 +292,6 @@ export const UnparalleledMainText = styled(Typography)({
   fontFamily: "'Inter'",
   width: "90%",
 
-
   "@media (max-width: 1024px)": {
     fontSize: "28px",
   },
@@ -271,3 +311,22 @@ export const UnparalleledSubText = styled(Typography)({
     textAlign: "center",
   },
 });
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+export const ImageHere = styled("img")<{ animate?: boolean }>(
+  ({ animate }) => ({
+    animation: `${animate ? `${slideIn} 0.5s ease-in-out` : "none"}`,
+
+    width: `100%`,
+    height: "100%",
+    paddingTop: "50px",
+  })
+);

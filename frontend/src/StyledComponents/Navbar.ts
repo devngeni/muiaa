@@ -68,32 +68,38 @@ export const NavBarButtonsContainer = styled(Grid)({
   width: "20%",
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-around",
+  justifyContent:'center',
+  gap:'30px',
   alignItems: "center",
   height: "100%",
 });
 
 export const NavButton = styled(Button)({
-  border: "1px solid white",
   color: "white",
   borderRadius: "5px",
-  width: "40%",
-  height: "40px",
-  fontSize: "16px",
+  width: "35%",
+  height: "50px",
+  fontSize: "20px",
   fontWeight: "600",
+  textTransform: "none",
+  background: "#033D66",
   "@media screen and (max-width:1024px)": {
     width: "fit-content",
     fontSize: "14px",
   },
   "&:hover": {
-    background: "#E9BC6D",
-    color: "#003565",
-    border: "none",
+    background: "#072e4a",
+    border: "1px solid #ffff",
   },
 });
 export const NavButton2 = styled(NavButton)({
   color: "#DFBC6D",
   border: "2px solid #DFBC6D",
-  width: "40%",
+  width: "35%",
   textAlign: "center",
+  background: "#072e4a",
+  "&:hover": {
+    background: "#ffff",
+    color: "#072e4a",
+  },
 });

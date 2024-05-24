@@ -29,6 +29,7 @@ import {
   OrangeText,
   UnparalleledMainText,
   UnparalleledSubText,
+  ImageHere,
 } from "@/StyledComponents/HomeHero";
 import { Grid, Box, Button, styled, Typography } from "@mui/material";
 import CountUp from "react-countup";
@@ -38,20 +39,35 @@ import { useRouter } from "next/router";
 const inter = Inter({ subsets: ["latin"] });
 
 import dotenv from "dotenv";
+import { useEffect, useState } from "react";
 dotenv.config();
 
 export default function Home() {
   const Type = styled(TypeAnimation)({});
-  const ImageHere = styled("img")({
-    width: "100%",
-    borderRadius: "5%",
-    boxShadow: "0px 4px 40.6px 0px #0000001A",
-  });
+
   const router = useRouter();
   const navigate = () => {
     router.push(`https://api.muiaafeeds.com/auth0/login`);
   };
 
+  const bgImgList = ["bgIMG.png", "bgIMG2.png", "bgIMG3.png"];
+  const snapShotList = ["order.png", "trade.png", "automate.png"];
+  const [selectedImgIndex, setSelectedImgIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setOpacity(0.6);
+      setTimeout(() => {
+        setSelectedImgIndex((prevIndex) => (prevIndex + 1) % bgImgList.length);
+        setOpacity(1);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [bgImgList.length]);
+
+  console.log(opacity);
   return (
     <>
       <Head>
@@ -63,7 +79,10 @@ export default function Home() {
       </Head>
       <Navbar />
       <HomeMainContainer>
-        <HeroMainContainer>
+        <HeroMainContainer
+          bgImgUrl={`/assets/${bgImgList[selectedImgIndex]}`}
+          opacity={opacity}
+        >
           <BgMask>
             <ContentContainer>
               {/* <Fade direction="down"> */}
@@ -112,7 +131,7 @@ export default function Home() {
                       }}
                       onClick={() => navigate()}
                     >
-                      Make an Order
+                      Explore App
                     </BlueButton>
                   </Grid>
                   <Grid item md={6} xs={12}>
@@ -130,56 +149,22 @@ export default function Home() {
             </ContentContainer>
           </BgMask>
         </HeroMainContainer>
-
-        {/* <NavySection
-          sx={{
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            minHeight: { md: "400px", xs: "200px" },
-            alignItems: "center",
-          }}
-        >
-          <br />
-          <br />
-          <NavyTextContainer
-            sx={{
-              width: { xs: "100%", md: "70%" },
-              margin: "auto",
-              minHeight: { md: "600px", xs: "200px" },
-              display: "flex",
-            }}
-          >
-            <WhiteText
-              sx={{
-                fontSize: { md: "60px", xs: "35px" },
-                minWidth: { md: "160%", xs: "100%" },
-                margin: "auto",
-                marginLeft: { md: "-30%", xs: "0" },
-                pt: { xs: "100px", md: "0" },
-                pb: { xs: "100px", md: "0" },
-              }}
-            >
-              Uniting Kenya and Zanzibar through innovative technology
-            </WhiteText>
-          </NavyTextContainer>
-        </NavySection> */}
       </HomeMainContainer>
       <NavyStatContainer sx={{ marginTop: { xs: "-50px" } }}>
         <NavyStatGridContainer container>
-          <NavyStatItem md={4} xs={12}>
+          <NavyStatItem md={4} xs={12} noAfter={false}>
             <NavyNumber>
               <CountUp end={50} duration={10} /> +
             </NavyNumber>
             <NavyText>Dairy Farmers</NavyText>
           </NavyStatItem>
-          <NavyStatItem md={4} xs={12}>
+          <NavyStatItem md={4} xs={12} noAfter={false}>
             <NavyNumber>
               <CountUp end={266} duration={10} />
             </NavyNumber>
             <NavyText>Smart Contracts</NavyText>
           </NavyStatItem>
-          <NavyStatItem md={4} xs={12}>
+          <NavyStatItem md={4} xs={12} noAfter={true}>
             <NavyNumber>
               <CountUp end={45} duration={10} />
             </NavyNumber>
@@ -677,16 +662,18 @@ export default function Home() {
             <Box sx={{ width: "80%", height: "50%", margin: "auto" }}>
               <Button
                 sx={{
-                  background: "#fff",
+                  background: selectedImgIndex == 0 ? "#fff" : "",
+                  color: selectedImgIndex == 0 ? "#000" : "#fff",
                   width: "100%",
-                  fontWeight: "bold",
-                  color: "#000",
+                  fontWeight: selectedImgIndex == 0 ? "bold" : "normal",
+                  transition: "all 0.3s ease-in-out",
                   padding: "10px",
                   paddingRight: "40%",
                   borderRadius: "10px",
                   textTransform: "capitalize",
                   ":hover": {
-                    background: "#ccc",
+                    background: "#ffffffc3",
+                    color: "#131212",
                   },
                 }}
               >
@@ -697,11 +684,18 @@ export default function Home() {
               <Button
                 sx={{
                   width: "100%",
-                  color: "#FFFFFF",
+                  background: selectedImgIndex == 1 ? "#fff" : "",
+                  color: selectedImgIndex == 1 ? "#000" : "#fff",
+                  fontWeight: selectedImgIndex == 1 ? "bold" : "normal",
+                  transition: "all 0.3s ease-in-out",
                   padding: "10px",
                   paddingRight: "40%",
                   borderRadius: "10px",
                   textTransform: "capitalize",
+                  ":hover": {
+                    background: "#ffffffc3",
+                    color: "#131212",
+                  },
                 }}
               >
                 Trade
@@ -711,11 +705,18 @@ export default function Home() {
               <Button
                 sx={{
                   width: "100%",
-                  color: "#FFFFFF",
+                  background: selectedImgIndex == 2 ? "#fff" : "",
+                  color: selectedImgIndex == 2 ? "#000" : "#fff",
+                  fontWeight: selectedImgIndex == 2 ? "bold" : "normal",
+                  transition: "all 0.3s ease-in-out",
                   padding: "10px",
                   paddingRight: "13%",
                   borderRadius: "10px",
                   textTransform: "capitalize",
+                  ":hover": {
+                    background: "#ffffffc3",
+                    color: "#131212",
+                  },
                 }}
               >
                 Automate with XDC
@@ -734,12 +735,21 @@ export default function Home() {
             }}
           >
             <Fade direction="up">
-              <ImageHere
-                src="assets/snapshot.svg"
+              <Box
                 sx={{
-                  marginTop: { md: "-60px", xs: "80px" },
+                  borderRadius: { xs: "0%", md: "5%" },
+                  boxShadow: { xs: "none", md: "0px 4px 40.6px 0px #0000001A" },
+                  overflowX: { xs: "none", md: "hidden" },
                 }}
-              />
+              >
+                <ImageHere
+                  animate={opacity == 1}
+                  src={`assets/${snapShotList[selectedImgIndex]}`}
+                  sx={{
+                    marginTop: { md: "-60px", xs: "80px" },
+                  }}
+                />
+              </Box>
             </Fade>
           </Grid>
           <Grid
@@ -827,12 +837,27 @@ export default function Home() {
             width: "100%",
             maxWidth: "700px",
             margin: "auto",
-            marginTop: { md: "100PX", xs: "0" },
+            marginTop: { md: "130px", xs: "0" },
             marginBottom: "25px",
           }}
         >
           Powered by blockchain
         </SeamlessMainText>
+        <UnparalleledSubText
+          sx={{
+            fontSize: { md: "18px", xl: "24px" },
+            lineHeight: { xs: "35px", md: "44px" },
+            color: "#1A1A1A",
+            textAlign: "center",
+            width: { xs: "96%", md: "60%" },
+            margin: "auto",
+            fontWeight: "300",
+          }}
+        >
+          Blockchain technology is a decentralized, digital ledger that securely
+          records transactions and data across multiple parties, enhancing
+          immutability, transparency, traceability, and efficiency.
+        </UnparalleledSubText>
         <br />
         <Grid
           container
@@ -841,6 +866,7 @@ export default function Home() {
             width: "100%",
             maxWidth: "1350px",
             margin: "auto",
+            marginTop: "50px",
             img: { width: "50px", height: "50px", marginBottom: "10px" },
           }}
         >
@@ -1078,9 +1104,10 @@ export default function Home() {
                     textAlign: "left",
                     fontWeight: "500",
                     lineHeight: "29.05px",
+                    width: "100%",
                   }}
                 >
-                  Real-time Feed Tracking via Blockchain
+                  Smart Contracts for Automated Agreements(ESCROW Contract)
                 </UnparalleledMainText>
                 <br />
                 <UnparalleledSubText
