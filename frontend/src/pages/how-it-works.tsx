@@ -8,6 +8,7 @@ import {
   WhiteText,
   SeamlessMainText,
   BlueButton,
+  OrangeText,
 } from "@/StyledComponents/HomeHero";
 import {
   AccordionText,
@@ -22,16 +23,45 @@ import {
   WhiteBox,
   WorksMainHero,
   AccordionText2,
+  StepContainer,
+  StepBox,
+  StepTitle,
+  StepText,
+  ImageContainer,
+  Subtitle,
 } from "@/StyledComponents/Works";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Icon, Typography } from "@mui/material";
 import React from "react";
 import MaximizeIcon from "@mui/icons-material/Maximize";
 import { NavButton2 } from "@/StyledComponents/Navbar";
 import ProductsCarousel from "@/Components/ProductsCarousel";
 import TestimonialCarousel from "@/Components/TestimonialCarousel";
 import { Fade } from "react-awesome-reveal";
+import { steps } from "@/data/platformSteps";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import PaymentIcon from '@mui/icons-material/Payment';
+import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
+import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
+import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
+import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
+import YoutubeSearchedForSharpIcon from '@mui/icons-material/YoutubeSearchedForSharp';
+import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
+import Image from "next/image";
 
+const icons=[
+  <YoutubeSearchedForSharpIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <NoteAltOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <VerifiedOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentTurnedInOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <PaymentIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <RoomOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <LocalShippingIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <AssignmentTurnedInOutlinedIcon sx={{fontSize:40, color:"#003565"}}/>,
+  <PaymentIcon sx={{fontSize:40, color:"#003565"}}/>,
+]
 function HotItWorks() {
+  
   return (
     <>
       <Head>
@@ -77,231 +107,33 @@ function HotItWorks() {
             </Box>
           </BgOverlay>
         </WorksMainHero>
+          <Fade direction="down">
         <PlatformContainer container>
-          <PLatformItem item xs={12} md={6}>
-            <Typography
-              sx={{
-                color: "#ffff",
-                fontWeight: "600",
-                fontSize: { md: "48px", xs: "36px" },
-                width: { md: "65%", xs: "90%" },
-                margin: "auto",
-                mt: "100px",
-                lineHeight: "72px",
-                letterSpacing: "-3px",
-                fontFamily: "'Inter'",
-                maxWidth:"400px"
-              }}
-            >
-              How our platform Works{" "}
-            </Typography>
-            <br />
-            <br />
-            <WhiteBox sx={{ display: { md: "block", xs: "none" } }} />
-          </PLatformItem>
-          <PLatformItem
-            item
-            xs={12}
-            md={6}
-            sx={{
-              width: "90%",
-              maxWidth: "90vw",
-              margin: "auto",
-              maxHeight: { md: "600px", xs: "auto" },
-              overflowY: "scroll",
-            }}
-          >
-            <Grid container sx={{ marginTop: { md: "150px", xs: "20px" } }}>
-              <Grid item md={3} sx={{ textAlign: "center" }}>
-                <Fade direction="down">
+            <Subtitle>How our platform works</Subtitle>
+        <StepContainer>
+          {steps.map((step, index) => (
+            <StepBox key={index}>
+              {/* {step.img && (
+                <ImageContainer>
                   <img
-                    src="./assets/SearchOrange.svg"
-                    style={{ width: "100px" }}
+                    src={step.img}
+                    alt="Cow & Feeds"              
+                    style={{ width: '100%', height: '200px' }}
                   />
-                  <br />
-                  <br />
-
-                  <img src="./assets/line.svg" style={{ height: "100px" }} />
-                </Fade>
-              </Grid>
-              <Grid item md={9}>
-                <Fade direction="down">
-                  <UnparalleledMainText sx={{ color: "#fff" }}>
-                    Place order
-                  </UnparalleledMainText>
-                  <br />
-                  <UnparalleledSubText
-                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
-                  >
-                    Place an order via Whatsapp or our Webstore.
-                    <br />
-                    <br /> Supplier details, contracts, and quality assurance
-                    information in a transparent and tamper-proof manner are
-                    recorded in the blockchain. <br />
-                    <br /> Contracts with suppliers would typically outline
-                    terms such as feed quality, pricing, delivery schedules, and
-                    payment terms.
-                  </UnparalleledSubText>
-                </Fade>
-              </Grid>
-            </Grid>
-            <Grid container sx={{ marginTop: "60px" }}>
-              <Grid item md={3} sx={{ textAlign: "center" }}>
-                <Fade direction="down">
-                  <img
-                    src="./assets/OrangeContract.svg"
-                    style={{ width: "80px" }}
-                  />
-                  <br />
-                  <br />
-                  <img src="./assets/line.svg" style={{ height: "100px" }} />
-                </Fade>
-              </Grid>
-              <Grid item md={9}>
-                <Fade direction="down">
-                  <UnparalleledMainText sx={{ color: "#fff" }}>
-                    Order processing
-                  </UnparalleledMainText>
-                  <br />
-                  <UnparalleledSubText
-                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
-                  >
-                    We implement Smart logistics contracts on the XDC blockchain
-                    to facilitate seamless transportation arrangements and
-                    optimize routes, reducing transportation costs.
-                  </UnparalleledSubText>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                </Fade>
-              </Grid>
-            </Grid>
-            <Grid container sx={{ marginTop: "60px" }}>
-              <Grid item md={3} sx={{ textAlign: "center" }}>
-                <Fade direction="down">
-                  <img
-                    src="./assets/traceability.svg"
-                    style={{ width: "70px" }}
-                  />
-                  <br />
-                  <br />
-
-                  <img src="./assets/line.svg" style={{ height: "100px" }} />
-                </Fade>
-              </Grid>
-              <Grid item md={9}>
-                <Fade direction="down">
-                  <UnparalleledMainText sx={{ color: "#fff" }}>
-                    Tokenization and traceability
-                  </UnparalleledMainText>
-                  <br />
-                  <UnparalleledSubText
-                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
-                  >
-                    We reecord transportation details on the blockchain,
-                    including shipment status, location, and estimated time of
-                    arrival.
-                  </UnparalleledSubText>
-                </Fade>
-              </Grid>
-            </Grid>
-            <Grid container sx={{ marginTop: "60px" }}>
-              <Grid item md={3} sx={{ textAlign: "center" }}>
-                <Fade direction="down">
-                  <img
-                    src="./assets/SearchOrange.svg"
-                    style={{ width: "100px" }}
-                  />
-                  <br />
-                  <br />
-                  <img src="./assets/line.svg" style={{ height: "100px" }} />
-                </Fade>
-              </Grid>
-              <Grid item md={9}>
-                <Fade direction="down">
-                  <UnparalleledMainText sx={{ color: "#fff" }}>
-                    Delivery
-                  </UnparalleledMainText>
-                  <br />
-                  <UnparalleledSubText
-                    sx={{ maxWidth: "500px", color: "#E0D2A4" }}
-                  >
-                    We enable cross-border payments using XDC tokens, This
-                    eliminates currency exchange fees and delays.
-                  </UnparalleledSubText>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                </Fade>
-              </Grid>
-            </Grid>
-          </PLatformItem>
-          <PLatformItem
-            item
-            xs={12}
-            md={6}
-            sx={{ background: "#fff", pb: "100px" }}
-          >
-            <WhiteBox
-              sx={{
-                borderTopRightRadius: "0",
-                height: { md: "600px", xs: "auto" },
-                boxShadow: "rgba(0, 0, 0, 0.3) 0px 26px 26px",
-                borderTop: "1px solid #fff",
-                marginTop: "-10px",
-              }}
-            >
-              <Box sx={{ mt: { md: "-200px", xs: "10px" }, width: "100%" }}>
-                <Fade direction="down">
-                  <img src="./assets/StockK.png" style={{ width: "100%" }} />
-                </Fade>
-              </Box>
-            </WhiteBox>
-          </PLatformItem>
-          <PLatformItem
-            item
-            xs={12}
-            md={6}
-            sx={{ background: "#fff", pb: "100px" }}
-          >
-            <Typography
-              sx={{
-                color: "#000",
-                fontWeight: "600",
-                fontSize: { md: "48px", xs: "30px" },
-                width: "80%",
-                margin: "auto",
-                mt: { md: "100px", xs: "20px" },
-                lineHeight: "55px",
-                letterSpacing: "-2px",
-                fontFamily: "'Inter'",
-              }}
-            >
-              We believe that in a world that{" "}
-              <span style={{ color: "#DFBC6D" }}>
-                {" "}
-                turns you into a business
-              </span>{" "}
-            </Typography>
-            <Typography
-              sx={{
-                color: "#000",
-                fontWeight: "300",
-                fontSize: { md: "28px", xs: "25px" },
-                width: "80%",
-                margin: "auto",
-                mt: { md: "10px", xs: "5px" },
-                lineHeight: "44px",
-                fontFamily: "'Inter'",
-              }}
-            >
-              we are able to use technology to deliver to you an unparalleled
-              dairy feeds supply.
-            </Typography>
-          </PLatformItem>
-        </PlatformContainer>
+                </ImageContainer>
+              ) 
+                } */}
+                <>
+                  {icons[index]}
+                  <StepTitle sx={{mb:1}}>{step.title}</StepTitle>
+                  <StepText sx={{mb:1}}>{step.description}</StepText>
+                </>
+          </StepBox>
+          ))}
+        </StepContainer>
+      </PlatformContainer>
+      </Fade>
+          
         <ProductsCarousel />
         <br />
         <br />
@@ -351,7 +183,7 @@ function HotItWorks() {
               ml: "0",
               mb: "50px",
               mt: "70px",
-              maxWidth: "80vw",
+              maxWidth: "100vw",
               fontSize: { md: "45px", xs: "35px" },
             }}
           >
