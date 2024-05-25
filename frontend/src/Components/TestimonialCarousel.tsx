@@ -10,6 +10,7 @@ import {
   styled,
 } from "@mui/material";
 import Testimony from "./Testimony";
+import { TestimonyCarouSelIndicator } from "@/StyledComponents/Works";
 
 const TestimonialCarousel = () => {
   const theme = useTheme();
@@ -32,7 +33,23 @@ const TestimonialCarousel = () => {
   });
 
   return (
-    <CustomCarousel   {...settings}>
+    <CustomCarousel
+      {...settings}
+      renderIndicator={(onClickHandler, isSelected, index, label) => {
+        return (
+          <TestimonyCarouSelIndicator
+            disableRipple
+            isSelected={isSelected}
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            key={index}
+            role="button"
+            tabIndex={0}
+            aria-label={`${label} ${index + 1}`}
+          ></TestimonyCarouSelIndicator>
+        );
+      }}
+    >
       <Box sx={{ border: "none" }}>
         <Testimony />
       </Box>

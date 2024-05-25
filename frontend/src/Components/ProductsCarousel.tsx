@@ -6,6 +6,7 @@ import { OrangeText, SeamlessMainText } from "@/StyledComponents/HomeHero";
 import {
   BlueText,
   CarouselDescText,
+  CarouSelIndicator,
   CarouselIntro,
   CarouselIntroWrapper,
   OrangeText1,
@@ -79,10 +80,30 @@ const ProductsCarousel = () => {
           </CarouselDescText>
         </CarouselIntroWrapper>
       </CarouselIntro>
-      <CustomCarousel {...settings}>
+      <CustomCarousel
+        {...settings}
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          return (
+            <CarouSelIndicator
+              disableRipple
+              isSelected={isSelected}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              key={index}
+              role="button"
+              tabIndex={0}
+              aria-label={`${label} ${index + 1}`}
+            ></CarouSelIndicator>
+          );
+        }}
+      >
         <Box>
           <Box
-            sx={{ padding: { md: "50px", xs: "20px" }, textAlign: "center" }}
+            sx={{
+              padding: { md: "50px", xs: "20px" },
+              mb: { xs: "30px", md: "10px" },
+              textAlign: "center",
+            }}
           >
             <img
               src="/assets/nourishing.svg"
