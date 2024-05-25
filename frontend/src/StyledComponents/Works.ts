@@ -10,6 +10,59 @@ import {
 } from "@mui/material";
 import { OrangeText } from "./HomeHero";
 
+export const HeroWorkMainContainer = styled(Grid)({
+  width: "100vw",
+  height: "100vh",
+  position: "relative",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(assets/aboutbgIMG2.png)`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    transition: "opacity 0.5s ease-in-out",
+    zIndex: 1,
+  },
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#00356569", // Adjust the color and opacity as needed
+    zIndex: 2,
+  },
+
+  "@media screen and (max-width: 600px)": {
+    height: "60vh",
+  },
+  "@media screen and (max-width: 400px)": {
+    height: "90vh",
+  },
+});
+
+export const WorkBgMask = styled(Box)(({ theme }) => ({
+  width: "100%",
+  height: "100%",
+  zIndex: 999,
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  [theme.breakpoints.down("md")]: {
+    "*": {
+      textAlign: "center",
+    },
+  },
+}));
+
 export const WorksMainHero = styled(Box)({
   width: "100vw",
   height: "auto",
@@ -33,9 +86,8 @@ export const PlatformContainer = styled(Grid)({
   background: "#033D66",
   padding: "1rem",
   justifyContent: "center",
-  "@media (max-width: 768px)": {
-    padding: "1rem 0.5rem 1rem 0",
-  },
+  paddingTop: "50px",
+  paddingBottom: "50px",
 });
 export const PLatformItem = styled(Grid)({});
 export const StepContainer = styled(Box)({
@@ -43,7 +95,7 @@ export const StepContainer = styled(Box)({
   padding: "2rem",
   flexWrap: "wrap",
   gap: "2rem",
-  maxWidth: "1200px",
+  maxWidth: "1250px",
   width: "100%",
   "@media (max-width: 768px)": {
     gap: "1rem",
@@ -77,22 +129,24 @@ export const Subtitle = styled(Typography)({
   fontWeight: 400,
   textAlign: "center",
   fontFamily: "inter",
+  paddingBottom: "50px",
   "@media(min-width:768px)": {
     width: "100%",
   },
   "@media(max-width:480px)": {
     fontSize: "1.5rem",
-    paddingBottom: "1rem",
   },
 });
 export const StepTitle = styled(Typography)({
   color: "#003565",
-  fontSize: "1.2rem",
+  fontSize: "24px",
   fontWeight: 500,
 });
 export const StepText = styled(Typography)({
   color: "#444444",
   fontSize: "1rem",
+  fontWeight: 400,
+  lineHeight: "22.5px",
 });
 export const OrangeText1 = styled(OrangeText)({
   fontSize: "3rem",
@@ -122,14 +176,24 @@ export const WhiteBox = styled(Box)({
 export const Part = styled(Box)({
   width: "100%",
   height: "auto",
-  minHeight: "35vh",
+  minHeight: "80vh",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundImage: "url(assets/works-hero.png)",
+  backgroundImage: "url(assets/who-we-bg.png)",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+});
+
+export const PartMask = styled(Box)({
+  width: "100%",
+  height: "auto",
+  minHeight: "80vh",
+  background: "#194b7670",
+  justifyContent: "center",
+  textAlign: "center",
+  display: "flex",
 });
 export const BlueSection = styled(Box)({
   maxWidth: "100%",

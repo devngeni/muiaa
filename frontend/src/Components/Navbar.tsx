@@ -115,7 +115,7 @@ function Navbar() {
               "linear-gradient(to bottom, rgb(3,61,102), rgb(0,0,0,0.9))",
             borderBottomLeftRadius: "20px",
             transition: "0.3s ease-in-out",
-            zIndex: 999,
+            zIndex: 1000,
             paddingTop: "23px",
             boxShadow: "0px 0px 100px 0px #000000",
             display: "block",

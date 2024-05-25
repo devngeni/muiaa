@@ -32,7 +32,7 @@ const TestimonialCarousel = () => {
   });
 
   return (
-    <CustomCarousel {...settings}>
+    <CustomCarousel   {...settings}>
       <Box sx={{ border: "none" }}>
         <Testimony />
       </Box>
