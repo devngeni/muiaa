@@ -767,48 +767,164 @@ export default function Home() {
                 "*": { lineHeight: "38px" },
               }}
             >
-              <ul>
-                <li>
-                  <UnparalleledSubText
-                    sx={{
-                      fontSize: "18px",
-                      lineHeight: "22px",
-                      width: "100%",
-                      color: "#ece0e0",
-                      textAlign: "left",
-                    }}
-                  >
-                    Browse available feed products
-                  </UnparalleledSubText>
-                </li>
-                <li>
-                  <UnparalleledSubText
-                    sx={{
-                      fontSize: "18px",
-                      lineHeight: "22px",
-                      width: "100%",
-                      color: "#ece0e0",
-                      textAlign: "left",
-                    }}
-                  >
-                    View detailed quality assurance and traceability details of
-                    each feed.
-                  </UnparalleledSubText>
-                </li>
-                <li>
-                  <UnparalleledSubText
-                    sx={{
-                      fontSize: "18px",
-                      lineHeight: "22px",
-                      width: "100%",
-                      color: "#ece0e0",
-                      textAlign: "left",
-                    }}
-                  >
-                    Place an order for the desired feed quantity.
-                  </UnparalleledSubText>
-                </li>
-              </ul>
+              {selectedImgIndex == 0 && (
+                <ul>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Browse available feed products
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      View detailed quality assurance and traceability details
+                      of each feed.
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Place an order for the desired feed quantity.
+                    </UnparalleledSubText>
+                  </li>
+                </ul>
+              )}
+              {selectedImgIndex == 1 && (
+                <ul>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Track feed's real-time location and expected delivery
+                      date.
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Access immutable quality tests and data for the ordered
+                      feed.
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Receiving the Order
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Confirm the receipt of the feed order.
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Rate and review the feed based on quality and delivery.
+                    </UnparalleledSubText>
+                  </li>
+                </ul>
+              )}
+              {selectedImgIndex == 2 && (
+                <ul>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Check on XDC endpoints and
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Authentication-Authorization process(Access
+                    </UnparalleledSubText>
+                  </li>
+                  <li>
+                    <UnparalleledSubText
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "22px",
+                        width: "100%",
+                        color: "#ece0e0",
+                        textAlign: "left",
+                      }}
+                    >
+                      Certificates) to determine platform capabilities.
+                    </UnparalleledSubText>
+                  </li>
+                </ul>
+              )}
             </Box>
           </Grid>
         </Grid>

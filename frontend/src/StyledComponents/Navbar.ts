@@ -68,8 +68,8 @@ export const NavBarButtonsContainer = styled(Grid)({
   width: "20%",
   display: "flex",
   flexDirection: "row",
-  justifyContent:'center',
-  gap:'30px',
+  justifyContent: "center",
+  gap: "30px",
   alignItems: "center",
   height: "100%",
 });
