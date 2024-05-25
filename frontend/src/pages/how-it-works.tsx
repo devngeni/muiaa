@@ -208,7 +208,7 @@ function HotItWorks() {
           </WhiteText>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 How do I place an order on MUIAA Feeds
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -225,7 +225,7 @@ function HotItWorks() {
               sx={{ fontSize: { md: "25px", xs: "18px" } }}
               expandIcon={<MaximizeIcon />}
             >
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "20px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "20px" } }}>
                 How does blockchain technology benefit MUIAA Feeds?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -240,7 +240,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 How does tokenization contribute to traceability?{" "}
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -254,7 +254,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 What are the advantages of using XDC tokens for cross-border
                 payments?{" "}
               </AccordionText>
@@ -269,7 +269,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                  Is MUIAA Feeds available for international orders?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -282,7 +282,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 How can I track my order once it's been placed?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -296,7 +296,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 What measures does MUIAA Feeds take to ensure product quality?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
@@ -310,7 +310,7 @@ function HotItWorks() {
           </WhiteBackgroundAccordion>
           <WhiteBackgroundAccordion>
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
-              <AccordionText sx={{ fontSize: { md: "25px", xs: "18px" } }}>
+              <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                  How can I contact MUIAA Feeds for further assistance?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>

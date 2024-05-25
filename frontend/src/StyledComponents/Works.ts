@@ -1,4 +1,4 @@
-import { Padding } from "@mui/icons-material";
+import { BorderAllRounded, Height, Padding } from "@mui/icons-material";
 import {
   Grid,
   Accordion,
@@ -7,6 +7,7 @@ import {
   Typography,
   styled,
   Box,
+  Button,
 } from "@mui/material";
 import { OrangeText } from "./HomeHero";
 
@@ -227,7 +228,7 @@ export const WhiteBackgroundAccordionDetails = styled(AccordionDetails)({
 
 export const AccordionText = styled(Typography)({
   color: "#003565",
-  fontWeight: "bold",
+  fontWeight: "600",
   fontSize: "22px",
   fontFamily: "'Inter'",
 });
@@ -251,3 +252,51 @@ export const CarouselIntro = styled(Box)({
   width: "100%",
   textAlign: "center",
 });
+
+export const CarouSelIndicator = styled(Button)<{ isSelected: boolean }>(
+  ({ isSelected }) => ({
+    position: "relative",
+    marginLeft: "0",
+    width: "100%",
+    maxWidth: "45px",
+    "&:hover": {
+      background: "transparent",
+    },
+    "&:after": {
+      content: `""`,
+      position: "absolute",
+      lef: 0,
+      top: 0,
+      background: isSelected ? "#B69021" : "#DEDEDE",
+      borderRadius: "45px",
+      width: isSelected ? "45px" : "25.16px",
+      height: "14.3px",
+      transition: "all 0.3s ease-in-out",
+    },
+    "@media screen and (max-width:768px)": {
+      "&:after": {
+        width: isSelected ? "30px" : "20.16px",
+      },
+    },
+  })
+);
+
+export const TestimonyCarouSelIndicator = styled(CarouSelIndicator)<{
+  isSelected: boolean;
+}>(({ isSelected }) => ({
+  maxWidth: "16.64px",
+  height: "16.64px",
+  overflow: "hidden",
+  "&:after": {
+    width: "16.64px",
+    height: "16.64px",
+    borderRadius: "0",
+    background: isSelected ? "#033D66" : "#C1C1C1",
+  },
+  "@media screen and (max-width:768px)": {
+    "&:after": {
+      width: "15px",
+      height: "15px",
+    },
+  },
+}));
