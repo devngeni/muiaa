@@ -76,7 +76,7 @@ const AboutHero = () => {
         <AboutHeroContainer
           opacity={opacity}
           bgImgUrl={`/assets/${aboutBgList[selectedImgIndex]}`}
-          sx={{ height: { xs: "50vh", md: "90vh" } }}
+          sx={{ height: { xs: "50vh", md: "70vh" } }}
         >
           <AboutHeroMask>
             <AboutStyledText
@@ -88,7 +88,7 @@ const AboutHero = () => {
             >
               About us
             </AboutStyledText>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce>
               <AboutStyledText
                 sx={{
                   fontSize: { xs: "16px", md: "24px" },
@@ -103,7 +103,7 @@ const AboutHero = () => {
                 moves today.
               </AboutStyledText>
             </Fade>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce>
               <AboutStyledExpertBtn
                 sx={{ fontSize: { xs: "16px", md: "20px" } }}
               >
@@ -204,7 +204,7 @@ const AboutHero = () => {
           sx={{ pt: { xs: "70px", md: "100px" }, width: "90%", margin: "auto" }}
         >
           <Grid item md={4} xs={12}>
-            <Fade direction="left">
+            <Fade direction="left" triggerOnce>
               <Box sx={{ width: "90%", margin: "auto" }}>
                 <AboutStyledText
                   sx={{
@@ -239,7 +239,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12} sx={{ pt: { xs: "60px", md: "0" } }}>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce>
               <Box sx={{ width: "90%", margin: "auto" }}>
                 <AboutStyledText
                   sx={{
@@ -274,7 +274,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12} sx={{ pt: { xs: "60px", md: "0" } }}>
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce>
               <Box sx={{ width: "90%", margin: "auto" }}>
                 <AboutStyledText
                   sx={{
@@ -367,7 +367,7 @@ const AboutHero = () => {
           justifyContent={"center"}
         >
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="top-left">
+            <Fade direction="top-left" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -415,7 +415,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="down">
+            <Fade direction="down" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -463,7 +463,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="down">
+            <Fade direction="down" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -511,7 +511,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="top-right">
+            <Fade direction="top-right" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -559,7 +559,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="bottom-left">
+            <Fade direction="bottom-left" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -607,7 +607,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}

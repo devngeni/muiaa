@@ -17,6 +17,12 @@ export const HeroMainContainer = styled(Grid)<{
   width: "100vw",
   height: "100vh",
   position: "relative",
+  h1: {
+    paddingBottom: "50px",
+  },
+  p: {
+    paddingBottom: "50px",
+  },
   "&::before": {
     content: '""',
     position: "absolute",
@@ -49,6 +55,16 @@ export const HeroMainContainer = styled(Grid)<{
   "@media screen and (max-width: 400px)": {
     height: "90vh",
   },
+  "@media screen and (max-width:390px)": {
+    height: "70vh",
+    h1: {
+      lineHeight: "29px",
+      paddingBottom: "20px",
+    },
+    p: {
+      paddingBottom: "20px",
+    },
+  },
 }));
 
 export const BgMask = styled(Box)(({ theme }) => ({
@@ -68,7 +84,6 @@ export const BgMask = styled(Box)(({ theme }) => ({
 }));
 export const ContentContainer = styled(Box)({
   width: "100%",
-  //maxWidth: "1400px",
   maxWidth: "75%",
   display: "flex",
   flexDirection: "column",
