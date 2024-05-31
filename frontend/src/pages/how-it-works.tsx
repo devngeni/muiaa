@@ -82,7 +82,7 @@ function HotItWorks() {
         <HeroWorkMainContainer>
           <WorkBgMask>
             <Box sx={{ textAlign: "center", width: "100%" }}>
-              <Fade direction="down">
+              <Fade direction="down" triggerOnce>
                 <Typography
                   sx={{
                     color: "#ffff",
@@ -101,7 +101,7 @@ function HotItWorks() {
                   Reliable supply for all your dairy products, across the border
                 </Typography>
               </Fade>
-              <Fade direction="up">
+              <Fade direction="up" triggerOnce>
                 <OrangeButton
                   sx={{
                     marginTop: "20px",
@@ -117,39 +117,37 @@ function HotItWorks() {
             </Box>
           </WorkBgMask>
         </HeroWorkMainContainer>
-        <Fade direction="down" triggerOnce>
-          <PlatformContainer container>
-            <Subtitle
-              sx={{
-                width: { md: "60%", xs: "100%" },
-                fontSize: { xs: "28px", md: "40px", xl: "48px" },
-                letterSpacing: { md: "-3px", xs: "-1px" },
-                textAlign: "center",
-                margin: "auto",
-                pt: { xs: "20px", md: "50px" },
-                lineHeight: { xs: "35px", md: "60px" },
-                fontWeight: "500",
-              }}
-            >
-              How our platform works
-            </Subtitle>
-            <StepContainer>
-              {steps.map((step, index) => (
-                <StepBox key={index}>
-                  <>
-                    {icons[index]}
-                    <StepTitle
-                      sx={{ mb: 1, fontSize: { xs: "20px", md: "24px" } }}
-                    >
-                      {step.title}
-                    </StepTitle>
-                    <StepText sx={{ mb: 1 }}>{step.description}</StepText>
-                  </>
-                </StepBox>
-              ))}
-            </StepContainer>
-          </PlatformContainer>
-        </Fade>
+        <PlatformContainer container>
+          <Subtitle
+            sx={{
+              width: { md: "60%", xs: "100%" },
+              fontSize: { xs: "28px", md: "40px", xl: "48px" },
+              letterSpacing: { md: "-3px", xs: "-1px" },
+              textAlign: "center",
+              margin: "auto",
+              pt: { xs: "20px", md: "50px" },
+              lineHeight: { xs: "35px", md: "60px" },
+              fontWeight: "500",
+            }}
+          >
+            How our platform works
+          </Subtitle>
+          <StepContainer>
+            {steps.map((step, index) => (
+              <StepBox key={index}>
+                <>
+                  {icons[index]}
+                  <StepTitle
+                    sx={{ mb: 1, fontSize: { xs: "20px", md: "24px" } }}
+                  >
+                    {step.title}
+                  </StepTitle>
+                  <StepText sx={{ mb: 1 }}>{step.description}</StepText>
+                </>
+              </StepBox>
+            ))}
+          </StepContainer>
+        </PlatformContainer>
 
         <ProductsCarousel />
         <br />

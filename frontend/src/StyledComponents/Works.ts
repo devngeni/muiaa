@@ -13,7 +13,7 @@ import { OrangeText } from "./HomeHero";
 
 export const HeroWorkMainContainer = styled(Grid)({
   width: "100vw",
-  height: "100vh",
+  height: "70vh",
   position: "relative",
   "&::before": {
     content: '""',
@@ -41,10 +41,14 @@ export const HeroWorkMainContainer = styled(Grid)({
   },
 
   "@media screen and (max-width: 600px)": {
-    height: "60vh",
-  },
-  "@media screen and (max-width: 400px)": {
-    height: "90vh",
+    height: "50vh",
+    p: {
+      marginBottom: "50px",
+      minHeight: "0",
+    },
+    button: {
+      marginTop: "0",
+    },
   },
 });
 
@@ -109,6 +113,11 @@ export const StepBox = styled(Box)({
   background: "white",
   padding: "2rem",
   borderRadius: "20px",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
+  ":hover": {
+    transform: "scale(1.01)",
+  },
   "@media (max-width: 768px)": {
     padding: "1rem",
     flexGrow: 0,
