@@ -86,7 +86,7 @@ function Navbar() {
           sx={{ display: { md: "flex", xs: "none" } }}
         >
           <NavButton href={`${process.env.NEXT_PUBLIC_BACKEND_URI}auth0/login`}>
-            Make an Order
+            Make Order
           </NavButton>
           <NavButton2 href="#">Get in Touch</NavButton2>
         </NavBarButtonsContainer>

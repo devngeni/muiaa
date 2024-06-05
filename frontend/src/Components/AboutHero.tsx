@@ -57,8 +57,8 @@ const AboutHero = () => {
           (prevIndex) => (prevIndex + 1) % aboutBgList.length
         );
         setOpacity(1);
-      }, 500);
-    }, 3000);
+      }, 600);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [aboutBgList.length]);
@@ -88,7 +88,7 @@ const AboutHero = () => {
             >
               About us
             </AboutStyledText>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1200}>
               <AboutStyledText
                 sx={{
                   fontSize: { xs: "16px", md: "24px" },
@@ -103,7 +103,7 @@ const AboutHero = () => {
                 moves today.
               </AboutStyledText>
             </Fade>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1200}>
               <AboutStyledExpertBtn
                 sx={{ fontSize: { xs: "16px", md: "20px" } }}
               >
@@ -204,7 +204,7 @@ const AboutHero = () => {
           sx={{ pt: { xs: "70px", md: "100px" }, width: "90%", margin: "auto" }}
         >
           <Grid item md={4} xs={12}>
-            <Fade direction="left" triggerOnce>
+            <Fade direction="left" triggerOnce duration={1300}>
               <Box sx={{ width: "90%", margin: "auto" }}>
                 <AboutStyledText
                   sx={{
@@ -239,7 +239,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12} sx={{ pt: { xs: "60px", md: "0" } }}>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1300}>
               <Box sx={{ width: "90%", margin: "auto" }}>
                 <AboutStyledText
                   sx={{
@@ -367,7 +367,7 @@ const AboutHero = () => {
           justifyContent={"center"}
         >
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="top-left" triggerOnce>
+            <Fade direction="top-left" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -415,7 +415,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="down" triggerOnce>
+            <Fade direction="down" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -463,7 +463,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="down" triggerOnce>
+            <Fade direction="down" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -511,7 +511,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="top-right" triggerOnce>
+            <Fade direction="top-right" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -559,7 +559,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="bottom-left" triggerOnce>
+            <Fade direction="bottom-left" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
@@ -607,7 +607,7 @@ const AboutHero = () => {
             </Fade>
           </Grid>
           <Grid item md={3} xs={12} sx={{ mb: { xs: "30px", md: "0" } }}>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1300}>
               <AboutPageTeamWrapper>
                 <Image
                   width={215}
