@@ -61,8 +61,8 @@ export default function Home() {
       setTimeout(() => {
         setSelectedImgIndex((prevIndex) => (prevIndex + 1) % bgImgList.length);
         setOpacity(1);
-      }, 500);
-    }, 3000);
+      }, 600);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [bgImgList.length]);
@@ -99,7 +99,7 @@ export default function Home() {
                 Advance cross-border cattle feed distribution enterprise.
               </HeroMainText>
               {/* </Fade> */}
-              <Fade direction="up" triggerOnce>
+              <Fade direction="up" triggerOnce duration={1200}>
                 <HeroMiniText
                   sx={{
                     fontSize: { xs: "18px", md: "24px" },
@@ -205,7 +205,7 @@ export default function Home() {
           <br />
           <UnparalleledMainContainer container>
             <UnparalleledGridItem item md={6}>
-              <Fade direction="left" triggerOnce>
+              <Fade direction="left" triggerOnce duration={1300}>
                 <UnparalleledContentContainer>
                   <Grid container>
                     <Grid item md={6} xs={12}>
@@ -233,7 +233,7 @@ export default function Home() {
               </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={6}>
-              <Fade direction="right" triggerOnce>
+              <Fade direction="right" triggerOnce duration={1300}>
                 <UnparalleledContentContainer>
                   <Grid container>
                     <Grid item md={6} xs={12}>
@@ -261,7 +261,7 @@ export default function Home() {
               </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={6}>
-              <Fade direction="left" triggerOnce>
+              <Fade direction="left" triggerOnce duration={1300}>
                 <UnparalleledContentContainer>
                   <Grid container>
                     <Grid item md={6} xs={12}>
@@ -288,7 +288,7 @@ export default function Home() {
               </Fade>
             </UnparalleledGridItem>
             <UnparalleledGridItem item md={6}>
-              <Fade direction="right" triggerOnce>
+              <Fade direction="right" triggerOnce duration={1300}>
                 <UnparalleledContentContainer>
                   <Grid container>
                     <Grid item md={6} xs={12}>
@@ -377,7 +377,7 @@ export default function Home() {
               xs={12}
               sx={{ textAlign: { xs: "center", md: "start" } }}
             >
-              <Fade direction="left" triggerOnce>
+              <Fade direction="left" triggerOnce duration={1300}>
                 <img src="./assets/notes.svg" />
                 <br />
                 <SeamlessMainText
@@ -415,7 +415,7 @@ export default function Home() {
               xs={12}
               sx={{ textAlign: { xs: "center", md: "start" } }}
             >
-              <Fade direction="right" triggerOnce>
+              <Fade direction="right" triggerOnce duration={1300}>
                 <img src="./assets/search.svg" />
                 <br />
                 <SeamlessMainText
@@ -453,7 +453,7 @@ export default function Home() {
               xs={12}
               sx={{ textAlign: { xs: "center", md: "start" } }}
             >
-              <Fade direction="left" triggerOnce>
+              <Fade direction="left" triggerOnce duration={1300}>
                 <img src="./assets/quality.svg" />
                 <br />
                 <SeamlessMainText
@@ -490,7 +490,7 @@ export default function Home() {
               xs={12}
               sx={{ textAlign: { xs: "center", md: "start" } }}
             >
-              <Fade direction="right" triggerOnce>
+              <Fade direction="right" triggerOnce duration={1300}>
                 <img src="./assets/tokenization.svg" />
                 <br />
                 <SeamlessMainText
@@ -731,7 +731,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1300}>
               <Box
                 sx={{
                   borderRadius: { xs: "0%", md: "5%" },
@@ -984,8 +984,8 @@ export default function Home() {
           }}
         >
           <Grid item md={4} xs={12}>
-            <Fade direction="left" triggerOnce>
-              <Fade direction="down" triggerOnce>
+            <Fade direction="left" triggerOnce duration={1300}>
+              <Fade direction="down" triggerOnce duration={1300}>
                 <Box
                   sx={{
                     width: { xs: "90%", md: "95%" },
@@ -1036,7 +1036,7 @@ export default function Home() {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Fade direction="down" triggerOnce>
+            <Fade direction="down" triggerOnce duration={1300}>
               <Box
                 sx={{
                   width: { xs: "90%", md: "95%" },
@@ -1086,8 +1086,8 @@ export default function Home() {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Fade direction="right" triggerOnce>
-              <Fade direction="down" triggerOnce>
+            <Fade direction="right" triggerOnce duration={1300}>
+              <Fade direction="down" triggerOnce duration={1300}>
                 <Box
                   sx={{
                     width: { xs: "90%", md: "95%" },
@@ -1138,8 +1138,8 @@ export default function Home() {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Fade direction="left" triggerOnce>
-              <Fade direction="up" triggerOnce>
+            <Fade direction="left" triggerOnce duration={1300}>
+              <Fade direction="up" triggerOnce duration={1300}>
                 <Box
                   sx={{
                     width: { xs: "90%", md: "95%" },
@@ -1190,7 +1190,7 @@ export default function Home() {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce duration={1300}>
               <Box
                 sx={{
                   width: { xs: "90%", md: "95%" },
@@ -1240,8 +1240,8 @@ export default function Home() {
             </Fade>
           </Grid>
           <Grid item md={4} xs={12}>
-            <Fade direction="right" triggerOnce>
-              <Fade direction="up" triggerOnce>
+            <Fade direction="right" triggerOnce duration={1300}>
+              <Fade direction="up" triggerOnce duration={1300}>
                 <Box
                   sx={{
                     width: { xs: "90%", md: "95%" },

@@ -82,7 +82,7 @@ function HotItWorks() {
         <HeroWorkMainContainer>
           <WorkBgMask>
             <Box sx={{ textAlign: "center", width: "100%" }}>
-              <Fade direction="down" triggerOnce>
+              <Fade direction="down" triggerOnce duration={1200}>
                 <Typography
                   sx={{
                     color: "#ffff",
@@ -101,7 +101,7 @@ function HotItWorks() {
                   Reliable supply for all your dairy products, across the border
                 </Typography>
               </Fade>
-              <Fade direction="up" triggerOnce>
+              <Fade direction="up" triggerOnce duration={1200}>
                 <OrangeButton
                   sx={{
                     marginTop: "20px",
@@ -254,7 +254,7 @@ function HotItWorks() {
             <WhiteBackgroundAccordionSummary expandIcon={<MaximizeIcon />}>
               <AccordionText sx={{ fontSize: { md: "22px", xs: "18px" } }}>
                 What are the advantages of using XDC tokens for cross-border
-                payments?{" "}
+                payments?
               </AccordionText>
             </WhiteBackgroundAccordionSummary>
             <WhiteBackgroundAccordionDetails>
