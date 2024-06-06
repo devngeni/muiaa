@@ -13,7 +13,9 @@ import {
 } from "@mui/material";
 import CountUp from "react-countup";
 import React, { useEffect, useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import Fade from "@/Components/CustomFade";
+import { Fade as OriginalFade } from "react-awesome-reveal";
+
 import {
   AboutContainer,
   AboutHeroContainer,
@@ -88,7 +90,7 @@ const AboutHero = () => {
             >
               About us
             </AboutStyledText>
-            <Fade direction="up" triggerOnce duration={1200}>
+            <OriginalFade direction="up" triggerOnce duration={1200}>
               <AboutStyledText
                 sx={{
                   fontSize: { xs: "16px", md: "24px" },
@@ -102,14 +104,14 @@ const AboutHero = () => {
                 technology. Enabling the world to move value the way information
                 moves today.
               </AboutStyledText>
-            </Fade>
-            <Fade direction="up" triggerOnce duration={1200}>
+            </OriginalFade>
+            <OriginalFade direction="up" triggerOnce duration={1200}>
               <AboutStyledExpertBtn
                 sx={{ fontSize: { xs: "16px", md: "20px" } }}
               >
                 Speak to our Experts
               </AboutStyledExpertBtn>
-            </Fade>
+            </OriginalFade>
           </AboutHeroMask>
         </AboutHeroContainer>
         <Grid

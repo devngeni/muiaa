@@ -2,7 +2,8 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import { Fade } from "react-awesome-reveal";
+import Fade from "@/Components/CustomFade";
+import { Fade as OriginalFade } from "react-awesome-reveal";
 import {
   BgMask,
   BlueButton,
@@ -30,6 +31,7 @@ import {
   UnparalleledMainText,
   UnparalleledSubText,
   ImageHere,
+  SliderSectionListWrapper,
 } from "@/StyledComponents/HomeHero";
 import { Grid, Box, Button, styled, Typography } from "@mui/material";
 import CountUp from "react-countup";
@@ -99,7 +101,7 @@ export default function Home() {
                 Advance cross-border cattle feed distribution enterprise.
               </HeroMainText>
               {/* </Fade> */}
-              <Fade direction="up" triggerOnce duration={1200}>
+              <OriginalFade direction="up" triggerOnce duration={1200}>
                 <HeroMiniText
                   sx={{
                     fontSize: { xs: "18px", md: "24px" },
@@ -142,7 +144,7 @@ export default function Home() {
                     </OrangeButton>
                   </Grid>
                 </Grid>
-              </Fade>
+              </OriginalFade>
             </ContentContainer>
           </BgMask>
         </HeroMainContainer>
@@ -536,7 +538,7 @@ export default function Home() {
           mb: { md: "50px", xs: "0" },
         }}
       >
-        <Grid item md={4} xs={0}>
+        <Grid item md={3} lg={4} xs={0}>
           <Box
             sx={{
               width: "100%",
@@ -551,7 +553,8 @@ export default function Home() {
         </Grid>
         <Grid
           item
-          md={4}
+          md={6}
+          lg={4}
           xs={12}
           sx={{
             background: "#F5F6F7",
@@ -587,7 +590,7 @@ export default function Home() {
             efficiency, and traceability in every facet of the supply chain
           </UnparalleledSubText>
         </Grid>
-        <Grid item md={4} xs={0}>
+        <Grid item md={3} xs={0} lg={4}>
           <Box
             sx={{
               width: "100%",
@@ -640,7 +643,13 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <Box sx={{ width: "100%", maxWidth: "1400px", margin: "auto" }}>
+      <Box
+        sx={{
+          width: "100%",
+          maxWidth: "1400px",
+          margin: "auto",
+        }}
+      >
         <Grid
           container
           sx={{
@@ -736,7 +745,7 @@ export default function Home() {
                 sx={{
                   borderRadius: { xs: "0%", md: "5%" },
                   boxShadow: { xs: "none", md: "0px 4px 40.6px 0px #0000001A" },
-                  overflowX: { xs: "none", md: "hidden" },
+                  overflowX: { xs: "hidden", md: "hidden" },
                 }}
               >
                 <ImageHere
@@ -765,7 +774,7 @@ export default function Home() {
               }}
             >
               {selectedImgIndex == 0 && (
-                <ul>
+                <SliderSectionListWrapper>
                   <li>
                     <UnparalleledSubText
                       sx={{
@@ -806,10 +815,10 @@ export default function Home() {
                       Place an order for the desired feed quantity.
                     </UnparalleledSubText>
                   </li>
-                </ul>
+                </SliderSectionListWrapper>
               )}
               {selectedImgIndex == 1 && (
-                <ul>
+                <SliderSectionListWrapper>
                   <li>
                     <UnparalleledSubText
                       sx={{
@@ -877,10 +886,10 @@ export default function Home() {
                       Rate and review the feed based on quality and delivery.
                     </UnparalleledSubText>
                   </li>
-                </ul>
+                </SliderSectionListWrapper>
               )}
               {selectedImgIndex == 2 && (
-                <ul>
+                <SliderSectionListWrapper>
                   <li>
                     <UnparalleledSubText
                       sx={{
@@ -920,7 +929,7 @@ export default function Home() {
                       Certificates) to determine platform capabilities.
                     </UnparalleledSubText>
                   </li>
-                </ul>
+                </SliderSectionListWrapper>
               )}
             </Box>
           </Grid>
