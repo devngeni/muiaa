@@ -339,9 +339,19 @@ const slideIn = keyframes`
 export const ImageHere = styled("img")<{ animate?: boolean }>(
   ({ animate }) => ({
     animation: `${animate ? `${slideIn} 0.5s ease-in-out` : "none"}`,
-
     width: `100%`,
     height: "100%",
     paddingTop: "50px",
+    "@media screen and (max-width:768px)": {
+      overflowX: "hidden",
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+    },
   })
 );
+
+export const SliderSectionListWrapper = styled("ul")({
+  "@media screen and (max-width:768px)": {
+    minHeight: "35vh",
+  },
+});
