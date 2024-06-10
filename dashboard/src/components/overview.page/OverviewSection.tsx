@@ -12,13 +12,13 @@ import { Grid } from "@mui/material";
 import OrderTrackSection from "./OrderTrackSection";
 
 const OverviewSection = () => {
-  const [selectedOrderId, setSelectedOrderId] = useState<string | null>();
-  const handleOnOrderSelect = (orderId: string) => {
-    setSelectedOrderId(orderId);
+  const [selectedOrderIndex, setSelectedOrderIndex] = useState<number>();
+  const handleOnOrderSelect = (index: number) => {
+    setSelectedOrderIndex(index === selectedOrderIndex ? undefined : index);
   };
 
   const handleRemoveSelectedOrder = () => {
-    setSelectedOrderId(undefined);
+    setSelectedOrderIndex(undefined);
   };
 
   return (
@@ -44,11 +44,12 @@ const OverviewSection = () => {
         </Grid>
         <OrderSection
           handleOnOrderSelect={handleOnOrderSelect}
+          selectedIndex={selectedOrderIndex}
           title="My Orders"
         />
       </StyledOrderListContainer>
       <OrderTrackSection
-        isSectionVisible={selectedOrderId !== undefined}
+        isSectionVisible={selectedOrderIndex !== undefined}
         handleRemoveSelectedOrder={handleRemoveSelectedOrder}
       />
     </StyledOverViewSectionContainer>

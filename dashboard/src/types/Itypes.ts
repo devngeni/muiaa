@@ -7,7 +7,8 @@ export interface OverViewCardPropsType {
 
 export interface OrderSectionPropsType {
   title: string;
-  handleOnOrderSelect: (orderId: string) => void;
+  handleOnOrderSelect: (index: number) => void;
+  selectedIndex: number;
 }
 
 export interface OrderTrackCardPropsType {
@@ -38,6 +39,6 @@ export interface NotificationDetailsPropsType {
 }
 
 export interface OrderTrackSectionPropsType {
-  isSectionVisible: boolean;
   handleRemoveSelectedOrder: () => void;
+  isSectionVisible?: boolean;
 }
