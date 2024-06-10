@@ -9,14 +9,15 @@ import {
 import React, { useState } from "react";
 
 const MyOrders = () => {
-  const [selectedOrderId, setSelectedOrderId] = useState<string | null>();
-  const handleOnOrderSelect = (orderId: string) => {
-    setSelectedOrderId(orderId);
+  const [selectedOrderIndex, setSelectedOrderIndex] = useState<number>();
+  const handleOnOrderSelect = (index: number) => {
+    setSelectedOrderIndex(index === selectedOrderIndex ? undefined : index);
   };
 
   const handleRemoveSelectedOrder = () => {
-    setSelectedOrderId(undefined);
+    setSelectedOrderIndex(undefined);
   };
+
   return (
     <DefaultLayout>
       <WithSidebarLayout pageTitle="My Orders | Muiaa">
@@ -25,10 +26,11 @@ const MyOrders = () => {
             <OrderSection
               title="All Orders"
               handleOnOrderSelect={handleOnOrderSelect}
+              selectedIndex={selectedOrderIndex}
             />
           </StyledOrderSectionWrapper>
           <OrderTrackSection
-            isSectionVisible={selectedOrderId !== undefined}
+            isSectionVisible={selectedOrderIndex != undefined}
             handleRemoveSelectedOrder={handleRemoveSelectedOrder}
           />
         </StyledMyOrderPageContainer>

@@ -1,4 +1,11 @@
-import { Box, OutlinedInput, Table, TableCell, styled } from "@mui/material";
+import {
+  Box,
+  OutlinedInput,
+  Table,
+  TableCell,
+  TableRow,
+  styled,
+} from "@mui/material";
 
 export const StyledOrderSectionContainer = styled(Box)(() => ({
   width: "100%",
@@ -6,6 +13,7 @@ export const StyledOrderSectionContainer = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   gap: "10px",
+  transition: "all 0.3s ease-in-out",
 }));
 
 export const OrderTableWrapper = styled(Box)(() => ({
@@ -60,38 +68,52 @@ export const StyledOrderTable = styled(Table)(() => ({
     fontWeight: "700",
     lineHeight: "normal",
   },
-  tbody: {
-    tr: {
-      td: {
-        padding: "20px",
-        color: "",
-        fontFamily: "Inter",
-        fontSize: "0.875rem",
-        fontStyle: "normal",
-        fontWeight: "300",
-        lineHeight: "normal",
-        cursor: "pointer",
-      },
-
-      ".delivered": {
-        maxWidth: "fit-content",
-        padding: "5px 5px",
-        borderRadius: "8px",
-        background: "#C0F9D3",
-      },
-      ".pending": {
-        maxWidth: "fit-content",
-        padding: "5px 3px",
-        borderRadius: "4px",
-        background: "#FFE6AE",
-      },
-
-      ":hover": {
-        background: "#F5F5F5",
-      },
-    },
-  },
 }));
+
+export const TableRowWrapper = styled(TableRow)(
+  ({ isSelected }: { isSelected: boolean }) => ({
+    background: isSelected ? "#F5F5F5" : "",
+    td: {
+      padding: "20px",
+      color: "",
+      fontFamily: "Inter",
+      fontSize: "0.875rem",
+      fontStyle: "normal",
+      fontWeight: "300",
+      lineHeight: "normal",
+      cursor: "pointer",
+    },
+
+    ".delivered": {
+      maxWidth: "fit-content",
+      padding: "5px 5px",
+      borderRadius: "8px",
+      background: "#C0F9D3",
+    },
+    ".pending": {
+      maxWidth: "fit-content",
+      padding: "5px 3px",
+      borderRadius: "4px",
+      background: "#FFE6AE",
+    },
+
+    ":hover": {
+      background: "#F5F5F5",
+    },
+  })
+);
+
+export const TableRowArrowWrapper = styled(Box)(
+  ({ isSelected }: { isSelected: boolean }) => ({
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+    transform: isSelected ? "rotate(0deg)" : "rotate(180deg)",
+    transition: "0.3s",
+  })
+);
 
 export const StyledTableCell = styled(TableCell)(() => ({
   borderBottom: "2px solid #E8AD4B",

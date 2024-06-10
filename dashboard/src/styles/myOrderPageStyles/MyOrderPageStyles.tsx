@@ -12,4 +12,7 @@ export const StyledMyOrderPageContainer = styled(Box)(() => ({
 export const StyledOrderSectionWrapper = styled(Box)(() => ({
   width: "100%",
   padding: "45px",
+  "@media screen and (max-width:768px)": {
+    padding: "0",
+  },
 }));

@@ -5,6 +5,8 @@ import {
   StyledOrderSectionNav,
   StyledOrderTable,
   StyledTableCell,
+  TableRowArrowWrapper,
+  TableRowWrapper,
 } from "@/styles/overViewPageStyles";
 import { OrderSectionPropsType } from "@/types/Itypes";
 import {
@@ -53,6 +55,7 @@ const mocOrderList = [
 const OrderSection = ({
   title,
   handleOnOrderSelect,
+  selectedIndex,
 }: OrderSectionPropsType) => {
   return (
     <StyledOrderSectionContainer>
@@ -83,9 +86,10 @@ const OrderSection = ({
           <TableBody>
             {mocOrderList.map((item, index) => {
               return (
-                <TableRow
+                <TableRowWrapper
+                  isSelected={selectedIndex == index}
                   key={index}
-                  onClick={() => handleOnOrderSelect(item.orderId)}
+                  onClick={() => handleOnOrderSelect(index)}
                 >
                   <TableCell component="td">{index + 1}</TableCell>
                   <TableCell component="td">{item.orderId}</TableCell>
@@ -101,9 +105,11 @@ const OrderSection = ({
                   <TableCell component="td">{item.destination}</TableCell>
                   <TableCell component="td">{item.expectedDate}</TableCell>
                   <TableCell component="td">
-                    <ActionArrowDown />
+                    <TableRowArrowWrapper isSelected={selectedIndex == index}>
+                      <ActionArrowDown />
+                    </TableRowArrowWrapper>
                   </TableCell>
-                </TableRow>
+                </TableRowWrapper>
               );
             })}
           </TableBody>

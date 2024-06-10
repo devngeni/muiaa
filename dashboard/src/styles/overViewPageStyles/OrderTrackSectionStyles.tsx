@@ -1,16 +1,35 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { BorderLeft, BorderRight } from "@mui/icons-material";
+import { Box, Button, keyframes, styled, Typography } from "@mui/material";
+
+const slideIn = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
+const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+`;
 
 export const OrderTrackSectionContainer = styled(Box)(
-  ({ isVisible }: { isVisible: Boolean }) => ({
-    width: "45%",
-    borderLeft: "3px dotted #E3E3E3",
+  ({ isSectionVisible }: { isSectionVisible: boolean }) => ({
+    width: isSectionVisible ? "45%" : "0",
+    borderLeft: isSectionVisible ? "3px dotted #E3E3E3" : "none",
     padding: "70px",
-    display: "flex",
     flexDirection: "column",
     gap: "30px",
-    transform: "translateX(0)",
-    transition: "transform 0.3s ease-in-out",
-    "@media (max-width: 1200px)": {
+    transition: "all 0.3s ease-in-out",
+    animation: `${isSectionVisible ? slideIn : slideOut} 0.5s ease-in-out`,
+    display: isSectionVisible ? "flex" : "none",
+    "@media screen and (max-width: 1200px)": {
       position: "fixed",
       top: 0,
       right: 0,
@@ -18,11 +37,9 @@ export const OrderTrackSectionContainer = styled(Box)(
       height: "100%",
       padding: "20px",
       borderLeft: "none",
-      borderRight: "3px dotted #E3E3E3",
       backgroundColor: "#fff",
       zIndex: 999,
       overflowY: "auto",
-      transform: `${isVisible ? "translateX(0%)" : "translateX(100%)"}`,
     },
   })
 );

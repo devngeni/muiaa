@@ -60,11 +60,11 @@ const orderTrackSectionMock = [
 ];
 
 const OrderTrackSection = ({
-  isSectionVisible,
   handleRemoveSelectedOrder,
+  isSectionVisible,
 }: OrderTrackSectionPropsType) => {
   return (
-    <OrderTrackSectionContainer isVisible={isSectionVisible}>
+    <OrderTrackSectionContainer isSectionVisible={isSectionVisible}>
       <OrderTrackingCloseBtnWrapper>
         <Button onClick={() => handleRemoveSelectedOrder()}>
           <CloseIcon />
